@@ -9,12 +9,12 @@ const LandingPage = () => {
     <div>
       <Header />
       <div className="flex justify-center items-center">
-        <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[350px]  md:w-[418px]  lg:w-[438px] xl:w-[468px] ' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />
+        <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] ' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />
       </div>
       <div className="footerArea h-screen flex items-end">
         <div>
           <div className="flex px-[14px] sm:px-[34px]">
-            <div className="text-black text-[18px] sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
+            <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
               <div className="">
                 CURATED
               </div>
@@ -22,7 +22,7 @@ const LandingPage = () => {
                 CREATIVE
               </div>
             </div>
-            <div className="text-black text-[18px] sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-6 sm:leading-9">
+            <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9">
               <div className="">
                 TRAVEL
               </div>

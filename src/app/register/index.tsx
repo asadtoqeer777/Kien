@@ -7,8 +7,8 @@ import Button from '../__components/buttons'
 
 const Register = () => {
   return (
-    <div className='bg-black h-[100%] p-5 sm:p-0'>
-      <div className="container flex justify-center m-auto h-[100%] lg:h-[100vh]">
+    <div className='bg-black h-auto p-5 sm:p-0'>
+      <div className="container flex justify-center m-auto h-[100vh]">
         <div className=' mb-[25px] 2xl:mb-[225px]'>
 
           <div className="mainImage text-center w-[310px] sm:w-[390px]  pt-[40px] m-auto relative  sm:pt-[50px] md:pt-[60px] lg:pt-[70px] xl:pt-[80px] 2xl:pt-[224px]">

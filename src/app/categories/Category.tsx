@@ -4,6 +4,7 @@ import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/pngs/footerLogo.png"
 import Image from 'next/image'
 import Button from '../__components/buttons'
+import style from "./style.module.css"
 
 const Category = () => {
   return (
@@ -11,22 +12,15 @@ const Category = () => {
       <Header />
       <div className="">
         <div className="mt-[30px]">
-          <div className="grid grid-cols-6 gap-2" style={{
-            backgroundImage: "url(./page5heroBg.png)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            width: "100%",
-            borderBottom: "1px solid black",
-            backgroundPosition: "center"
-          }}>
+          <div className={`grid grid-cols-6 gap-2  ${style.categoryHero}`} >
             <div className="col-span-2"></div>
-            <div className="col-span-4 text-[35px] sm:text-[60px] md:text-[70px]: lg:text-[80px] xl:text-[90px] 2xl:text-[120px] leading-[40px] sm:leading-[50px] md:leading-[70px] lg:leading-[100px]	mt-[42px]">
-              <h1>
+            <div className={`${style.categoryHeading} col-span-4 `}>
+              <div>
                 Peripatetic
-              </h1>
-              <h1>
+              </div>
+              <div>
                 Additional Info
-              </h1>
+              </div>
             </div>
 
           </div>
@@ -41,7 +35,7 @@ const Category = () => {
               </div>
             </div>
             <div className="col-span-4">
-              <div className=" text-[35px] sm:text-[60px] md:text-[70px]: lg:text-[80px] xl:text-[90px] 2xl:text-[120px] leading-[40px] sm:leading-[50px] md:leading-[70px] lg:leading-[100px] mt-10 sm:mt-[22px] text-[#00000080]">
+              <div className={`${style.categoryHeading} col-span-4 text-[#00000080] mt-[4vh] sm:mt-[3vh]`} >
                 <h1>
                   Inquisitive
                 </h1>
@@ -58,13 +52,13 @@ const Category = () => {
         <div className="grid grid-cols-6 gap-2">
           <div className="col-span-2"></div>
           <div className="col-span-4">
-            <div className="mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[140px] xl:mt-[160px] 2xll:mt-[181px]">
-              <div className="text-[25px]  sm:text-[30px] md:text-[40px]: lg:text-[60px] xl:text-[70px] 2xl:text-[80px] leading-[30px] sm:leading-[70px]	mt-[22px] text-[#00000080]">
-                <h1>
+            <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[70px] xl:mt-[80px] 2xl:mt-[80px]">
+              <div className={`${style.categorySubHeading} text-[#00000080]`}>
+                <div>
                   Peripatetic Refers
-                </h1>
+                </div>
               </div>
-              <div className="text-[#00000033] text-[16px] sm:text-[20px] md:text-[22px]: lg:text-[25px] xl:text-[28px] 2xl:text-[30px] font-medium w-[90%] sm:w-[70%]">
+              <div className={`${style.categorySubHeadDes} text-[#00000033]`}>
                 <div>
                   A seeker who explores the world's heart to understand its essence, connecting nature, people, and culture on a profound philosophical & critical quest.
                 </div>
@@ -77,7 +71,7 @@ const Category = () => {
 
 
       </div>
-      <div className="footerArea flex justify-end mt-6">
+      <div className="footerArea flex justify-end mt-6 mr-4">
         <Image className='w-[70px] sm:w-[90px] md:w-[100px] lg:w-[150px] xl:w-[200px] 2xl:w-[300px]' src={footerLogo} alt='footerLogo' />
       </div>
     </div>

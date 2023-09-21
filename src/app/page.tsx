@@ -10,8 +10,8 @@ import Register from './register';
 export default function Home() {
   return (
     <div>
-      {/* <Login /> */}
-      <Register />
+      <Login />
+      {/* <Register /> */}
       {/* <LandingPage /> */}
       {/* <LandingTransition /> */}
       {/* <Category /> */}

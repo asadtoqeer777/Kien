@@ -8,7 +8,7 @@ import Button from '../__components/buttons'
 const Login = () => {
   return (
     <div className='bg-white  flex justify-center px-5 sm:px-0'>
-      <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[224px]">
+      <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[170px]">
 
         <div className="mainImage text-center">
           <Image className='h-[100px] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
@@ -20,7 +20,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="mt-[78px] mb-[15px] 2xl:mb-[225px]">
+        <div className="mt-[78px] mb-[15px] 2xl:mb-[30px]">
           <div>
             <Input inputLabel={"email address / user name"} inputLabelExtCSS={"text-[#00000080]"} inputExtCSS={"border-[#00000080]  text-[#00000080]"} inputType={"text"} />
           </div>

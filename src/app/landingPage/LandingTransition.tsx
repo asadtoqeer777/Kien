@@ -10,7 +10,9 @@ const LandingTransition = () => {
       style={{
         backgroundImage: "url(./heroBg-2.png)",
         backgroundSize: "cover",
-        width: "100%"
+        backgroundPosition: "bottom",
+        width: "100%",
+        height: "100%"
       }}
     >
       <Header />
