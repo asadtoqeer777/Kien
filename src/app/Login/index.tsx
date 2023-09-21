@@ -11,7 +11,7 @@ const Login = () => {
       <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[170px]">
 
         <div className="mainImage text-center">
-          <Image className='h-[100px] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
+          <Image className='h-[auto] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
           <div className="text-[27px] font-semibold text-[#000]">
             Travel Experiences
           </div>
