@@ -8,7 +8,7 @@ import Hiking from "../../__assets/images/svgs/hiking.svg"
 const Card = () => {
   return (
     <div>
-      <div className="w-[100%] sm:w-[267px] md:w-[230px] lg:w-[100%] xl:w-[267px] h-[236px] bg-[#2667CF] rounded-2xl px-3 py-2 flex flex-col justify-between">
+      <div className="w-[100%] sm:w-[267px] md:w-[230px] lg:w-[100%] lg:h-[165px] 2xl:h-[224.762px] xl:w-[254.286px] h-[224.762px] bg-[#2667CF] rounded-2xl px-3 py-2 flex flex-col justify-between">
         <div className="flex items-center justify-between">
           <div className="">
             <div className="text-white text-[15px] font-medium">
@@ -29,7 +29,7 @@ const Card = () => {
           </div>
           <div className="">
 
-            <div className="text-white text-[16px] sm:text-[18px] md:text-[22px] lg:text-[20px] xl:text-[26px] font-medium ">
+            <div className="text-white text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[22px]  2xl:text-[26px] font-medium ">
               <div className="leading-5">
                 Tye Addams,
               </div>
