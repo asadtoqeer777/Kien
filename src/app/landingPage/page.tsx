@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../__components/header'
+import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/svgs/footerLogo.svg"
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      <Header navTheme={"bg-[#E3FF00]"} />
       <div className="flex justify-center items-center">
         <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] ' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />
       </div>

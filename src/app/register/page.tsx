@@ -2,8 +2,8 @@ import React from 'react'
 import LogoImage from "../__assets/images/pngs/logoWhite.png"
 import RegisterBar from "../__assets/images/pngs/loginBar.png"
 import Image from 'next/image'
-import Input from '../__components/inputs'
-import Button from '../__components/buttons'
+import Input from '../__components/inputs/Input'
+import Button from '../__components/buttons/Button'
 
 const Register = () => {
   return (

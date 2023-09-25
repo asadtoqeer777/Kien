@@ -1,10 +1,10 @@
-import Login from './Login';
-import Card from './__components/card';
-import CategoriesList from './categories/CategoriesList';
-import LandingPage from './landingPage/LandingPage';
-import LandingTransition from './landingPage/LandingTransition';
-import Category from './categories/Category';
-import Register from './register';
+import Login from './login/page';
+import Card from './__components/card/Card';
+import CategoriesList from './categoriesList/page';
+import LandingPage from './landingPage/page';
+import LandingTransition from './landingPageTansition/page';
+import Category from './categories/page';
+import Register from './register/page';
 import Connect from './connect/page';
 
 export default function Home() {
