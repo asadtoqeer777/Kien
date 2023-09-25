@@ -7,7 +7,7 @@ import Button from '../__components/buttons/Button'
 import DarkPlus from "../__assets/images/svgs/darkPlus.svg"
 import Card from '../__components/card/Card'
 import Tick from "../__assets/images/pngs/navArrow.png"
-import style from "./style.module.css"
+import style from "../categories/style.module.css"
 
 const CategoriesList = () => {
   return (
