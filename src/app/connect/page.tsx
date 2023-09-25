@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../__components/header'
+import Header from '../__components/header/Header'
 import Image from 'next/image'
 import backArrow from "../__assets/images/svgs/backArrow.svg"
 import DownArrow from "../__assets/images/svgs/downArrow.svg"
-import Button from '../__components/buttons'
+import Button from '../__components/buttons/Button'
 import FooterLogo from "../__assets/images/svgs/footerLogo.svg"
-import Container from '../__components/container'
+import Container from '../__components/container/Container'
 
 const Connect = () => {
   return (

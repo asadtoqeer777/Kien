@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../__components/header'
+import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/pngs/footerLogo.png"
 import Image from 'next/image'
-import Button from '../__components/buttons'
+import Button from '../__components/buttons/Button'
 import DarkPlus from "../__assets/images/svgs/darkPlus.svg"
-import Card from '../__components/card'
+import Card from '../__components/card/Card'
 import Tick from "../__assets/images/pngs/navArrow.png"
 import style from "./style.module.css"
 

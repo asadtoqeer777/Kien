@@ -1,15 +1,15 @@
 import React from 'react'
-import Header from '../__components/header'
+import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/pngs/footerLogo.png"
 import Image from 'next/image'
-import Button from '../__components/buttons'
+import Button from '../__components/buttons/Button'
 import style from "./style.module.css"
 
 const Category = () => {
   return (
     <div>
-      <Header />
+      <Header navTheme={"bg-[#E3FF00]"} />
       <div className="">
         <div className="mt-[30px]">
           <div className={`grid grid-cols-6 gap-2  ${style.categoryHero}`} >

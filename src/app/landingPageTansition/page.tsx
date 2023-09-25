@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../__components/header'
+import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/svgs/footerLogo.svg"
 import Image from 'next/image'
@@ -15,7 +15,7 @@ const LandingTransition = () => {
         height: "100%"
       }}
     >
-      <Header />
+      <Header navTheme={"bg-[#E3FF00]"} />
       <div className="flex justify-center items-center">
         <div className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center" style={{
           transform: "translate(-50%, -50%)"
