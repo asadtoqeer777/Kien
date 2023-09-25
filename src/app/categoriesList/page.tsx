@@ -11,10 +11,10 @@ import style from "../categories/style.module.css"
 
 const CategoriesList = () => {
   return (
-    <div>
+    <div className='w-[100vw] h-[100vh]'>
       <Header navTheme={"bg-[#E3FF00]"} />
       <div className="">
-        <div className="mt-[20px]">
+        <div className="mt-[30px]">
           <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black">
             <div className="col-span-2"></div>
             <div className={`${style.categoryHeading} col-span-4 `}>

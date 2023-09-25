@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import NavArrow from "../../__assets/images/pngs/navArrow.png"
 
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const Header = ({ navTheme }: Props) => {
+  const router = useRouter()
 
   const [toggleNav, settoggleNav] = useState(false)
 
@@ -24,10 +26,12 @@ const Header = ({ navTheme }: Props) => {
           <div onClick={handleNav}>
             MENU
           </div>
-          <div>
+          <div >
             EXPERIENCES
           </div>
-          <div>
+          <div onClick={() => {
+            router.push('/login')
+          }}>
             LOGIN
           </div>
         </div>

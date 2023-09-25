@@ -7,7 +7,7 @@ import Button from '../__components/buttons/Button'
 
 const Login = () => {
   return (
-    <div className='bg-white  flex justify-center px-5 sm:px-0'>
+    <div className='bg-white  flex justify-center px-5 sm:px-0' style={{width: '100vw', height: '100vh'}}>
       <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[170px]">
 
         <div className="mainImage text-center">
