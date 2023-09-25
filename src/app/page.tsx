@@ -9,9 +9,14 @@ import LandingPage from "./landingPage/page";
 import LandingTransition from "./landingPageTransition/page";
 import Category from "./categories/page";
 import CategoriesList from "./categoriesList/page";
+import PhilosophyPage from './philosophy/page';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
+import localFont from 'next/font/local'
+
+
+const myFont = localFont({ src: './__assets/fonts/Craftwork Grotesk/MDGroteskRegular.woff' })
 
 export default function Home() {
   const router = useRouter(); // Initialize the router hook
@@ -62,18 +67,23 @@ export default function Home() {
       <section className="item1">
         <LandingTransition />
       </section>
-      <section className="item1">
-        <Register />
-      </section>
-      <section className="item1">
-        <Login />
-      </section>
+
       <section className="item1">
         <Category />
       </section>
       <section className="item1">
         <CategoriesList />
       </section>
+      <section className="item1">
+        <PhilosophyPage />
+      </section>
+      <section className="item1">
+        <Register />
+      </section>
+      <section className="item1">
+        <Login />
+      </section>
+
     </div>
   );
 }
