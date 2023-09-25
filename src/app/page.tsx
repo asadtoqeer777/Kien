@@ -4,8 +4,8 @@ import CategoriesList from './categories/CategoriesList';
 import LandingPage from './landingPage/LandingPage';
 import LandingTransition from './landingPage/LandingTransition';
 import Category from './categories/Category';
-
 import Register from './register';
+import Connect from './connect/page';
 
 export default function Home() {
   return (
@@ -15,7 +15,8 @@ export default function Home() {
       {/* <LandingPage /> */}
       {/* <LandingTransition /> */}
       {/* <Category /> */}
-      <CategoriesList />
+      {/* <CategoriesList /> */}
+      <Connect />
     </div>
   )
 }

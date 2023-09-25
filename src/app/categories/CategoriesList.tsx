@@ -12,7 +12,7 @@ import style from "./style.module.css"
 const CategoriesList = () => {
   return (
     <div>
-      <Header />
+      <Header navTheme={"bg-[#E3FF00]"} />
       <div className="">
         <div className="mt-[20px]">
           <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black">
