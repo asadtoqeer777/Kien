@@ -14,6 +14,7 @@ const LandingTransition = () => {
         width: "100%",
         height: "100%"
       }}
+      className='relative'
     >
       <Header navTheme={"bg-[#E3FF00]"} />
       <div className="flex justify-center items-center">

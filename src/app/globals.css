@@ -6,6 +6,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: 'Craftwork Grotesk';
+  src: url('./__assets/fonts/Craftwork Grotesk/MDGroteskRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
 @layer utilities {
   @variants responsive {
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -22,19 +29,19 @@
   }
 }
 
-
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.custom-img {
+  position: relative !important;
+  height: unset !important;
+  width: 100% !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.calc-width {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .calc-width {
+    width: calc(100% - 160px);
   }
 }
 
@@ -42,7 +49,6 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
 
 }
 

@@ -9,9 +9,14 @@ import LandingPage from "./landingPage/page";
 import LandingTransition from "./landingPageTransition/page";
 import Category from "./categories/page";
 import CategoriesList from "./categoriesList/page";
+import PhilosophyPage from './philosophy/page';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
+import localFont from 'next/font/local'
+
+
+const myFont = localFont({ src: './__assets/fonts/Craftwork Grotesk/MDGroteskRegular.woff' })
 
 export default function Home() {
   const router = useRouter(); // Initialize the router hook
@@ -29,7 +34,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".container1",
         pin: true,
-        scrub: 1,
+        scrub: 0.01,
         snap: 1 / (sections.length - 1),
         end: endValue,
         onLeave: () => {
@@ -43,12 +48,12 @@ export default function Home() {
     const landingImage = document.getElementById("landing-logo");
     if (landingImage) {
       gsap.to(landingImage, {
-        scale: 0.25, // Adjust the scale value as needed
+        scale: 0.01, // Adjust the scale value as needed
         scrollTrigger: {
           trigger: landingImage,
           start: "center center", // When to start the zoom-out
           end: "bottom center", // When to end the zoom-out
-          scrub: 1, // Smooth scrolling effect
+          scrub: 0.01, // Smooth scrolling effect
         },
       });
     }
@@ -62,18 +67,23 @@ export default function Home() {
       <section className="item1">
         <LandingTransition />
       </section>
-      <section className="item1">
-        <Register />
-      </section>
-      <section className="item1">
-        <Login />
-      </section>
+
       <section className="item1">
         <Category />
       </section>
       <section className="item1">
         <CategoriesList />
       </section>
+      <section className="item1">
+        <PhilosophyPage />
+      </section>
+      {/* <section className="item1">
+        <Register />
+      </section>
+      <section className="item1">
+        <Login />
+      </section> */}
+
     </div>
   );
 }

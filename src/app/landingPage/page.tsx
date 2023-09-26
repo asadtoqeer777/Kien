@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className='relative'>
       <Header navTheme={"bg-[#E3FF00]"} />
       <div className="flex justify-center items-center">
         <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] ' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />

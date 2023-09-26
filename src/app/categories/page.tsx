@@ -29,8 +29,8 @@ const Category = () => {
           <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black pb-5">
             <div className="col-span-2">
               <div className="flex items-center gap-2 ml-4 mt-2">
-                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[20px] rounded-[19.5px] text-[12px]"} btntext={"USER LOGIN"} />
-                <Button btnClasses={"bg-black text-white border-[1px] border-black w-[122px] h-[20px] rounded-[19.5px] text-[12px]"} btntext={"ENROLL NOW"} />
+                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"USER LOGIN"} />
+                <Button btnClasses={"bg-black text-white border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"ENROLL NOW"} />
 
               </div>
             </div>
