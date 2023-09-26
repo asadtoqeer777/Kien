@@ -8,7 +8,8 @@ import Button from '../__components/buttons/Button';
 import philosophyPoster from '../__assets/images/svgs/philosophy-poster.svg'
 import plusIcon from '../__assets/images/svgs/plusIconfilled.svg'
 import footerLogo from '../__assets/images/svgs/footerLogo.svg'
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
+import CountUp from 'react-countup'
 import backArrowCircle from '../__assets/images/svgs/back-arrow-circle.svg'
 
 const expListings = [
@@ -37,7 +38,7 @@ const PhilosophyPage = () => {
     const [selectedExp, setSelectedExp] = useState<number>(expListings.length - 1)
 
     return (
-        <div className='bg-black'>
+        <div className='bg-black w-[100vw] h-[100vh]'>
             <section className='h-screen w-full overflow-scroll sticky top-0'>
                 <Header navTheme={'bg-primary text-white z-20'} />
                 <div className='bg-white pt-10'>
@@ -62,7 +63,7 @@ const PhilosophyPage = () => {
                 </div>
 
                 <div className='bg-black text-white'>
-                    <Container styles="py-3">
+                    {/* <Container styles="py-3">
                         <p className='text-xs mb-1'>(04)</p>
                         <h1 className='2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold'>
                             Your personality, your destinations, your experiences : <br />
@@ -82,11 +83,11 @@ const PhilosophyPage = () => {
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                    </Container>
+                    </Container> */}
                 </div>
             </section>
 
-            <section className='min-h-screen h-full w-full bg-black sticky top-0 text-white'>
+            <section className=' bg-black sticky top-0 text-white'>
                 <Container styles="h-full lg:py-3 pt-3 pb-32">
                     <p className='text-xs mb-1'>(04)</p>
                     <h1 className='2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold'>

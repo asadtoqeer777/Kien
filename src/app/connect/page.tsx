@@ -1,4 +1,7 @@
+"use client"
+
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import Header from '../__components/header/Header'
 import Image from 'next/image'
 import backArrow from "../__assets/images/svgs/backArrow.svg"
@@ -8,6 +11,7 @@ import FooterLogo from "../__assets/images/svgs/footerLogo.svg"
 import Container from '../__components/container/Container'
 
 const Connect = () => {
+  const router = useRouter()
   return (
     <div>
       <div className="h-[100%]">
@@ -23,7 +27,11 @@ const Connect = () => {
               <div className="relative h-[90vh] sm:h-[85vh] md:h-[81vh] xl:h-[82vh] 2xl:h-[85vh]">
                 <div className="grid grid-cols-12">
                   <div className="col-span-4 lg:col-span-5">
-                    <Image className='w-[50px] h-[50px] 2xl:h-[151px] xl:h-[100px] 2xl:w-[151px] xl:w-[100px] lg:h-[80px] lg:w-[80px] md:h-[60px] md:w-[60px]' src={backArrow} alt='back arrow' />
+                    <div>
+                      <Image className='cursor-pointer w-[50px] h-[50px] 2xl:h-[151px] xl:h-[100px] 2xl:w-[151px] xl:w-[100px] lg:h-[80px] lg:w-[80px] md:h-[60px] md:w-[60px]' src={backArrow} alt='back arrow' onClick={() => {
+                        router.push("/")
+                      }} />
+                    </div>
                   </div>
                   <div className="col-span-8 lg:col-span-7">
                     <div className="mt-5 border-y-[1px] border-black flex justify-between items-center pr-4 2xl:pr-4  xl:pr-3">

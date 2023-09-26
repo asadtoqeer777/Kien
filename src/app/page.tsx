@@ -34,7 +34,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".container1",
         pin: true,
-        scrub: 1,
+        scrub: 0.01,
         snap: 1 / (sections.length - 1),
         end: endValue,
         onLeave: () => {
@@ -48,12 +48,12 @@ export default function Home() {
     const landingImage = document.getElementById("landing-logo");
     if (landingImage) {
       gsap.to(landingImage, {
-        scale: 0.25, // Adjust the scale value as needed
+        scale: 0.01, // Adjust the scale value as needed
         scrollTrigger: {
           trigger: landingImage,
           start: "center center", // When to start the zoom-out
           end: "bottom center", // When to end the zoom-out
-          scrub: 1, // Smooth scrolling effect
+          scrub: 0.01, // Smooth scrolling effect
         },
       });
     }
@@ -77,12 +77,12 @@ export default function Home() {
       <section className="item1">
         <PhilosophyPage />
       </section>
-      <section className="item1">
+      {/* <section className="item1">
         <Register />
       </section>
       <section className="item1">
         <Login />
-      </section>
+      </section> */}
 
     </div>
   );

@@ -32,13 +32,13 @@ const CategoriesList = () => {
           <div className="pb-5">
             <div className="flex mx-4 mt-2 justify-between gap-2 flex-wrap">
               <div className="flex items-center gap-2 ">
-                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[20px] rounded-[19.5px] text-[12px]"} btntext={"USER LOGIN"} />
-                <Button btnClasses={"bg-black text-white border-[1px] border-black w-[122px] h-[20px] rounded-[19.5px] text-[12px]"} btntext={"ENROLL NOW"} />
+                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"USER LOGIN"} />
+                <Button btnClasses={"bg-black text-white border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"ENROLL NOW"} />
 
               </div>
               <div className="flex items-center gap-2 ">
                 <Image src={DarkPlus} alt='DarkPlus' />
-                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[20px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
+                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
               </div>
             </div>
 
@@ -59,8 +59,8 @@ const CategoriesList = () => {
         </div>
 
       </div>
-      <div className="footerArea flex justify-end mt-3 xl:mt-4">
-        <Image className='w-[70px] sm:w-[90px] md:w-[100px] lg:w-[150px] xl:w-[200px]' src={footerLogo} alt='footerLogo' />
+      <div className="footerArea flex justify-end mt-3 xl:mt-1">
+        <Image className='w-[70px] sm:w-[90px] md:w-[100px] lg:w-[150px] xl:w-[200px] 2xl:w-[300px]' src={footerLogo} alt='footerLogo' />
       </div>
     </div>
   )
