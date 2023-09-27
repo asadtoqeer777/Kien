@@ -8,7 +8,7 @@ import style from "./style.module.css"
 
 const Category = () => {
   return (
-    <div className='w-[100vw] h-[100vh]'>
+    <div className='w-[100vw] h-[100vh] bg-white'>
       <Header navTheme={"bg-[#E3FF00]"} />
       <div className="">
         <div className="mt-[30px]">

@@ -11,7 +11,7 @@ import style from "../categories/style.module.css"
 
 const CategoriesList = () => {
   return (
-    <div className='w-[100vw] h-[100vh]'>
+    <div className='w-[100vw] h-[100vh] bg-white'>
       <Header navTheme={"bg-[#E3FF00]"} />
       <div className="">
         <div className="mt-[30px]">

@@ -6,13 +6,14 @@ import Image from 'next/image'
 
 const LandingPage = () => {
   return (
-    <div className='relative'>
+    <div style={{width: '100vw', height: '100vh'}} className='relative'>
       <Header navTheme={"bg-[#E3FF00]"} />
-      <div className="flex justify-center items-center">
-        <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] ' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />
+      <div className="flex justify-center items-center"  >
+        <Image className='absolute top-[50%] left-[50%] w-[280px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] landing-logo' style={{ transform: "translate(-50%, -50%)" }} src={logo} alt='Logo' />
       </div>
-      <div className="footerArea h-screen flex items-end">
+      <div className="footerArea h-screen flex items-end landing-logo">
         <div>
+          <div>
           <div className="flex px-[14px] sm:px-[34px]">
             <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
               <div className="">
@@ -45,6 +46,7 @@ const LandingPage = () => {
             <div className="">
               EXPERIENCES
             </div>
+          </div>
           </div>
 
           <div className="w-[100vw] overflow-x-auto  mt-5 flex items-center gap-[45px] no-scrollbar">
