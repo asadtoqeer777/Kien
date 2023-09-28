@@ -11,8 +11,8 @@ import style from "../categories/style.module.css"
 
 const CategoriesList = () => {
   return (
-    <div className='w-[100vw] h-[100vh] bg-white'>
-      <Header navTheme={"bg-[#E3FF00]"} />
+    <div className='w-[100vw] h-[100vh] overflow-y-auto bg-white no-scrollbar'>
+
       <div className="">
         <div className="mt-[30px]">
           <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black">

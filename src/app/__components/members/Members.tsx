@@ -8,7 +8,7 @@ import Button from '../buttons/Button'
 const MembersPage = () => {
   return (
     <div>
-      <Header navTheme={"bg-[#E3FF00]"} />
+
       <div className="grid grid-cols-11 mt-[40px] uppercase">
         <div className="col-span-6 relative ">
           <div className="w-[1px] h-[100%] bg-black absolute top-[-10px] right-0"></div>

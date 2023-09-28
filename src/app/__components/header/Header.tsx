@@ -7,21 +7,18 @@ import NavArrow from "../../__assets/images/pngs/navArrow.png"
 
 interface Props {
   navTheme: string,
+  toggleNav: boolean,
+  handleNav: any
 }
 
-const Header = ({ navTheme }: Props) => {
+const Header = ({ navTheme, toggleNav, handleNav }: Props) => {
   const router = useRouter()
 
-  const [toggleNav, settoggleNav] = useState(false)
-
-  const handleNav = () => {
-    settoggleNav((toggleNav) => !toggleNav)
-  }
 
   return (
-    <header>
+    <header className='relative w-full'>
 
-      <div className={toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] fixed top-0 left-0 z-10 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
+      <div className={toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] absolute top-0 left-0 z-10 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
         <div onClick={handleNav}>
           MENU
         </div>
@@ -36,7 +33,7 @@ const Header = ({ navTheme }: Props) => {
         </div>
       </div>
 
-      <div className={toggleNav ? `h-auto ${navTheme}  pl-[25px] sm:pl-[35px] pr-[50px] w-[auto] sm:w-[620px] md:w-[690px] lg:w-[700px] xl:w-[790px] pb-[57px] transition duration-500 ease-out fixed top-0 left-0 z-10` : "h-0 w-0 transition duration-1000 ease-out"}>
+      <div className={toggleNav ? `h-auto ${navTheme}  pl-[25px] sm:pl-[35px] pr-[50px] w-[auto] sm:w-[620px] md:w-[690px] lg:w-[700px] xl:w-[790px] pb-[57px] transition duration-500 ease-out absolute top-0 left-0 z-50` : "h-0 w-0 transition duration-1000 ease-out"}>
         <div className={toggleNav ? "" : "hidden"} >
 
           <div className=" text-sm not-italic font-normal pt-2 cursor-pointer" onClick={handleNav}>

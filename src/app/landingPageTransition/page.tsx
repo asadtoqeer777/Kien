@@ -16,7 +16,7 @@ const LandingTransition = () => {
       }}
       className='relative'
     >
-      <Header navTheme={"bg-[#E3FF00]"} />
+
       <div className="flex justify-center items-center">
         <div className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center" style={{
           transform: "translate(-50%, -50%)"

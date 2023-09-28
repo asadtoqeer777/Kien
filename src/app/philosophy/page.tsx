@@ -8,8 +8,7 @@ import Button from '../__components/buttons/Button';
 import philosophyPoster from '../__assets/images/svgs/philosophy-poster.svg'
 import plusIcon from '../__assets/images/svgs/plusIconfilled.svg'
 import footerLogo from '../__assets/images/svgs/footerLogo.svg'
-// import CountUp from 'react-countup';
-import CountUp from 'react-countup'
+import CountUp from 'react-countup';
 import backArrowCircle from '../__assets/images/svgs/back-arrow-circle.svg'
 
 const expListings = [
@@ -38,9 +37,9 @@ const PhilosophyPage = () => {
     const [selectedExp, setSelectedExp] = useState<number>(expListings.length - 1)
 
     return (
-        <div className='bg-black w-[100vw] h-[100vh]'>
-            <section className='h-screen w-full overflow-scroll sticky top-0'>
-                <Header navTheme={'bg-primary text-white z-20'} />
+        <div className='bg-black w-[100vw] h-[100vh] overflow-y-auto'>
+            <section className=' w-full overflow-scroll sticky top-0'>
+
                 <div className='bg-white pt-10'>
                     <Container styles="uppercase">
                         <div className='flex justify-between items-center'>

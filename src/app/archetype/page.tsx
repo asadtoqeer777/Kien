@@ -11,7 +11,7 @@ import Container from '../__components/container/Container';
 const ArchetypePage = () => {
   return (
     <div>
-      <Header navTheme={"bg-[#E3FF00]"} />
+
       <Container>
 
         <div className="">

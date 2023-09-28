@@ -15,7 +15,7 @@ const Connect = () => {
   return (
     <div>
       <div className="h-[100%]">
-        <Header navTheme={"bg-white"} />
+
         <div className="h-[100vh] bg-black pt-[30px] sm:pt-[50px] md:pt-[80px] xl:pt-[120px] relative">
           <Container>
             <div>

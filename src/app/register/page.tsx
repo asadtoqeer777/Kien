@@ -7,7 +7,7 @@ import Button from '../__components/buttons/Button'
 
 const Register = () => {
   return (
-    <div className='bg-black h-auto p-5 sm:p-0' style={{width: '100vw', height: '100vh'}}>
+    <div className='bg-black p-5 sm:p-0 overflow-y-auto h-[100vh] w-[100vw] no-scrollbar'>
       <div className="container flex justify-center m-auto h-[100vh]">
         <div className=' mb-[25px] 2xl:mb-[225px]'>
 
