@@ -7,19 +7,22 @@ import NavArrow from "../../__assets/images/pngs/navArrow.png"
 
 interface Props {
   navTheme: string,
-  toggleNav: boolean,
-  handleNav: any
+  toggleNav?: boolean,
+  handleNav?: any
 }
 
 const Header = ({ navTheme, toggleNav, handleNav }: Props) => {
+  const [activeNav, setActiveNav] = useState(false);
   const router = useRouter()
 
-
+  const handleNavInternal = () => {
+    setActiveNav((activeNav) => !activeNav)
+  };
   return (
     <header className='relative w-full'>
 
-      <div className={toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] absolute top-0 left-0 z-10 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
-        <div onClick={handleNav}>
+      <div className={activeNav || toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] absolute top-0 left-0 z-10 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
+        <div onClick={handleNav || handleNavInternal}>
           MENU
         </div>
         <div >
@@ -27,16 +30,16 @@ const Header = ({ navTheme, toggleNav, handleNav }: Props) => {
         </div>
         <div onClick={() => {
           router.push('/login')
-          handleNav()
+          handleNav() || handleNavInternal()
         }}>
           LOGIN
         </div>
       </div>
 
-      <div className={toggleNav ? `h-auto ${navTheme}  pl-[25px] sm:pl-[35px] pr-[50px] w-[auto] sm:w-[620px] md:w-[690px] lg:w-[700px] xl:w-[790px] pb-[57px] transition duration-500 ease-out absolute top-0 left-0 z-50` : "h-0 w-0 transition duration-1000 ease-out"}>
-        <div className={toggleNav ? "" : "hidden"} >
+      <div className={ activeNav || toggleNav ? `h-auto ${navTheme}  pl-[25px] sm:pl-[35px] pr-[50px] w-[auto] sm:w-[620px] md:w-[690px] lg:w-[700px] xl:w-[790px] pb-[57px] transition duration-500 ease-out absolute top-0 left-0 z-50` : "h-0 w-0 transition duration-1000 ease-out"}>
+        <div className={toggleNav || activeNav  ? "" : "hidden"} >
 
-          <div className=" text-sm not-italic font-normal pt-2 cursor-pointer" onClick={handleNav}>
+          <div className=" text-sm not-italic font-normal pt-2 cursor-pointer" onClick={handleNav || handleNavInternal}>
             MENU
           </div>
 
@@ -67,7 +70,7 @@ const Header = ({ navTheme, toggleNav, handleNav }: Props) => {
 
           <div className='cursor-pointer' onClick={() => {
             router.push('/')
-            handleNav()
+            handleNav() || handleNavInternal()
           }}>
             <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
@@ -95,7 +98,7 @@ const Header = ({ navTheme, toggleNav, handleNav }: Props) => {
 
           <div className='cursor-pointer' onClick={() => {
             router.push('/connect')
-            handleNav()
+            handleNav() || handleNavInternal()
           }}>
             <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">

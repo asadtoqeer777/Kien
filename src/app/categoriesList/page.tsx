@@ -1,22 +1,30 @@
 import React from 'react'
 import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
-import footerLogo from "../__assets/images/pngs/footerLogo.png"
+import footerLogo from "../__assets/images/pngs/logo.png";
 import Image from 'next/image'
 import Button from '../__components/buttons/Button'
 import DarkPlus from "../__assets/images/svgs/darkPlus.svg"
 import Card from '../__components/card/Card'
 import Tick from "../__assets/images/pngs/navArrow.png"
 import style from "../categories/style.module.css"
+import CatagoryButton from '../__components/catagoryButton/CatagoryButton'
+import CategoriesLogo from "../__assets/images/pngs/categoryLogo.png";
 
 const CategoriesList = () => {
   return (
-    <div className='w-[100vw] h-[100vh] overflow-y-auto bg-white no-scrollbar'>
+    <div className='w-[100vw] h-[100vh] overflow-y-auto bg-white no-scrollbar relative'>
 
       <div className="">
         <div className="mt-[30px]">
           <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black">
-            <div className="col-span-2"></div>
+          <div className="col-span-2 px-3">
+              <Image
+                src={CategoriesLogo}
+                alt=""
+                className="w-[100px] 2xl:w-[210px] xl:w-[180px] lg:w-[170px] md:w-[140px] sm:w-[120px]"
+              />
+            </div>
             <div className={`${style.categoryHeading} col-span-4 `}>
               <div>
                 Peripatetic
@@ -59,8 +67,50 @@ const CategoriesList = () => {
         </div>
 
       </div>
-      <div className="footerArea flex justify-end mt-3 xl:mt-1">
-        <Image className='w-[70px] sm:w-[90px] md:w-[100px] lg:w-[150px] xl:w-[200px] 2xl:w-[300px]' src={footerLogo} alt='footerLogo' />
+      <div className="absolute bottom-3 left-3 w-full flex pr-6 justify-between ">
+        <div className="mb-2 sm:mb-0">
+
+        <div className="gap-2 flex flex-wrap mb-2 items-end">
+
+            <CatagoryButton
+              btnLabelDetail={"For the bold adventurer"}
+              btnLabel={"VITALIST"}
+            />
+
+
+            <CatagoryButton
+              btnLabelDetail={"For the bold adventurer"}
+              btnLabel={"CONTEMPLATIVE"}
+            />
+
+        </div>
+        <div className="gap-2 flex flex-wrap items-end">
+
+            <CatagoryButton
+              btnLabelDetail={"For the bold adventurer"}
+              btnLabel={"EPICUREAN"}
+            />
+
+
+            <CatagoryButton
+              btnLabelDetail={"For the bold adventurer"}
+              btnLabel={"MELANCHOLIC"}
+            />
+
+        </div>
+        </div>
+
+
+      <div className="flex items-end gap-1 w-max ml-auton ">
+        <Image
+          src={footerLogo}
+          alt="footer-logo"
+          className="w-[70px] sm:w-[90px] md:w-[100px] lg:w-[150px] xl:w-[150px] 2xl:w-[200px]"
+        />
+        <div className="flex items-end gap-1 leading-4">
+          <span>© </span>2023
+        </div>
+      </div>
       </div>
     </div>
   )
