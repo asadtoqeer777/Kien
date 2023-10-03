@@ -19,7 +19,7 @@ const LandingTransition = () => {
       >
         <div className="flex justify-center items-center">
           <div
-            className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center"
+            className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center landingTransitionImage"
             style={{
               transform: "translate(-50%, -50%)",
             }}

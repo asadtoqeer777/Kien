@@ -59,12 +59,34 @@ export default function Home() {
         // Calculate the activeNav based on the scroll position
         const scrollPercent = self.progress * 100;
         const footer = document.querySelector(".landingPageFooter") as HTMLElement | null;
-        // const LandingImageMain = document.querySelector(".landingPageMainImage") as HTMLElement | null;
+        const LandingImageMain = document.querySelector(".LandingPage") as HTMLElement | null;
+        const landingTransitionImage = document.querySelector(".landingTransitionImage") as HTMLElement | null;
+        console.log("landingTransitionImage", landingTransitionImage);
+        
 
         if (scrollPercent > 1) {
       
-          if (footer) {
+          if (footer && LandingImageMain) {
             footer.style.display = 'none';
+          }
+          if (scrollPercent > 19) {
+            if (LandingImageMain) {
+              LandingImageMain.style.zIndex = '-1';
+            }
+          }else {
+            if (LandingImageMain) {
+              LandingImageMain.style.zIndex = '1';
+            }
+          }
+
+          if (scrollPercent > 19) {
+            if (landingTransitionImage) {
+              landingTransitionImage.style.alignItems = 'end';
+            }
+          }else {
+            if (landingTransitionImage) {
+              landingTransitionImage.style.alignItems = "center";
+            }
           }
         } else {
           if (footer) {
