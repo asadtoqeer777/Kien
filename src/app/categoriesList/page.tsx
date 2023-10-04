@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Header from '../__components/header/Header'
 import logo from "../__assets/images/pngs/logo.png"
 import footerLogo from "../__assets/images/pngs/logo.png";
@@ -12,6 +14,15 @@ import CatagoryButton from '../__components/catagoryButton/CatagoryButton'
 import CategoriesLogo from "../__assets/images/pngs/categoryLogo.png";
 
 const CategoriesList = () => {
+  const [toggleBtn, setToggleBtn] = useState(null);
+
+  const handleToggleBtn = (catNum : any) => {
+    if(catNum === toggleBtn) {
+      setToggleBtn(null)
+    }else{
+      setToggleBtn(catNum)
+    }
+  };
   return (
     <div className='w-[100vw] h-[100vh] overflow-y-auto bg-white no-scrollbar relative'>
 
@@ -70,31 +81,47 @@ const CategoriesList = () => {
       <div className="absolute bottom-3 left-3 w-full flex pr-6 justify-between ">
         <div className="mb-2 sm:mb-0">
 
-        <div className="gap-2 flex flex-wrap mb-2 items-end">
+        <div className="gap-2 flex flex-wrap mb-2 items-end w-[350px]">
 
             <CatagoryButton
               btnLabelDetail={"For the bold adventurer"}
               btnLabel={"VITALIST"}
+              clickFcun = {
+                () => handleToggleBtn(1)
+              }
+              toggleBtn={toggleBtn === 1}
             />
 
 
             <CatagoryButton
               btnLabelDetail={"For the bold adventurer"}
               btnLabel={"CONTEMPLATIVE"}
+              clickFcun = {
+                () => handleToggleBtn(2)
+              }
+              toggleBtn={toggleBtn === 2}
             />
 
-        </div>
-        <div className="gap-2 flex flex-wrap items-end">
+        {/* </div>
+        <div className="gap-2 flex flex-wrap items-end"> */}
 
             <CatagoryButton
               btnLabelDetail={"For the bold adventurer"}
               btnLabel={"EPICUREAN"}
+              clickFcun = {
+                () => handleToggleBtn(3)
+              }
+              toggleBtn={toggleBtn === 3}
             />
 
 
             <CatagoryButton
               btnLabelDetail={"For the bold adventurer"}
               btnLabel={"MELANCHOLIC"}
+              clickFcun = {
+                () => handleToggleBtn(4)
+              }
+              toggleBtn={toggleBtn === 4}
             />
 
         </div>

@@ -1,62 +1,71 @@
-import React, { useRef, useEffect } from 'react';
-import Head from 'next/head';
+import React from "react";
+import Image from "next/image";
+import footerLogo from "../../__assets/images/svgs/footerLogo.svg";
+import Marquee from "react-fast-marquee";
 
-const AutoScrollFooter = () => {
-  const tickerRef = useRef<HTMLDivElement | null>(null); // Specify the type explicitly
-
-  useEffect(() => {
-    const tickerElement = tickerRef.current;
-
-    if (!tickerElement) return;
-
-    const startScroll = () => {
-      tickerElement.style.animation = 'scrollTicker 20s linear infinite';
-    };
-
-    const stopScroll = () => {
-      tickerElement.style.animation = 'none';
-      setTimeout(startScroll, 10); // Restart the animation after a brief delay
-    };
-
-    startScroll();
-
-    return () => {
-      stopScroll();
-    };
-  }, []);
-
-  return (
-    <div className="stb_line_single relative whitespace-no-wrap p-0 flex flex-row overflow-hidden" ref={tickerRef}>
-      {/* ... your anchor elements */}
-	    <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 1&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 2&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 3&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 4&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 5&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 6&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 7&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 8&nbsp; &nbsp; - </span>
-      </a>
-      <a href="#" className="stb-item p-0 text-6xl inline-block mr-20 text-blue-500 font-normal no-underline">
-        <span>Simple 9&nbsp; &nbsp; - &nbsp; &nbsp;</span>
-      </a>
-    </div>
-  );
-};
+const AutoScrollFooter = () => (
+  <Marquee >
+     <div className=" flex items-center gap-[45px]">
+          <div className="flex gap-1">
+            <Image src={footerLogo} alt="footer logo" />
+            <div>©</div>
+            <div className="text-[36px]">2023</div>
+          </div>
+          <div className="flex ml-12">
+            <div className="text-[23px] font-semibold uppercase">traveler</div>
+          </div>
+          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
+            <div className="">Vital</div>
+            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
+            <div className="">Expressive Driven</div>
+          </div>
+        </div>
+        <div className=" flex items-center gap-[45px]">
+          <div className="flex gap-1">
+            <Image src={footerLogo} alt="footer logo" />
+            <div>©</div>
+            <div className="text-[36px]">2023</div>
+          </div>
+          <div className="flex ml-12">
+            <div className="text-[23px] font-semibold uppercase">traveler</div>
+          </div>
+          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
+            <div className="">Vital</div>
+            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
+            <div className="">Expressive Driven</div>
+          </div>
+        </div>
+        <div className=" flex items-center gap-[45px]">
+          <div className="flex gap-1">
+            <Image src={footerLogo} alt="footer logo" />
+            <div>©</div>
+            <div className="text-[36px]">2023</div>
+          </div>
+          <div className="flex ml-12">
+            <div className="text-[23px] font-semibold uppercase">traveler</div>
+          </div>
+          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
+            <div className="">Vital</div>
+            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
+            <div className="">Expressive Driven</div>
+          </div>
+        </div>
+        <div className=" flex items-center gap-[45px]">
+          <div className="flex gap-1">
+            <Image src={footerLogo} alt="footer logo" />
+            <div>©</div>
+            <div className="text-[36px]">2023</div>
+          </div>
+          <div className="flex ml-12">
+            <div className="text-[23px] font-semibold uppercase">traveler</div>
+          </div>
+          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
+            <div className="">Vital</div>
+            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
+            <div className="">Expressive Driven</div>
+          </div>
+        </div>
+  </Marquee>
+);
 
 export default AutoScrollFooter;

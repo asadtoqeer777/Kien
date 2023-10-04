@@ -12,7 +12,6 @@ import footerLogo from "../__assets/images/pngs/logoWhite.png";
 const ArchetypePage = () => {
   return (
     <div className="relative h-screen w-screen">
-      <Header navTheme="bg-secondary " />
 
       <div className=" h-[40vh] bg-white">
         <h1

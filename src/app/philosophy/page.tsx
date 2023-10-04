@@ -132,7 +132,7 @@ const PhilosophyPage = () => {
 
                                     <div className='2xl:text-[255px] xl:text-[200px] sm:text-[140px] text-[110px]  2xl:leading-[13rem] xl:leading-[12rem] leading-[10rem] 2xl:max-w-[630px] font-bold'>
                                         {data.count < 10 ? '00' : data.count < 100 && 0}
-                                        <CountUp end={data.count} scrollSpyOnce={true} enableScrollSpy={true} />
+                                        <CountUp end={data.count}  enableScrollSpy={true} />
                                         <span>{data.moreThanCount && '+'}</span>
                                     </div>
                                     <p className='mt-4 lg:text-[15px] sm:text-sm text-[10px]'>{data.info}</p>

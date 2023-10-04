@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../__components/header/Header";
 import logo from "../__assets/images/pngs/logo.png";
-import footerLogo from "../__assets/images/svgs/footerLogo.svg";
 import Image from "next/image";
+import AutoScrollFooter from "../__components/autoScrollFooter/AutoScrollFooter";
 
 const LandingTransition = () => {
   return (
@@ -71,66 +71,7 @@ const LandingTransition = () => {
 
       </div>
       <div className="w-[100vw] overflow-x-auto  mt-5 flex items-center gap-[45px] no-scrollbar absolute bottom-0 left-0 z-20">
-        <div className=" flex items-center gap-[45px]">
-          <div className="flex gap-1">
-            <Image src={footerLogo} alt="footer logo" />
-            <div>©</div>
-            <div className="text-[36px]">2023</div>
-          </div>
-          <div className="flex ml-12">
-            <div className="text-[23px] font-semibold uppercase">traveler</div>
-          </div>
-          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
-            <div className="">Vital</div>
-            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
-            <div className="">Expressive Driven</div>
-          </div>
-        </div>
-        <div className=" flex items-center gap-[45px]">
-          <div className="flex gap-1">
-            <Image src={footerLogo} alt="footer logo" />
-            <div>©</div>
-            <div className="text-[36px]">2023</div>
-          </div>
-          <div className="flex ml-12">
-            <div className="text-[23px] font-semibold uppercase">traveler</div>
-          </div>
-          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
-            <div className="">Vital</div>
-            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
-            <div className="">Expressive Driven</div>
-          </div>
-        </div>
-        <div className=" flex items-center gap-[45px]">
-          <div className="flex gap-1">
-            <Image src={footerLogo} alt="footer logo" />
-            <div>©</div>
-            <div className="text-[36px]">2023</div>
-          </div>
-          <div className="flex ml-12">
-            <div className="text-[23px] font-semibold uppercase">traveler</div>
-          </div>
-          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
-            <div className="">Vital</div>
-            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
-            <div className="">Expressive Driven</div>
-          </div>
-        </div>
-        <div className=" flex items-center gap-[45px]">
-          <div className="flex gap-1">
-            <Image src={footerLogo} alt="footer logo" />
-            <div>©</div>
-            <div className="text-[36px]">2023</div>
-          </div>
-          <div className="flex ml-12">
-            <div className="text-[23px] font-semibold uppercase">traveler</div>
-          </div>
-          <div className="flex items-baseline gap-1 text-[13px] font-semibold w-36">
-            <div className="">Vital</div>
-            <div className="h-[6px] w-[6px] bg-[#2667CF] mb-[2px]"></div>
-            <div className="">Expressive Driven</div>
-          </div>
-        </div>
+        <AutoScrollFooter/>
       </div>
     </div>
   );
