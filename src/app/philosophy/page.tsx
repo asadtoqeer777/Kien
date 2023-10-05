@@ -12,6 +12,11 @@ import footerLogo from '../__assets/images/svgs/footerLogo.svg'
 import CountUp from 'react-countup';
 import backArrowCircle from '../__assets/images/svgs/back-arrow-circle.svg'
 
+
+interface Props{
+    scrollCheck : boolean
+}
+
 const expListings = [
     {
         title: 'Testimonials',
@@ -33,14 +38,15 @@ const expListings = [
     },
 ]
 
-const PhilosophyPage = () => {
+
+const PhilosophyPage = ({scrollCheck} : Props) => {
 
     const router = useRouter()
 
     const [selectedExp, setSelectedExp] = useState<number>(expListings.length - 1)
 
     return (
-        <div className='bg-black w-[100vw] h-[100vh] philosophyMain'>
+        <div className={ scrollCheck ? "bg-black w-[100vw] h-[100vh] philosophyMain " : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto"}>
             <section className=' w-full overflow-scroll sticky top-0'>
 
                 <div className='bg-white pt-10'>

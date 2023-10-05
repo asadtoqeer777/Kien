@@ -304,7 +304,7 @@ export default function Home() {
         </section>
         <section className={`panel`} data-pin="true">
           <div className="PhilosophyPage">
-          <PhilosophyPage />
+          <PhilosophyPage scrollCheck = {true}/>
           </div>
         </section>
       </div>
