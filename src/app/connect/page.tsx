@@ -29,8 +29,8 @@ const Connect = () => {
                   <div className="col-span-4 lg:col-span-5">
                     <div>
                       <Image className='cursor-pointer w-[50px] h-[50px] 2xl:h-[151px] xl:h-[100px] 2xl:w-[151px] xl:w-[100px] lg:h-[80px] lg:w-[80px] md:h-[60px] md:w-[60px]' src={backArrow} alt='back arrow' onClick={() => {
-                        router.push("/")
-                      }} />
+                                        router.back()
+                                    }} />
                     </div>
                   </div>
                   <div className="col-span-8 lg:col-span-7">

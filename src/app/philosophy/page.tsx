@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Header from '../__components/header/Header'
 import Container from '../__components/container'
 import Image from 'next/image'
@@ -34,16 +35,20 @@ const expListings = [
 
 const PhilosophyPage = () => {
 
+    const router = useRouter()
+
     const [selectedExp, setSelectedExp] = useState<number>(expListings.length - 1)
 
     return (
-        <div className='bg-black w-[100vw] h-[100vh] overflow-y-auto'>
+        <div className='bg-black w-[100vw] h-[100vh] philosophyMain'>
             <section className=' w-full overflow-scroll sticky top-0'>
 
                 <div className='bg-white pt-10'>
                     <Container styles="uppercase">
                         <div className='flex justify-between items-center'>
-                            <div>
+                            <div className='cursor-pointer' onClick={() => {
+                                        router.back()
+                                    }}>
                                 <Image src={backArrowCircle} alt='arrow-icon' className='custom-img' fill />
                             </div>
                             <div className='hidden xl:max-w-sm max-w-xs w-full sm:flex items-end'>
@@ -162,8 +167,17 @@ const PhilosophyPage = () => {
                                     <div className='md:block hidden mt-4 h-[22px] w-[22px] rounded-full bg-secondary cursor-pointer'></div>
                                 </div>
                                 <div className='flex items-center flex-wrap gap-4 mt-20'>
-                                    <Button btntext="CONNECT" btnClasses="text-white border border-white" />
+                                    <div onClick={() => {
+                                        router.push("/connect")
+                                    }}>
+                                     <Button btntext="CONNECT" btnClasses="text-white border border-white" />
+                                    </div>
+
+                                    <div onClick={() => {
+                                        router.push("/register")
+                                    }}>
                                     <Button btntext="REGISTER NOW" btnClasses="text-white border border-white" />
+                                    </div>
                                     <Button btntext="VIEW CURATORS" btnClasses="bg-secondary text-black" />
                                 </div>
                             </div>

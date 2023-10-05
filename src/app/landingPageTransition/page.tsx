@@ -19,7 +19,7 @@ const LandingTransition = () => {
       >
         <div className="flex justify-center items-center">
           <div
-            className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center landingTransitionImage"
+            className="w-[179px] h-[388px] bg-white absolute top-[50%] left-[50%] flex items-end justify-center "
             style={{
               transform: "translate(-50%, -50%)",
             }}
@@ -70,7 +70,7 @@ const LandingTransition = () => {
         </div>
 
       </div>
-      <div className="w-[100vw] overflow-x-auto  mt-5 flex items-center gap-[45px] no-scrollbar absolute bottom-0 left-0 z-20">
+      <div className="w-[100vw] mt-5 flex items-center gap-[45px] no-scrollbar absolute bottom-0 left-0 z-20">
         <AutoScrollFooter/>
       </div>
     </div>

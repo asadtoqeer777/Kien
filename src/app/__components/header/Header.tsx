@@ -31,7 +31,6 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
         </div>
         <div onClick={() => {
           router.push('/login')
-          // handleNav() || handleNavInternal()
           setActiveNav(false)
         }}>
           LOGIN
@@ -70,11 +69,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
             </div>
           </div>
 
-          <div className='cursor-pointer' onClick={() => {
-            router.push('/')
-            // handleNav() || handleNavInternal()
-            setActiveNav(false)
-          }}>
+          <div className='cursor-pointer' >
             <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 Members
@@ -131,7 +126,11 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
             </div>
           </div>
 
-          <div className='cursor-pointer'>
+          <div className='cursor-pointer' onClick={() => {
+            router.push('/philosophy')
+            // handleNav() || handleNavInternal()
+            setActiveNav(false)
+          }}>
             <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 Process
