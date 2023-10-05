@@ -47,7 +47,7 @@ const PhilosophyPage = () => {
                     <Container styles="uppercase">
                         <div className='flex justify-between items-center'>
                             <div className='cursor-pointer' onClick={() => {
-                                        router.back()
+                                        router.push("/")
                                     }}>
                                 <Image src={backArrowCircle} alt='arrow-icon' className='custom-img' fill />
                             </div>
