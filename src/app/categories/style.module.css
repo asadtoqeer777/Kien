@@ -9,10 +9,10 @@ letter-spacing: -3.429px;
 
 
 .categoryHero{
-  background-image: url("../../../public/page5heroBg.png");
+  /* background-image: url("../../../public/page5heroBg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   border-bottom: 1px solid black;
 }
 
