@@ -81,7 +81,7 @@ const TeamMembers = () => {
           </div>
 		  </div>
 
-		  <div className="w-[108px] h-[455px] bg-secondary flex justify-center items-end pb-[6px] absolute top-0 right-[51px] z-20">
+		  <div className="w-[108px] h-[455px] bg-secondary flex justify-center items-end pb-[6px] absolute top-[10px] right-[51px] z-20">
 		<Image className="w-[87px]" src={logo} alt=""/>
 	  </div>
         </div>
