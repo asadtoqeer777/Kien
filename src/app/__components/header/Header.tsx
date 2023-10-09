@@ -9,7 +9,7 @@ interface Props {
   navTheme: string,
   toggleNav?: boolean,
   handleNav?: any,
-  navCol: number
+  navCol?: number
 }
 
 const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
