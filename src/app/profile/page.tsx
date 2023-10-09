@@ -106,7 +106,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-2  h-40 uppercase">
-          <div className="mt-3 2xl:mt--">
+          <div className="mt-3 2xl:mt-0">
             <div className=" inline-block pt-3 pr-3 ">
               <div className="text-[12px] 2xl:text-[16px] font-bold tracking-[-0.8px] leadind-[0px]">
                 details about the type
