@@ -179,7 +179,10 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                     fill
                   />
                 </div>
-                <Button btntext="Learn more" />
+                <Button
+                      btntext="Learn more"
+                      btnClasses="text-white border border-white w-[162px] h-[26px]"
+                    />
               </div>
             </div>
           </div>
@@ -258,7 +261,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   >
                     <Button
                       btntext="CONNECT"
-                      btnClasses="text-white border border-white"
+                      btnClasses="text-white border border-white w-[162px] h-[26px]"
                     />
                   </div>
 
@@ -269,12 +272,12 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   >
                     <Button
                       btntext="REGISTER NOW"
-                      btnClasses="text-white border border-white"
+                      btnClasses="text-white border border-white w-[162px] h-[26px]"
                     />
                   </div>
                   <Button
                     btntext="VIEW CURATORS"
-                    btnClasses="bg-secondary text-black"
+                    btnClasses="bg-secondary text-black  w-[162px] h-[26px]"
                   />
                 </div>
               </div>

@@ -1,18 +1,29 @@
 import React from 'react'
-import Header from '../header/Header'
-import BrandLogo from "../__assets/images/pngs/logo.png"
-import MembersBg from "../__assets/images/pngs/members.png"
+import footerLogo from "../../__assets/images/svgs/footerLogo.svg";
+import BrandLogo from "../../__assets/images/pngs/logo.png"
+import BrandWhiteLogo from "../../__assets/images/pngs/logoWhite.png"
+import MembersBg from "../../__assets/images/pngs/members.png"
 import Image from 'next/image'
-import Button from '../buttons/Button'
+import Button from '../../__components/buttons/Button'
 
-const MembersPage = () => {
+interface Props{
+  memberTheme: string;
+  memberThemeCol: string;
+  logoCol : boolean;
+  footerCol: string;
+  ProfileName: string;
+  prifileStack: string
+}
+
+const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack} : Props) => {
   return (
-    <div>
-
-      <div className="grid grid-cols-11 mt-[40px] uppercase">
+    <div className='relative'>
+      <div className={`grid grid-cols-10 pt-[40px] uppercase ${memberTheme} `}>
         <div className="col-span-6 relative ">
-          <div className="w-[1px] h-[100%] bg-black absolute top-[-10px] right-0"></div>
-          <div className="2xl:w-[318px] xl:w-[300px] lg:w-[280px] md:w-[260px] w-[70%] flex justify-between 2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[15px] leading-5 font-medium relative  ml-3">
+          <div className="h-[226px]">
+
+          <div className={`w-[1px] h-[100%] ${memberThemeCol} absolute top-[-10px] right-0`}></div>
+          <div className="2xl:w-[318px] xl:w-[300px] lg:w-[280px] md:w-[260px] w-[70%] flex justify-between 2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[15px] text-[12] leading-5 font-medium relative  ml-3">
             <div>
               <div>
                 Team
@@ -23,36 +34,45 @@ const MembersPage = () => {
             </div>
             <div>Members</div>
 
-            <div className="w-[1px] h-[96vh] bg-black absolute top-[-10px] right-[-12px]"></div>
-            <div className="w-[1px] h-[96vh] bg-black absolute top-[-10px] left-0"></div>
+            <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] right-[-12px]`}></div>
+            <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] left-0`}></div>
           </div>
-          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3">
-            SIVA
+          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3 w-[80%]">
+         
+{ProfileName}
           </h1>
-          <div className="mt-[90px] relative">
-            <Image className='w-[100%] h-[] sm:h-[] md:h-[65vh] lg:h-[60vh] xl:h-[62vh] 2xl:h-[64vh]' src={MembersBg} alt='' />
-            <div className="w-[100vw] h-[3px] bg-black absolute top-0 left-0"></div>
+          </div>
+
+          <div className=" relative">
+            <Image className='w-[100%] h-[calc(100vh-266px)]' src={MembersBg} alt=''/>
+            <div className={`w-[100vw] h-[3px] ${memberThemeCol} absolute top-0 left-0`}></div>
+            <div className="absolute bottom-[23px]">
+            <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px]  ml-3 text-white w-[80%]">
+            
+{prifileStack}
+          </h1>
+            </div>
           </div>
         </div>
-        <div className="col-span-5">
+        <div className="col-span-4">
 
           <div className="grid grid-cols-12">
-            <div className="col-span-5 relative">
-              <Image className='w-[253px] h-[75px] mx-3' src={BrandLogo} alt='' />
+            <div className="col-span-5 relative px-3 2xl:px-0">
+              <Image className='2xl:w-[253px] xl:w-[100%]  2xl:h-[75px] xl:h-[75px] mx-3' src={logoCol ?  BrandWhiteLogo : BrandLogo} alt='' />
               <div className="relative">
 
-                <div className="text-[48px] sm:text-[] md:text-[] lg:text-[68px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px]  break-words leading-[68px] mt-2 relative text-end m-auto ">
+                <div className="text-[48px] lg:text-[68px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px] md:w-[42%] w-[52%]   break-words 2xl:leading-[68px] leading-[50px] mt-2 relative text-end m-auto ">
                   2023
                 </div>
-                <div className="w-[46px] h-[40vh] bg-black absolute top-[14%] left-[29%]"></div>
+                <div className={`2xl:w-[46px] w-[40px] h-[428px] ${memberThemeCol} absolute top-[14%] xl:left-[29%] md:left-[20%] left-[12%]`}></div>
               </div>
 
-              <div className="w-[1px] h-[96vh] bg-black absolute top-[-10px] right-[-24px]"></div>
-              {/* <div className="w-[1px] h-[100vh] bg-black absolute top-[-10px] left-[-12px]"></div> */}
+              <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] right-[-24px]`}></div>
+              {/* <div className="w-[1px] h-[100vh] ${memberThemeCol} absolute top-[-10px] left-[-12px]"></div> */}
             </div>
             <div className="col-span-7 pl-7 pr-3">
-              <div>
-                <div className=" flex justify-between text-[22px] leading-5 font-medium relative ">
+              <div className='h-[226px]'>
+                <div className=" flex justify-between 2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[15px] text-[12] leading-5 font-medium relative ">
                   <div>
                     <div>
                       Team
@@ -62,7 +82,7 @@ const MembersPage = () => {
                   <div>Members</div>
 
                 </div>
-                <div className="mt-[10px] text-[12px] font-medium pl-1">
+                <div className="mt-[10px] 2xl:text-[12px] text-[10px] font-medium pl-1">
 
                   <div className=" flex justify-between">
                     <div>
@@ -99,9 +119,9 @@ const MembersPage = () => {
                 </div>
               </div>
 
-              <div className="mt-[140px]">
-                <div className="mb-[115px]">
-                  <div className=" flex justify-between text-[12px] leading-[15px] font-medium relative tracking-[-0.72px]">
+              <div>
+                <div className="2xl:mb-[115px] xl:mb-[85px] mb-[25px] ">
+                  <div className=" flex justify-between 2xl:text-[12px] text-[10px] leading-[15px] font-medium relative tracking-[-0.72px]">
                     <div>
                       <div>
                         (04)
@@ -121,26 +141,27 @@ const MembersPage = () => {
                     </div>
 
                   </div>
-                  <div className="text-[78px] font-bold leading-[65px] text-right tracking-[-4.68px]">
+                  <div className="2xl:text-[78px] xl:text-[68px] lg:text-[65px] md:text-[55px] sm:text-[50px] text-[30px] font-bold leading-[65px] text-right tracking-[-4.68px]">
                     2023
                   </div>
                 </div>
 
               </div>
             </div>
-            <div className="col-span-12">
-              <div className=" pr-3">
-                <div className="text-[78px] leading-[70px] tracking-[-4.68px] font-bold text-end">
+            <div className="col-span-12 mt-[115px]">
+              <div className=" pr-3 relative">
+                <div className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[50px] sm:text-[50px] text-[30px] 2xl:leading-[70px] leading-[55px] tracking-[-4.68px] font-bold text-end">
                   ideation
                   wizard
                 </div>
+                <div className={`w-full h-[1px] ${memberThemeCol} absolute top-[2px] `}></div>
               </div>
 
             </div>
 
-            <div className="col-span-5"></div>
-            <div className="col-span-7 pl-7 pr-3">
-              <div className="text-[12px] leading-[15px] font-medium relative tracking-[-0.72px]">
+            <div className="col-span-4"></div>
+            <div className="col-span-8 pl-7 pr-3">
+              <div className=" 2xl:text-[12px] text-[10px] leading-[15px] font-medium relative tracking-[-0.72px]">
                 <div className='w-[60%] flex justify-between'>
                   <div className=''>
                     (04)
@@ -149,12 +170,12 @@ const MembersPage = () => {
                     IND
                   </div>
                 </div>
-                <div className='flex flex-col xl:flex-row xl:justify-between'>
+                <div className='flex flex-col 2xl:flex-row 2xl:justify-between'>
                   <div>
                     chakkaravarthy@kien.travel
                   </div>
-                  <div className='mt-4 xl:mt-0'>
-                    <Button btnClasses={"bg-secondary text-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"Connect Here"} />
+                  <div className='mt-2 2xl:mt-0'>
+                    <Button btnClasses={"bg-secondary w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]"} btntext={"Connect Here"} />
                   </div>
                 </div>
               </div>
@@ -166,10 +187,20 @@ const MembersPage = () => {
 
         </div>
       </div>
-
-
+      <div className="absolute right-3  bottom-3">
+      <div className="flex items-end gap-1 w-max ml-auto">
+            <Image
+              src={footerLogo}
+              alt="footer-logo"
+              className={logoCol ? "custom-img filter invert" : ""}
+            />
+            <div className={`flex items-end gap-1 leading-4 ${footerCol}`}>
+              <span>© </span>2023
+            </div>
+          </div>
+          </div>
     </div>
   )
 }
 
-export default MembersPage
+export default MembersItem 
