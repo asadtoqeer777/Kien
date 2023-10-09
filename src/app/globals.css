@@ -49,6 +49,7 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  
 
 }
 
@@ -74,27 +75,6 @@ body {
 .philosophyMain::-webkit-scrollbar{
   display: none;
 }
-
-/* 
-.container {
-  outline: 1px solid red;
-  height: 500px;
-  width: 100%;
-  display: flex;
-  flex: 1;
-}
-
-.container_text {
-  display: flex;
-  flex-direction: column;
-}
-
-.accordion {
-  overflow: hidden;
-}
-.accordion [role="region"] {
-  height: 0;
-} */
 
 .accordion {
   padding: 1rem;
@@ -124,4 +104,45 @@ body {
 .spacer {
   height: 100vh;
   background-color: coral;
+}
+
+.profileLogo{
+  background-color: #E3FF00;
+  padding: 12px;
+  border-bottom-right-radius: 15px;
+  display: inline-block;
+  transform: translate(-20px, -20px);
+  position: relative;
+  z-index: 1;
+  height: 65px;
+}
+
+
+.profileLogo::after{
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  rotate: 180deg;
+  border-radius: 18px;
+  z-index: -1;
+  background: transparent;
+  box-shadow: 15px 15px #E3FF00;
+}
+
+
+.profileLogo::before{
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -40px;
+  width: 40px;
+  height: 40px;
+  rotate: 180deg;
+  border-radius: 18px;
+  z-index: -1;
+  background: transparent;
+  box-shadow: 15px 15px #E3FF00;
 }

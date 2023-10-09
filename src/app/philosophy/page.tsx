@@ -179,7 +179,10 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                     fill
                   />
                 </div>
-                <Button btntext="Learn more" />
+                <Button
+                      btntext="Learn more"
+                      btnClasses="text-white border border-white w-[162px] h-[26px]"
+                    />
               </div>
             </div>
           </div>
