@@ -86,15 +86,16 @@ const Profile = () => {
             </div>
           </div>
       </div>
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-2/3 ProfileMainDetails">
-      <div className="relative w-[1256.83px] bg-black">
+      
+      <div className="absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 ProfileMainDetails">
+      <div className="relative 2xl:w-[1256.83px] xl:w-[1156.83px] bg-black">
         <Image src={ProfileMain} alt="" />
         <div className="flex absolute top-2 left-2">
           <div className="">
             <Image className="w-[135px]" src={logo} alt="logo" />
           </div>
           <div className="flex items-center gap-[19px]">
-            <div className="text-[116px] text-white font-black tracking-[-5.8px] ml-[191px]">
+            <div className="2xl:text-[116px] xl:text-[100px] text-white font-black tracking-[-5.8px] ml-[191px]">
               RAJIV KAPOOR
             </div>
             <div className="flex  gap-[10px] flex-col mt-4">
@@ -105,20 +106,20 @@ const Profile = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-2  h-40 uppercase">
-          <div>
+          <div className="mt-3 2xl:mt-0">
             <div className=" inline-block pt-3 pr-3 ">
-              <div className="font-bold tracking-[-0.8px] leadind-[0px]">
+              <div className="text-[12px] 2xl:text-[16px] font-bold tracking-[-0.8px] leadind-[0px]">
                 details about the type
               </div>
-              <div className="flex gap-6 items-center font-bold tracking-[-0.8px] leadind-[0px]">
+              <div className="flex gap-6 items-center text-[12px] 2xl:text-[16px] font-bold tracking-[-0.8px] leadind-[0px]">
                 <div className="w-[14px] h-[14px] bg-black rounded-full"></div>
                 <div>relevant details</div>
               </div>
-              <div className="flex gap-6 items-center font-bold tracking-[-0.8px] leadind-[0px]">
+              <div className="flex gap-6 items-center text-[12px] 2xl:text-[16px] font-bold tracking-[-0.8px] leadind-[0px]">
                 <div className="w-[14px] h-[14px] bg-black rounded-full"></div>
                 <div>+922km travelled</div>
               </div>
-              <div className="font-bold tracking-[-0.8px] leadind-[0px] mt-1">
+              <div className="text-[12px] 2xl:text-[16px] font-bold tracking-[-0.8px] leadind-[0px] mt-1">
                 archetype :
               </div>
             </div>
