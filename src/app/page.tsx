@@ -43,7 +43,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".MainContainer",
         pin: true,
-        scrub: 5,
+        scrub: 3,
         end: "+=14000",
 
         // end: "+=" + sections.length * 11000,
@@ -137,16 +137,16 @@ export default function Home() {
         "LandingPage"
       )
 
-      .to(
-        ".categoriesTransition",
-        {
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -35%)",
-        },
-        "LandingPage"
-      )
+      // .to(
+      //   ".categoriesTransition",
+      //   {
+      //     position: "absolute",
+      //     top: "50%",
+      //     left: "50%",
+      //     transform: "translate(-50%, -35%)",
+      //   },
+      //   "LandingPage"
+      // )
 
       .from(".ProfileMainDetails", {
         top: "50%",
@@ -156,10 +156,6 @@ export default function Home() {
         right: "50%",
         transform: "translate(50%, -50%)",
       });
-
-
-
-      
 
     stops.forEach((stop, index) => {
       const currentSection = sections[stop] as HTMLElement; // Use type assertion
