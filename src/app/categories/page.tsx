@@ -9,6 +9,7 @@ import Button from "../__components/buttons/Button";
 import style from "./style.module.css";
 import CategoriesLogo from "../__assets/images/pngs/categoryLogo.png";
 import CatagoryButton from "../__components/catagoryButton/CatagoryButton";
+import CategoriesCardMain from "../__components/categoriesCardMain/page";
 
 const Category = () => {
   const [toggleBtn, setToggleBtn] = useState(null);
@@ -21,7 +22,7 @@ const Category = () => {
     }
   };
   return (
-    <div className="w-[100vw] h-[100vh] overflow-y-auto no-scrollbar bg-white relative">
+    <div className="w-[100vw] h-[100vh] overflow-y-auto no-scrollbar bg-white relative " id= "3">
       <div className="">
         <div className="mt-[30px]">
           <div className={`grid grid-cols-6 gap-2  ${style.categoryHero}`}>
@@ -146,6 +147,10 @@ const Category = () => {
           <span>© </span>2023
         </div>
       </div>
+      </div>
+
+      <div className="categoriesTransition absolute top-1/2 right-0 translate-x-[84.2%] -translate-y-[35%] w-full">
+        <CategoriesCardMain/>
       </div>
     </div>
   );
