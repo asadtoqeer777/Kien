@@ -44,7 +44,7 @@ export default function Home() {
         trigger: ".MainContainer",
         pin: true,
         scrub: 3,
-        end: "+=14000",
+        end: "+=15000",
 
         // end: "+=" + sections.length * 11000,
         onUpdate: (self) => {
@@ -95,6 +95,59 @@ export default function Home() {
               footer.style.display = "block";
             }
           }
+          if(scrollPercent > 45){
+            gsap.to("#categoryFadeTextBorder",{
+              borderBottom: "0px"
+            })
+            gsap.to("#categoryFadeText",{
+                marginTop: "-50px",
+                opacity: "0.3",
+                display: "none",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoryFadeText"
+              },
+            })
+           gsap .to(
+              "#categoriesTransition",
+              {
+                position: "absolute",
+                top: "50%",
+                left: "-84.2%",
+                transform: "translate(0%, -35%)",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoriesTransition"
+                }
+              },
+            )
+          }else if(scrollPercent < 45){
+            gsap.to("#categoryFadeTextBorder",{
+              borderBottom: "1px"
+            })
+            gsap.to("#categoryFadeText",{
+                marginTop: "0px",
+                opacity: "1",
+                display: "block",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoryFadeText"
+              },
+            })
+            gsap.to(
+              "#categoriesTransition",
+              {
+                position: "absolute",
+                top: "50%",
+                left: "0%",
+                transform: "translate(84.2%, -35%)",
+                scrollTrigger: {
+                  trigger: "#categoriesTransition"
+                }
+              },
+            )
+          }
+
 
           if (scrollPercent > 70) {
             setToggleNav(2);
@@ -119,8 +172,8 @@ export default function Home() {
       position: "absolute",
       top: "50%",
       left: "50%",
-      width: "100%",
-      height: "388px",
+      width: "179px",
+      height: "100vh",
       transform: "translate(-50%, -50%)",
     })
 
@@ -137,16 +190,7 @@ export default function Home() {
         "LandingPage"
       )
 
-      // .to(
-      //   ".categoriesTransition",
-      //   {
-      //     position: "absolute",
-      //     top: "50%",
-      //     left: "50%",
-      //     transform: "translate(-50%, -35%)",
-      //   },
-      //   "LandingPage"
-      // )
+
 
       .from(".ProfileMainDetails", {
         top: "50%",
@@ -156,6 +200,10 @@ export default function Home() {
         right: "50%",
         transform: "translate(50%, -50%)",
       });
+
+
+
+      
 
     stops.forEach((stop, index) => {
       const currentSection = sections[stop] as HTMLElement; // Use type assertion
@@ -209,6 +257,7 @@ export default function Home() {
       />
       <div className="mainans ">
         <div className="MainContainer">
+
           <section className={`panel LandingTransition`}>
             <LandingTransition />
           </section>
