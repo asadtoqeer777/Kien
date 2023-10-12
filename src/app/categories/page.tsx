@@ -9,6 +9,7 @@ import Button from "../__components/buttons/Button";
 import style from "./style.module.css";
 import CategoriesLogo from "../__assets/images/pngs/categoryLogo.png";
 import CatagoryButton from "../__components/catagoryButton/CatagoryButton";
+import CategoriesCardMain from "../__components/categoriesCardMain/page";
 
 const Category = () => {
   const [toggleBtn, setToggleBtn] = useState(null);
@@ -21,7 +22,7 @@ const Category = () => {
     }
   };
   return (
-    <div className="w-[100vw] h-[100vh] overflow-y-auto no-scrollbar bg-white relative">
+    <div className="w-[100vw] h-[100vh] overflow-y-auto no-scrollbar bg-white relative " id= "3">
       <div className="">
         <div className="mt-[30px]">
           <div className={`grid grid-cols-6 gap-2  ${style.categoryHero}`}>
@@ -39,7 +40,7 @@ const Category = () => {
           </div>
         </div>
         <div className="">
-          <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black pb-5">
+          <div className="grid grid-cols-6 gap-2 border-b-[1px] border-black pb-5" id="categoryFadeTextBorder">
             <div className="col-span-2">
               <div className="flex items-center gap-2 ml-4 mt-2">
                 <Button
@@ -59,6 +60,7 @@ const Category = () => {
             <div className="col-span-4">
               <div
                 className={`${style.categoryHeading} col-span-4 text-[#00000080] mt-[4vh] sm:mt-[3vh]`}
+                id="categoryFadeText"
               >
                 <h1>Inquisitive</h1>
                 <h1>Critical • Profound</h1>
@@ -69,7 +71,7 @@ const Category = () => {
 
         <div className="grid grid-cols-6 gap-2">
           <div className="col-span-2"></div>
-          <div className="col-span-4">
+          <div className="col-span-4" id="categoryFadeText">
             <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[70px] xl:mt-[80px] 2xl:mt-[80px]">
               <div className={`${style.categorySubHeading} text-[#00000080]`}>
                 <div>Peripatetic Refers</div>
@@ -146,6 +148,10 @@ const Category = () => {
           <span>© </span>2023
         </div>
       </div>
+      </div>
+
+      <div className="absolute top-1/2 right-0 translate-x-[84.2%] -translate-y-[35%] w-full" id="categoriesTransition">
+        <CategoriesCardMain/>
       </div>
     </div>
   );

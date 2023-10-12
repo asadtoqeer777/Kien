@@ -22,119 +22,6 @@ export default function Home() {
   const router = useRouter();
   const [activeNav, setActiveNav] = useState(null);
   const [toggleNav, setToggleNav] = useState(1);
-  // const [animationPercent, setAnimationPercent] = useState(0)
-
-  // useEffect(() => {
-  //   const container1 = document.querySelector(
-  //     ".container1"
-  //   ) as HTMLElement | null;
-
-  //   const endValue = container1 ? "+=" + container1.offsetWidth : "+=0";
-  //   const t1 = gsap.timeline();
-
-  //   t1.to(".LandingPage", {
-  //     position: "absolute",
-  //     top: "50%",
-  //     left: "50%",
-  //     width: "179px",
-  //     height: "388px",
-  //     transform: "translate(-50%, -50%)",
-  //   })
-  //     // .to(".landingPageFooter", {display: "none"})
-  //     // .from(".landingPageFooter", {display: "none"})
-  //     .from(
-  //       ".landingTransition",
-  //       { xPercent: 0, position: "relative", zIndex: "1" },
-  //       "<"
-  //     )
-  //     .to(
-  //       ".landingTransition",
-  //       { xPercent: 0, position: "relative", zIndex: "2" },
-  //       "<"
-  //     )
-  //     .to(
-  //       ".ArchetypePage",
-  //       { xPercent: -100, position: "relative", zIndex: "3" },
-  //       ".landingTransition"
-  //     )
-  //     .to(
-  //       ".category",
-  //       { xPercent: -200, position: "relative", zIndex: "4" },
-  //       ".ArchetypePage"
-  //     )
-  //     .to(
-  //       ".categorieslist",
-  //       { xPercent: -300, position: "relative", zIndex: "5" },
-  //       ".category"
-  //     )
-  //     .to(".philosophyPage", {
-  //       xPercent: -400,
-  //       position: "relative",
-  //       zIndex: "6",
-  //     });
-
-  //   ScrollTrigger.create({
-  //     animation: t1,
-  //     trigger: ".container1",
-  //     scrub: 0,
-  //     snap: 1 / 5,
-  //     pin: true,
-  //     anticipatePin: 1,
-  //     toggleActions: "play reverse",
-  //     end: '+=25000px',
-
-  //     onUpdate: (self) => {
-  //       // Calculate the activeNav based on the scroll position
-  //       const scrollPercent = self.progress * 100;
-  //       console.log("scrollPercent",scrollPercent)
-  //       const footer = document.querySelector(
-  //         ".landingPageFooter"
-  //       ) as HTMLElement | null;
-  //       const LandingImageMain = document.querySelector(
-  //         ".LandingPage"
-  //       ) as HTMLElement | null;
-  //       const landingTransitionImage = document.querySelector(
-  //         ".landingTransitionImage"
-  //       ) as HTMLElement | null;
-  //       console.log("landingTransitionImage");
-
-  //       if (scrollPercent > 1) {
-  //         if (footer && LandingImageMain) {
-  //           footer.style.display = "none";
-  //         }
-  //         if (scrollPercent > 19) {
-  //           if (LandingImageMain) {
-  //             LandingImageMain.style.zIndex = "-1";
-  //           }
-  //         } else {
-  //           if (LandingImageMain) {
-  //             LandingImageMain.style.zIndex = "1";
-  //           }
-  //         }
-
-  //         if (scrollPercent > 19) {
-  //           if (landingTransitionImage) {
-  //             landingTransitionImage.style.alignItems = "end";
-  //           }
-  //         } else {
-  //           if (landingTransitionImage) {
-  //             landingTransitionImage.style.alignItems = "center";
-  //           }
-  //         }
-  //       } else {
-  //         if (footer) {
-  //           footer.style.display = "block";
-  //         }
-  //       }
-
-  //       if (scrollPercent > 90) {
-  //         setToggleNav(2)
-  //       } else {
-  //         setToggleNav(1)
-  //       }
-  //     },
-  //   });
-  // }, [router]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -148,14 +35,17 @@ export default function Home() {
     });
 
     const tl = gsap.timeline({
+      ease: "sine",
       defaults: {
         ease: "sine",
       },
+      smoothChildTiming: true,
       scrollTrigger: {
-        trigger: ".yfguhjbkn",
+        trigger: ".MainContainer",
         pin: true,
-        scrub: 0.5,
-        end: "+=14000",
+        scrub: 3,
+        end: "+=15000",
+
         // end: "+=" + sections.length * 11000,
         onUpdate: (self) => {
           // Calculate the activeNav based on the scroll position
@@ -177,6 +67,7 @@ export default function Home() {
           const LandingPage = document.querySelector(
             "LandingPage"
           ) as HTMLElement | null;
+
           if (scrollPercent < 0.1) {
             if (philosophyMain) {
               philosophyMain.style.overflowY = "auto";
@@ -190,20 +81,73 @@ export default function Home() {
             if (footer) {
               footer.style.display = "none";
             }
-            if (scrollPercent > 2.1) {
-              if (LandingImageMain) {
-                LandingImageMain.style.zIndex = "-1";
-              }
-            } else {
-              if (LandingImageMain) {
-                LandingImageMain.style.zIndex = "1";
-              }
-            }
+            // if (scrollPercent > 4.5) {
+            //   if (LandingImageMain) {
+            //     LandingImageMain.style.zIndex = "-1";
+            //   }
+            // } else {
+            //   if (LandingImageMain) {
+            //     LandingImageMain.style.zIndex = "1";
+            //   }
+            // }
           } else {
             if (footer) {
               footer.style.display = "block";
             }
           }
+          if(scrollPercent > 45){
+            gsap.to("#categoryFadeTextBorder",{
+              borderBottom: "0px"
+            })
+            gsap.to("#categoryFadeText",{
+                marginTop: "-50px",
+                opacity: "0.3",
+                display: "none",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoryFadeText"
+              },
+            })
+           gsap .to(
+              "#categoriesTransition",
+              {
+                position: "absolute",
+                top: "50%",
+                left: "-84.2%",
+                transform: "translate(0%, -35%)",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoriesTransition"
+                }
+              },
+            )
+          }else if(scrollPercent < 45){
+            gsap.to("#categoryFadeTextBorder",{
+              borderBottom: "1px"
+            })
+            gsap.to("#categoryFadeText",{
+                marginTop: "0px",
+                opacity: "1",
+                display: "block",
+                transitionDuration: "1s",
+                scrollTrigger: {
+                  trigger: "#categoryFadeText"
+              },
+            })
+            gsap.to(
+              "#categoriesTransition",
+              {
+                position: "absolute",
+                top: "50%",
+                left: "0%",
+                transform: "translate(84.2%, -35%)",
+                scrollTrigger: {
+                  trigger: "#categoriesTransition"
+                }
+              },
+            )
+          }
+
 
           if (scrollPercent > 70) {
             setToggleNav(2);
@@ -229,29 +173,43 @@ export default function Home() {
       top: "50%",
       left: "50%",
       width: "179px",
-      height: "388px",
+      height: "100vh",
       transform: "translate(-50%, -50%)",
     })
-      .to(".LandingPage", {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        width: "179px",
-        height: "388px",
-        transform: "translate(-50%, -50%)",
-      })
+
+      .to(
+        ".LandingPage",
+        {
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: "179px",
+          height: "388px",
+          transform: "translate(-50%, -50%)",
+        },
+        "LandingPage"
+      )
+
+
+
       .from(".ProfileMainDetails", {
         top: "50%",
         right: "0%",
       })
       .to(".ProfileMainDetails", {
         right: "50%",
-        transform: "translate(50%, -50%)"
+        transform: "translate(50%, -50%)",
       });
+
+
+
+      
 
     stops.forEach((stop, index) => {
       const currentSection = sections[stop] as HTMLElement; // Use type assertion
       const q = gsap.utils.selector(currentSection);
+      console.log("stop", stop)
+
 
       tl.to(sections, {
         xPercent: -(100 * stop),
@@ -267,8 +225,11 @@ export default function Home() {
         tl.to(sections, {
           xPercent: -(100 * (sections.length - 1)),
           duration: sections.length - stop,
+          
         });
+        
       }
+
     });
   }, []);
 
@@ -295,7 +256,7 @@ export default function Home() {
         navCol={toggleNav}
       />
       <div className="mainans ">
-        <div className="yfguhjbkn">
+        <div className="MainContainer">
 
           <section className={`panel LandingTransition`}>
             <LandingTransition />
@@ -306,9 +267,9 @@ export default function Home() {
           <section className={`panel Category`} data-pin="true">
             <Category />
           </section>
-          <section className={`panel CategoriesList`} data-pin="true">
+          {/* <section className={`panel CategoriesList`} data-pin="true">
             <CategoriesList />
-          </section>
+          </section> */}
 
           <section className={`panel`} data-pin="true">
             <div className="Philosophy">
@@ -326,72 +287,3 @@ export default function Home() {
     </div>
   );
 }
-
-// export default function Home() {
-// useEffect(() => {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   const sections = gsap.utils.toArray(".panel");
-//   const stops: number[] = [];
-
-//   sections.forEach((section, index) => {
-//     if (section instanceof HTMLElement && section.dataset.pin) stops.push(index); // Use type assertion
-//   });
-
-//   const tl = gsap.timeline({
-//     defaults: {
-//       ease: "none"
-//     },
-//     scrollTrigger: {
-//       trigger: ".yfguhjbkn",
-//       pin: true,
-//       scrub: 0.5,
-//       end: "+=4000"
-//     }
-//   });
-
-//   stops.forEach((stop, index) => {
-//     const currentSection = sections[stop] as HTMLElement; // Use type assertion
-//     const q = gsap.utils.selector(currentSection);
-
-//     tl.to(sections, {
-//       xPercent: -(100 * stop),
-//       duration: stop
-//     });
-
-//     tl.to(sections, {
-//       xPercent: -(100 * stop),
-//       duration: stop
-//     });
-
-//     if (index === stops.length - 1) {
-//       tl.to(sections, {
-//         xPercent: -(100 * (sections.length - 1)),
-//         duration: sections.length - stop
-//       });
-//     }
-//   });
-// }, []);
-
-//   return (
-//     <div className="mainans">
-//       <div className="yfguhjbkn w-[600%]">
-//         <section className="panel">
-//         <LandingTransition />
-//         </section>
-//         <section className="panel " data-pin="true">
-//         <LandingTransition />
-//         </section>
-//         <section className="panel " data-pin="true">
-//         <LandingTransition />
-//         </section>
-//         <section className="panel " data-pin="true">
-//         <LandingTransition />
-//         </section>
-//         <section className="panel ">
-//         <LandingTransition />
-//         </section>
-//       </div>
-//     </div>
-//   );
-// }

@@ -70,15 +70,23 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
           </div>
 
           <div className='cursor-pointer' >
-            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
+            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]" onClick={() => {
+            router.push('/members')
+            // handleNav() || handleNavInternal()
+            setActiveNav(false)
+          }}>
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 Members
               </h2>
               <div className="">
-                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />
+                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />  
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1" onClick={() => {
+            router.push('/teamMembers')
+            // handleNav() || handleNavInternal()
+            setActiveNav(false)
+          }}>
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className="w-3 h-3 bg-black rounded-[50%]"></div>
