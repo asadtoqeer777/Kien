@@ -12,10 +12,11 @@ interface Props{
   logoCol : boolean;
   footerCol: string;
   ProfileName: string;
-  prifileStack: string
+  prifileStack: string;
+  memeberBtnBg: string;
 }
 
-const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack} : Props) => {
+const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg} : Props) => {
   return (
     <div className='relative'>
       <div className={`grid grid-cols-10 pt-[40px] uppercase ${memberTheme} `}>
@@ -175,7 +176,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                     chakkaravarthy@kien.travel
                   </div>
                   <div className='mt-2 2xl:mt-0'>
-                    <Button btnClasses={"bg-secondary w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]"} btntext={"Connect Here"} />
+                    <Button btnClasses={`${memeberBtnBg} w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]`} btntext={"Connect Here"} />
                   </div>
                 </div>
               </div>

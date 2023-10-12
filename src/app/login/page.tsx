@@ -8,7 +8,7 @@ import Button from '../__components/buttons/Button'
 const Login = () => {
   return (
     <div className='bg-white  flex justify-center px-5 sm:px-0 h-[100vh] w-[100vw] overflow-y-auto no-scrollbar'>
-      <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[170px]">
+      <div className="container w-[390px] pt-[99px] relative sm:pt-[140px] md:pt-[140px] lg:pt-[159px] xl:pt-[150px] 2xl:pt-[240px]">
 
         <div className="mainImage text-center">
           <Image className='h-[auto] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
@@ -16,7 +16,7 @@ const Login = () => {
             Travel Experiences
           </div>
           <div className="barImage">
-            <Image className='h-[465px] w-[35px] sm:h-[500px] md:h-[536px] lg:h-[556px] xl:h-[548px] 2xl:h-[621px] absolute top-0 right-[10px] z-10' src={loginBar} alt="loginBar" />
+            <Image className='h-[434px] w-[35px] sm:h-[475px] md:h-[501px] lg:h-[520px] xl:h-[522px] 2xl:h-[621px] absolute top-0 right-[10px] z-10' src={loginBar} alt="loginBar" />
           </div>
         </div>
 

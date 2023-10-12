@@ -43,8 +43,8 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".MainContainer",
         pin: true,
-        scrub: 3,
-        end: "+=15000",
+        scrub: 1,
+        end: "+=10000",
 
         // end: "+=" + sections.length * 11000,
         onUpdate: (self) => {
@@ -54,11 +54,11 @@ export default function Home() {
           const footer = document.querySelector(
             ".landingPageFooter"
           ) as HTMLElement | null;
-          const LandingImageMain = document.querySelector(
-            ".LandingPage"
+          const landingLine1 = document.querySelector(
+            "#landingLine1"
           ) as HTMLElement | null;
-          const landingTransitionImage = document.querySelector(
-            ".landingPageMainImage"
+          const landingLine2 = document.querySelector(
+            "#landingLine2"
           ) as HTMLElement | null;
           const philosophyMain = document.querySelector(
             ".philosophyMain"
@@ -81,18 +81,21 @@ export default function Home() {
             if (footer) {
               footer.style.display = "none";
             }
-            // if (scrollPercent > 4.5) {
-            //   if (LandingImageMain) {
-            //     LandingImageMain.style.zIndex = "-1";
-            //   }
-            // } else {
-            //   if (LandingImageMain) {
-            //     LandingImageMain.style.zIndex = "1";
-            //   }
-            // }
+            if (landingLine1) {
+              landingLine1.style.display= "none"
+            }
+            if (landingLine2) {
+              landingLine2.style.display= "none"
+            }
           } else {
             if (footer) {
               footer.style.display = "block";
+            }
+            if (landingLine1) {
+              landingLine1.style.display= "block"
+            }
+            if (landingLine2) {
+              landingLine2.style.display= "block"
             }
           }
           if(scrollPercent > 45){
@@ -172,8 +175,8 @@ export default function Home() {
       position: "absolute",
       top: "50%",
       left: "50%",
-      width: "179px",
-      height: "100vh",
+      width: "100%",
+      height: "388px",
       transform: "translate(-50%, -50%)",
     })
 
