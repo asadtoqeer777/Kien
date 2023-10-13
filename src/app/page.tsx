@@ -35,11 +35,9 @@ export default function Home() {
     });
 
     const tl = gsap.timeline({
-      ease: "sine",
       defaults: {
-        ease: "sine",
+        ease: "none",
       },
-      smoothChildTiming: true,
       scrollTrigger: {
         trigger: ".MainContainer",
         pin: true,
@@ -223,6 +221,23 @@ export default function Home() {
         xPercent: -(100 * stop),
         duration: stop,
       });
+
+      // if (currentSection.querySelector('#categoriesTransition')) {
+      //   console.log("HHH", stop, sections, index);
+        
+      //   tl.to(
+      //     "#categoriesTransition",
+      //         {
+      //           position: "absolute",
+      //           top: "50%",
+      //           // left: "-04.2%",
+      //           transform: "translate(0%, -35%)",
+      //           transitionDuration: "1s",
+      //           background: "red",
+      //         },
+      //   )
+
+      // }
 
       if (index === stops.length - 1) {
         tl.to(sections, {

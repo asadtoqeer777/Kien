@@ -149,13 +149,16 @@ body {
 
 
 .containerMain{
-  width: 500%;
+  overscroll-behavior: none;
+  width: 600%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
 }
 
 .panel{
+  flex-direction: column;
+  padding: 0;
   width: 100vw;
   height: 100vh;
 }
