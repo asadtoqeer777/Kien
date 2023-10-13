@@ -191,7 +191,7 @@ export default function Home() {
         "LandingPage"
       )
 
-
+    
 
       .from(".ProfileMainDetails", {
         top: "50%",
@@ -201,6 +201,7 @@ export default function Home() {
         right: "50%",
         transform: "translate(50%, -50%)",
       });
+
 
 
 

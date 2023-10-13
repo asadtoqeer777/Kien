@@ -1,8 +1,10 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Header from '../__components/header/Header'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image'
 import backArrow from "../__assets/images/svgs/backArrow.svg"
 import DownArrow from "../__assets/images/svgs/downArrow.svg"
@@ -10,20 +12,37 @@ import Button from '../__components/buttons/Button'
 import FooterLogo from "../__assets/images/svgs/footerLogo.svg"
 import Container from '../__components/container/Container'
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Connect = () => {
   const router = useRouter()
+
+  useEffect(()=> {
+    gsap.from("#connectFade", {
+      opacity: 0, 
+      x: 800, 
+      duration: 1
+      
+    });
+    // gsap.from("#connectHeading", {
+    //   opacity: 0, 
+    //   x: -800, 
+    //   duration: 1
+      
+    // });
+  }, [])
   return (
     <div>
       <div className="h-[100%]">
 
         <div className="h-[100vh] bg-black pt-[30px] sm:pt-[50px] md:pt-[80px] xl:pt-[120px] relative">
           <Container>
-            <div>
+            <div id='connectHeading'>
               <h1 className='text-[60px] sm:text-[100px] md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[275px] text-white font-bold xl:tracking-[-16.5px] uppercase leading-[70px]'>
                 Connect
               </h1>
             </div>
-            <div className="h-[90vh] w-[100%] sm:h-[85vh] sm:w-[90%] md:h-[82vh] md:w-[80%] xl:h-[82vh] 2xl:h-[85vh] xl:w-[70%] 2xl:w-[75%] bg-[#E3FF00] absolute bottom-0 right-0">
+            <div className="h-[90vh] w-[100%] sm:h-[85vh] sm:w-[90%] md:h-[82vh] md:w-[80%] xl:h-[82vh] 2xl:h-[85vh] xl:w-[70%] 2xl:w-[75%] bg-[#E3FF00] absolute bottom-0 right-0" id='connectFade'>
               <div className="relative h-[90vh] sm:h-[85vh] md:h-[81vh] xl:h-[82vh] 2xl:h-[85vh]">
                 <div className="grid grid-cols-12">
                   <div className="col-span-4 lg:col-span-5">
