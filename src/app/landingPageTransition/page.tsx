@@ -33,45 +33,47 @@ const LandingTransition = () => {
         </div>
 
         <div className="LandingPage h-screen w-full absolute top-0 left-0 bg-white z-[1]">
-          <div className="flex justify-center items-center">
-            <Image
-              className="landingPageMainImage absolute top-[50%] left-[50%] w-[118px] h-auto  sm:w-[280px]  md:w-[290px]  lg:w-[300px] xl:w-[320px]  2xl:w-[468px] landing-logo"
-              style={{ transform: "translate(-50%, -50%)" }}
-              src={logo}
-              alt="Logo"
-            />
-          </div>
-          <div className="landingPageFooter h-screen flex items-end landing-logo relative">
-            <div>
+            <div className="flex justify-center items-center">
+              <Image
+                className="landingPageMainImage absolute top-[50%] left-[50%] sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
+                style={{ transform: "translate(-50%, -50%)" }}
+                src={logo}
+                alt="Logo"
+              />
+            </div>
+            <div className="landingPageFooter h-screen flex items-end landing-logo relative">
               <div>
-                <div className=" w-full absolute bottom-[70px] right-[14px]">
-                  <div className="flex justify-between pr-4">
-                    <div className="flex justify-between px-[14px] sm:px-[34px]">
-                      <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
-                        <div className="">CURATED</div>
-                        <div className="">CREATIVE</div>
+                <div>
+                  <div className=" w-full absolute bottom-[70px] right-[14px]">
+                    <div className="flex justify-between pr-4">
+                      <div className="flex justify-between px-[14px] sm:px-[34px]">
+                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
+                          <div className="">CURATED</div>
+                          <div className="">CREATIVE</div>
+                        </div>
+                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9">
+                          <div className="">TRAVEL</div>
+                          <div className="">EXPERIENCES</div>
+                        </div>
                       </div>
-                      <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9">
+                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] ">
+                        <div className="">TRAVEL</div>
+                        <div className="">EXPERIENCES</div>
                         <div className="">TRAVEL</div>
                         <div className="">EXPERIENCES</div>
                       </div>
-                    </div>
-                    <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] ">
-                      <div className="">TRAVEL</div>
-                      <div className="">EXPERIENCES</div>
-                      <div className="">TRAVEL</div>
-                      <div className="">EXPERIENCES</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
       </div>
+      <div className="absolute top-0 left-[80%] h-[calc(100vh-50px)] w-[1px] bg-black z-10" id="landingLine1"></div>
+      <div className="absolute top-0 left-[61.5%] h-[calc(100vh-50px)] w-[1px] bg-black z-10" id="landingLine2"></div>
+      
       <div className="w-[100vw] mt-5 flex items-center gap-[45px] no-scrollbar absolute bottom-0 left-0 z-20">
-        <AutoScrollFooter/>
+        <AutoScrollFooter />
       </div>
     </div>
   );

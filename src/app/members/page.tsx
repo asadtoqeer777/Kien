@@ -53,14 +53,14 @@ const MembersPage: React.FC<MembersPageProps> = () => {
 <div className="relative">
 
       <Slider {...sliderSettings} ref={sliderRef} className='w-screen overflow-x-hidden'>
-        <MembersItem prifileStack={"CEO / founder"} ProfileName={" Siva chakkaravarthy"} memberTheme={"text-black bg-[white]"} memberThemeCol={"bg-black"} logoCol= {false} footerCol={"text-black"}/>
-        <MembersItem prifileStack={"C.F.O (CHEIF)"} ProfileName={"Vishwanath Purushothaman"}  memberTheme={"text-white bg-[#2667CF]"} memberThemeCol={"bg-white"} logoCol= {true} footerCol={"text-white"}/>
+        <MembersItem prifileStack={"CEO / founder"} ProfileName={" Siva chakkaravarthy"} memberTheme={"text-black bg-[white]"} memberThemeCol={"bg-black"} logoCol= {false} footerCol={"text-black"} memeberBtnBg={"bg-secondary"}/>
+        <MembersItem prifileStack={"C.F.O (CHEIF)"} ProfileName={"Vishwanath Purushothaman"}  memberTheme={"text-white bg-[#2667CF]"} memberThemeCol={"bg-white"} logoCol= {true} footerCol={"text-white"}  memeberBtnBg={"bg-black"}/>
         
       </Slider>
       <div className="absolute bottom-4 left-[52%] z-20  text-white">
         <div className="flex">
-        <Image className={activeSlide ? 'cursor-pointer' : "hidden"} src={backArrow} alt='backArrow'  onClick={prevSlide}/>
-        <Image className={activeSlide? ' cursor-pointer rotate-180' : "ml-[50px] cursor-pointer rotate-180"} src={backArrow} alt='backArrow' onClick={nextSlide}/>
+          <Image className={activeSlide ? 'cursor-pointer' : "hidden"} src={backArrow} alt='backArrow'  onClick={prevSlide}/>
+          <Image className={activeSlide? ' cursor-pointer rotate-180' : "ml-[50px] cursor-pointer rotate-180"} src={backArrow} alt='backArrow' onClick={nextSlide}/>
         </div>
         </div>
         </div>

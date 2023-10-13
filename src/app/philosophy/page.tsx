@@ -49,8 +49,8 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
     <div
       className={
         scrollCheck
-          ? "bg-black w-[100vw] h-[100vh] philosophyMain "
-          : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto"
+          ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
+          : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
       }
     >
       <section className=" w-full overflow-scroll sticky top-0">
@@ -95,7 +95,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   <Image
                     src={philosophyPoster}
                     alt="philosophy-poster"
-                    className="custom-img"
+                    className="custom-img  relative z-10"
                     fill
                   />
                 </TransformComponent>
@@ -130,7 +130,9 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
       </section>
 
       <section className=" bg-black sticky top-0 text-white">
-        <Container styles="h-full lg:py-3 pt-3 pb-32">
+        <div className="h-full ">
+          <div className="relative pb-9 pl-4 sm:pl-0">
+
           <p className="text-xs mb-1">(04)</p>
           <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold">
             Your personality, your destinations, your experiences : <br />
@@ -139,7 +141,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
           <h1 className="sm:hidden block mt-3 text-xl font-semibold">
             Your memories.
           </h1>
-          <div className="lg:w-9/12 ml-auto mt-3 h-full">
+          <div className="lg:w-9/12 ml-auto mt-3 h-full border-b-[1.5px] border-white relative">
             <div className="max-w-[658px] lg:ml-44 leading-7 lg:text-base md:text-sm text-xs pr-4">
               <p>
                 Kien's travel philosophy is straightforward: we prioritise the
@@ -185,9 +187,15 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                     />
               </div>
             </div>
+            <div className="absolute w-[340px] h-[183px] bg-[#E3FF00] bottom-[38%] left-[-8%] z-10">
+
+            </div>
+          </div>
+            <div className="absolute top-0 left-[25%] w-[1px] h-[94.9%] bg-white"></div>
+            <div className="absolute top-0 left-[75%] w-[1px] h-[94.9%] bg-white"></div>
           </div>
 
-          <div className="border-t lg:w-9/12 w-full ml-auto pt-9">
+          <div className="border-t lg:w-9/12 w-full ml-auto">
             {expListings.map((data, index) => (
               <div key={index} className="relative calc-width ml-auto">
                 <div
@@ -283,7 +291,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
               </div>
             </div>
           </div>
-        </Container>
+        </div>
 
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex flex-wrap justify-between items-center mx-auto py-3 px-8 gap-5">
           <div className="max-w-sm w-full flex items-end">
@@ -314,6 +322,10 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
           </div>
         </div>
       </section>
+      <div className="absolute top-0 left-3 w-[1px] h-[68vh] bg-black"></div>
+      <div className="absolute top-0 left-[15%] w-[1px] h-[68vh] bg-black"></div>
+      <div className="absolute top-0 left-[65%] w-[1px] h-[68vh] bg-black"></div>
+      <div className="absolute top-0 left-[85%] w-[1px] h-[68vh] bg-black"></div>
     </div>
   );
 };
