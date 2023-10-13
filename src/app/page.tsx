@@ -3,18 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Login from "./login/page";
-import Register from "./register/page";
-import LandingPage from "./landingPage/page";
 import LandingTransition from "./landingPageTransition/page";
 import Category from "./categories/page";
-import CategoriesList from "./categoriesList/page";
 import PhilosophyPage from "./philosophy/page";
 import Header from "./__components/header/Header";
 import ArchetypePage from "./archetype/page";
-import { escape } from "querystring";
-import Accordion from "./__components/accordians/Accordians";
-import Profile from "./profile/page";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,8 +19,6 @@ export default function Home() {
   const [toggleNav, setToggleNav] = useState(1);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     const sections = gsap.utils.toArray(".panel");
     const stops: number[] = [];
 
@@ -80,75 +73,74 @@ export default function Home() {
               footer.style.display = "none";
             }
             if (landingLine1) {
-              landingLine1.style.display= "none"
+              landingLine1.style.display = "none";
             }
             if (landingLine2) {
-              landingLine2.style.display= "none"
+              landingLine2.style.display = "none";
             }
           } else {
             if (footer) {
               footer.style.display = "block";
             }
             if (landingLine1) {
-              landingLine1.style.display= "block"
+              landingLine1.style.display = "block";
             }
             if (landingLine2) {
-              landingLine2.style.display= "block"
+              landingLine2.style.display = "block";
             }
           }
-          if(scrollPercent > 45){
-            gsap.to("#categoryFadeTextBorder",{
-              borderBottom: "0px"
-            })
-            gsap.to("#categoryFadeText",{
-                marginTop: "-50px",
-                opacity: "0.3",
-                display: "none",
-                transitionDuration: "1s",
-                scrollTrigger: {
-                  trigger: "#categoryFadeText"
-              },
-            })
-           gsap .to(
-              "#categoriesTransition",
-              {
-                position: "absolute",
-                top: "50%",
-                left: "-84.2%",
-                transform: "translate(0%, -35%)",
-                transitionDuration: "1s",
-                scrollTrigger: {
-                  trigger: "#categoriesTransition"
-                }
-              },
-            )
-          }else if(scrollPercent < 45){
-            gsap.to("#categoryFadeTextBorder",{
-              borderBottom: "1px"
-            })
-            gsap.to("#categoryFadeText",{
-                marginTop: "0px",
-                opacity: "1",
-                display: "block",
-                transitionDuration: "1s",
-                scrollTrigger: {
-                  trigger: "#categoryFadeText"
-              },
-            })
-            gsap.to(
-              "#categoriesTransition",
-              {
-                position: "absolute",
-                top: "50%",
-                left: "0%",
-                transform: "translate(84.2%, -35%)",
-                scrollTrigger: {
-                  trigger: "#categoriesTransition"
-                }
-              },
-            )
-          }
-
+          // if(scrollPercent > 45){
+          //   gsap.to("#categoryFadeTextBorder",{
+          //     borderBottom: "0px"
+          //   })
+          //   gsap.to("#categoryFadeText",{
+          //       marginTop: "-50px",
+          //       opacity: "0.3",
+          //       display: "none",
+          //       transitionDuration: "1s",
+          //       scrollTrigger: {
+          //         trigger: "#categoryFadeText"
+          //     },
+          //   })
+          //  gsap .to(
+          //     "#categoriesTransition",
+          //     {
+          //       position: "absolute",
+          //       top: "50%",
+          //       left: "-84.2%",
+          //       transform: "translate(0%, -35%)",
+          //       transitionDuration: "1s",
+          //       scrollTrigger: {
+          //         trigger: "#categoriesTransition"
+          //       }
+          //     },
+          //   )
+          // }else if(scrollPercent < 45){
+          //   gsap.to("#categoryFadeTextBorder",{
+          //     borderBottom: "1px"
+          //   })
+          //   gsap.to("#categoryFadeText",{
+          //       marginTop: "0px",
+          //       opacity: "1",
+          //       display: "block",
+          //       transitionDuration: "1s",
+          //       scrollTrigger: {
+          //         trigger: "#categoryFadeText"
+          //     },
+          //   })
+          //   gsap.to(
+          //     "#categoriesTransition",
+          //     {
+          //       position: "absolute",
+          //       top: "50%",
+          //       left: "0%",
+          //       transform: "translate(84.2%, -35%)",
+          //       scrollTrigger: {
+          //         trigger: "#categoriesTransition"
+          //       }
+          //     },
+          //   )
+          // }
 
           if (scrollPercent > 70) {
             setToggleNav(2);
@@ -173,8 +165,8 @@ export default function Home() {
       position: "absolute",
       top: "50%",
       left: "50%",
-      width: "100%",
-      height: "388px",
+      width: "179px%",
+      height: "100vh",
       transform: "translate(-50%, -50%)",
     })
 
@@ -191,8 +183,6 @@ export default function Home() {
         "LandingPage"
       )
 
-    
-
       .from(".ProfileMainDetails", {
         top: "50%",
         right: "0%",
@@ -202,53 +192,43 @@ export default function Home() {
         transform: "translate(50%, -50%)",
       });
 
-
-
-
-      
-
     stops.forEach((stop, index) => {
       const currentSection = sections[stop] as HTMLElement; // Use type assertion
       const q = gsap.utils.selector(currentSection);
-      console.log("stop", stop)
-
-
-      tl.to(sections, {
-        xPercent: -(100 * stop),
-        duration: stop,
-      });
+      console.log("stop", stop, index);
 
       tl.to(sections, {
         xPercent: -(100 * stop),
         duration: stop,
       });
+      if (currentSection.querySelector("#categoriesTransition")) {
+        tl.to("#categoryFadeText", {
+            marginTop: "-80px",
+            opacity: "0",
+            duration: 3,
+          },"start").to("#categoryFadeTextBorder", {
+            borderBottom: "0px",
+            duration: 3,
+          },"start")
+          tl  .to("#categoriesTransition", {
+            position: "absolute",
+            top: "50%",
+            transform: "translate(0%, -35%)",
+            duration: 3,
+          },"start")
+      }
 
-      // if (currentSection.querySelector('#categoriesTransition')) {
-      //   console.log("HHH", stop, sections, index);
-        
-      //   tl.to(
-      //     "#categoriesTransition",
-      //         {
-      //           position: "absolute",
-      //           top: "50%",
-      //           // left: "-04.2%",
-      //           transform: "translate(0%, -35%)",
-      //           transitionDuration: "1s",
-      //           background: "red",
-      //         },
-      //   )
-
-      // }
+      tl.to(sections, {
+        xPercent: -(100 * stop),
+        duration: stop,
+      });
 
       if (index === stops.length - 1) {
         tl.to(sections, {
           xPercent: -(100 * (sections.length - 1)),
           duration: sections.length - stop,
-          
         });
-        
       }
-
     });
   }, []);
 
@@ -274,9 +254,8 @@ export default function Home() {
         handleNav={() => handleNav(2)}
         navCol={toggleNav}
       />
-      <div className="mainans ">
-        <div className="MainContainer">
-
+      <div className="mainans " id="smooth-wrapper">
+        <div className="MainContainer" id="smooth-content">
           <section className={`panel LandingTransition`}>
             <LandingTransition />
           </section>

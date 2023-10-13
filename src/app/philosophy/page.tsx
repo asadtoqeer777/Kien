@@ -131,7 +131,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
 
       <section className=" bg-black sticky top-0 text-white">
         <div className="h-full ">
-          <div className="relative pb-9 pl-4 sm:pl-0">
+          <div className="relative pb-9 pl-4">
 
           <p className="text-xs mb-1">(04)</p>
           <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold">

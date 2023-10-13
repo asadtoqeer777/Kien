@@ -24,6 +24,12 @@ const Connect = () => {
       duration: 1
       
     });
+    gsap.to("#connectFade", {
+      opacity: 1, 
+      x: 0, 
+      duration: 1
+      
+    });
     // gsap.from("#connectHeading", {
     //   opacity: 0, 
     //   x: -800, 
