@@ -9,8 +9,6 @@ import PhilosophyPage from "./philosophy/page";
 import Header from "./__components/header/Header";
 import ArchetypePage from "./archetype/page";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -202,20 +200,48 @@ export default function Home() {
         duration: stop,
       });
       if (currentSection.querySelector("#categoriesTransition")) {
-        tl.to("#categoryFadeText", {
+        tl.to(
+          "#categoryFadeText",
+          {
             marginTop: "-80px",
             opacity: "0",
             duration: 3,
-          },"start").to("#categoryFadeTextBorder", {
+          },
+          "start"
+        ).to(
+          "#categoryFadeTextBorder",
+          {
             borderBottom: "0px",
             duration: 3,
-          },"start")
-          tl  .to("#categoriesTransition", {
+          },
+          "start"
+        );
+        tl.to(
+          "#categoriesTransition",
+          {
             position: "absolute",
             top: "50%",
             transform: "translate(0%, -35%)",
             duration: 3,
-          },"start")
+          },
+          "start"
+        );
+      }
+      if (currentSection.querySelector("#philosophy")) {
+        tl.fromTo(
+          "#philosophy",
+          {
+            scale: 100,
+            duration: 15
+          },
+          {
+            scale: 1,
+            duration: 15,
+          }
+        )
+        // .to("#bottomFotter", {
+        //   yPercent: '30'
+        // }, "start")
       }
 
       tl.to(sections, {

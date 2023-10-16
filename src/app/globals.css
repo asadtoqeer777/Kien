@@ -53,6 +53,10 @@ body {
 
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .mainans{
   overscroll-behavior: none;
   height: 100vh;

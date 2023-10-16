@@ -48,13 +48,14 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
   return (
     <div
       className={
-        scrollCheck
-          ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
-          : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
+        // scrollCheck
+        //   ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
+        //   : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
+        "bg-black w-[100vw]  philosophyMain overflow-hidden relative"
       }
     >
-      <section className=" w-full overflow-scroll sticky top-0">
-        <div className="bg-white pt-10">
+      <section className=" w-full relative z-20">
+        <div className="bg-white pt-10 ">
           <Container styles="uppercase">
             <div className="flex justify-between items-center">
               <div
@@ -89,17 +90,17 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
             <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold">
               Philosophy
             </h1>
-            <div className="md:w-[80%] w-full mx-auto 2xl:mt-5 xl:mt-2 lg:mt-0 md:-mt-7">
-              <TransformWrapper>
-                <TransformComponent>
+            <div className="md:w-[80%] w-full mx-auto 2xl:mt-5 xl:mt-2 lg:mt-0 md:-mt-7" id="philosophy">
+              {/* <TransformWrapper> */}
+                {/* <TransformComponent> */}
                   <Image
                     src={philosophyPoster}
                     alt="philosophy-poster"
                     className="custom-img  relative z-10"
                     fill
                   />
-                </TransformComponent>
-              </TransformWrapper>
+                {/* </TransformComponent> */}
+              {/* </TransformWrapper> */}
             </div>
           </Container>
         </div>
@@ -129,9 +130,9 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
         </div>
       </section>
 
-      <section className=" bg-black sticky top-0 text-white">
+      <section className="overflow-hidden bg-black top-0 text-white">
         <div className="h-full ">
-          <div className="relative pb-9 pl-4">
+          <div className="relative pb-9 pl-4" id="bottomFotter">
 
           <p className="text-xs mb-1">(04)</p>
           <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold">
