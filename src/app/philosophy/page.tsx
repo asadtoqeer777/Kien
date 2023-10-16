@@ -48,10 +48,9 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
   return (
     <div
       className={
-        // scrollCheck
-        //   ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
-        //   : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
-        "bg-black w-[100vw]  philosophyMain overflow-hidden relative"
+        scrollCheck
+          ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
+          : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
       }
     >
       <section className=" w-full relative z-20">
@@ -130,7 +129,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-black top-0 text-white">
+      <section className="sticky bg-black top-0 text-white">
         <div className="h-full ">
           <div className="relative pb-9 pl-4" id="bottomFotter">
 
