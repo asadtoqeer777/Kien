@@ -9,7 +9,7 @@ const LandingTransition = () => {
     <div className="h-screen w-[100vw]">
       <div
         style={{
-          backgroundImage: "url(./heroBg-2.png)",
+          backgroundImage: "url(./heroBg-3.png)",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           width: "100%",

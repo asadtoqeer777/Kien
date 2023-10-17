@@ -12,7 +12,7 @@ interface Props {
 const CategoriesCardMain = ({handleContentChange} : Props) => {
   return (
     <div>
-      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto px-[43px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
+      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto pr-[43px] pl-[23px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
         boxShadow: "47px 0px 263px 60px white inset",
         borderBottomLeftRadius: "20px",
         borderTopLeftRadius: "20px",
