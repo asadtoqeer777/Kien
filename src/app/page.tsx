@@ -32,15 +32,11 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".MainContainer",
         pin: true,
-        // scrub: 1,
+        scrub: 1,
         end: "+=10000",
-    scrub: 1,
-    snap: 1 / (sections.length - 1),
-    // end: () => "+=" + document.querySelector(".gsapcontainer").offsetWidth,
+        snap: 1 / (sections.length - 1),
+        // end: "+=" + sections.length * 11000,
         onUpdate: (self) => {
-          self.targets().forEach((target, index) => {
-            panelRefs.current[index].updateTo({ x: target._gsap.x }, true);
-          });
           // Calculate the activeNav based on the scroll position
           const scrollPercent = self.progress * 100;
           console.log("scrollPercent", scrollPercent);
