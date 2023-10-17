@@ -25,16 +25,16 @@ const ArchetypeImgCon = ({
 				transform: "scale(-1, -1)"
 			}}>
             <div className=" uppercase">
-              <div className="text-[24px] sm:text-[27px] md:text-[28px] lg:text-[30px] xl:text-[33px] 2xl:text-[50px] leading-[28px] xl:leading-[45px]">
+              <div className="text-[24px] sm:text-[27px] md:text-[28px] lg:text-[30px] xl:text-[33px] 2xl:text-[50px] leading-[28px] xl:leading-[45px] SpaceGrotesk">
                 {heading}
               </div>
-              <div className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px] xl:text-[15px] 2xl:text-[20px]">
+              <div className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px] xl:text-[15px] 2xl:text-[20px] AuxMono">
                {subHeading}
               </div>
             </div>
 
             </div>
-            <div className="absolute right-1 bottom-4 z-10 text-white " style={{
+            <div className="absolute right-1 bottom-4 z-10 text-white SpaceGrotesk" style={{
 				writingMode:  "vertical-rl",
 				transform: "scale(-1, -1)"
 			}}>{text}</div>

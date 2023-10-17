@@ -50,8 +50,8 @@ const ArchetypePage = () => {
 
       <div className=" h-[40vh] bg-white">
         <h1
-          className="pt-[45px] sm:pt-[55px] md:pt-[65px]  xl:pt-[75px]  2xl:pt-[95px] text-center text-[50px] sm:text-[70px] md:text-[80px] lg:text-[110px] xl:text-[125px] 2xl:text-[160px] tracking-[-4.8px] 
-        lg:tracking-[-4.8px] font-bold leading-9 uppercase"
+          className="pt-[45px] sm:pt-[55px] md:pt-[65px]  xl:pt-[75px]  2xl:pt-[95px] text-center text-[50px] sm:text-[63px] md:text-[75px] lg:text-[100px] xl:text-[120px] 2xl:text-[140px] tracking-[-4.8px] 
+        lg:tracking-[-4.8px] font-bold leading-9 uppercase CraftworkGrotesk"
         >
           Craft your STORY
         </h1>
@@ -74,15 +74,15 @@ const ArchetypePage = () => {
           <div className="col-span-2 md:col-span-3 xl:col-span-5 bg-black"></div>
           <div className="col-span-10 md:col-span-9 xl:col-span-7 bg-primary relative">
             <div className="absolute text-white bottom-3 left-2 w-full">
-              <h2 className="text-[52px] font-[400]">Archetype</h2>
+              <h2 className="text-[52px] font-[400] SpaceGrotesk">Archetype</h2>
               <div className="grid grid-cols-10">
                 <div className="col-span-2">
-                  <p className="text-[12px] font-[400] mt-[9px]">[AA]+[KEE]+[TYP]</p>
+                  <p className="text-[12px] font-[400] mt-[9px] AuxMono">[AA]+[KEE]+[TYP]</p>
                 </div>
                 <div className="col-span-5 px-4">
                   <div className="flex mt-[9px] gap-3">
                     <div className="w-[12px] h-[12px] bg-white rounded-[50%] mt-[3px]"></div>
-                    <div className="text-[12px] font-[400] w-[95%]">
+                    <div className="text-[12px] font-[400] w-[95%] SpaceGrotesk">
                     Beyond a timeless emblem, an archetype reveals intrinsic truths in travel. Engaging with these patterns leads to self-discovery and a deeper connection to humanity's collective narrative, journeying both across lands and within the soul.
                     </div>
                   </div>

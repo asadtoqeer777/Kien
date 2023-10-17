@@ -13,7 +13,7 @@ const Register = () => {
 
           <div className="mainImage text-center w-[310px] sm:w-[390px]  pt-[40px] m-auto relative  sm:pt-[50px] md:pt-[60px] lg:pt-[70px] xl:pt-[80px] 2xl:pt-[124px]">
             <Image className='h-auto w-[250px] md:w-[260px]  lg:w-[270px]  xl:w-[300px] 2xl:h-[117px] 2xl:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
-            <div className="text-[20px] sm:text-[22px] md:text-[23px] lg:md:text-[24px] xl:text-[25px] 2xl:text-[27px] mt-2 font-semibold text-white">
+            <div className="text-[20px] sm:text-[22px] md:text-[23px] lg:md:text-[24px] xl:text-[25px] 2xl:text-[27px] mt-2 font-semibold text-white CraftworkGrotesk">
             YOU’RE THE DESTINATION
             </div>
             <div className="barImage">
@@ -21,7 +21,7 @@ const Register = () => {
             </div>
           </div>
           <div className="mt-[46px] sm:mt-[56px] md:mt-[46px] lg:mt-[56px] xl:mt-[66px] 2xl:mt-[70px]">
-            <div className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[34px] 2xl:text-[38px] mb-[15px] lg:b-[20px] xl:mb-[25px] 2xl:mb-[35px] font-semibold text-white">
+            <div className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[34px] 2xl:text-[38px] mb-[15px] lg:b-[20px] xl:mb-[25px] 2xl:mb-[35px] font-semibold text-white CraftworkGrotesk">
               Create an Account.
             </div>
 
@@ -51,7 +51,7 @@ const Register = () => {
             </div>
           </div>
 
-          <div className="mt-[30px] sm:mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:xl:mt-[180px] text-center">
+          <div className="mt-[30px] sm:mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:xl:mt-[130px] text-center">
             <Button btnClasses={"bg-transparent w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-semibold	text-[#ffffff80]"} btntext={"Need Help?"} />
           </div>
 

@@ -45,7 +45,7 @@ const LandingTransition = () => {
                 <div>
                   <div className=" w-full absolute bottom-[70px] right-[14px]">
                     <div className="flex justify-between pr-4">
-                      <div className="flex justify-between px-[14px] sm:px-[34px]">
+                      <div className="flex justify-between px-[14px] sm:px-[34px] CraftworkGrotesk">
                         <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
                           <div className="">YOU</div>
                           <div className="">ARE</div>
@@ -55,7 +55,7 @@ const LandingTransition = () => {
                           <div className="">DESTINATION </div>
                         </div>
                       </div>
-                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] ">
+                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] AuxMono">
                         <div className="">IMMERSIVE
 </div>
                         <div className="">TRAVEL</div>

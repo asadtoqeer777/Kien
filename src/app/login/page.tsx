@@ -12,7 +12,7 @@ const Login = () => {
 
         <div className="mainImage text-center">
           <Image className='h-[auto] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
-          <div className="text-[27px] font-semibold text-[#000]">
+          <div className="text-[27px] font-semibold text-[#000] CraftworkGrotesk">
           YOU’RE THE DESTINATION
           </div>
           <div className="barImage">

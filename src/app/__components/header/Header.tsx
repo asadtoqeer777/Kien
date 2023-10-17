@@ -22,7 +22,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
     setActiveNav((activeNav) => !activeNav)
   };
   return (
-    <header className='relative w-full'>
+    <header className='relative w-full CraftworkGrotesk'>
 
       <div className={activeNav || toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] fixed top-0 left-0 z-20 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
         <div onClick={handleNav || handleNavInternal}>

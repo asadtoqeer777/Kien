@@ -48,7 +48,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
   return (
     <div
       className={
-        " w-[100vw] h-[100vh] philosophyMain  relative overflow-x-hidden"
+        " w-[100vw] h-[100vh] philosophyMain  relative overflow-x-hidden SpaceGrotesk"
       }
     >
       <section className=" w-full relative z-20">
@@ -85,7 +85,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                 </div>
               </div>
             </div>
-            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold ">
+            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold CraftworkGrotesk">
               Philosophy
             </h1>
 
@@ -110,7 +110,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
           <div className="relative pb-9 pl-4" id="bottomFotter">
 
           <p className="text-xs mb-1">(04)</p>
-          <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold">
+          <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold CraftworkGrotesk">
           Meet who you are. On the way.
           </h1>
           <div className="lg:w-9/12 ml-auto mt-3 h-full border-b-[1.5px] border-white relative">
@@ -171,7 +171,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
             <div className="absolute top-0 left-[75%] w-[1px] h-[94.9%] bg-white"></div>
           </div>
 
-          <div className="border-t lg:w-9/12 w-full ml-auto">
+          <div className="border-t lg:w-9/12 w-full ml-auto CraftworkGrotesk">
             {expListings.map((data, index) => (
               <div key={index} className="relative calc-width ml-auto">
                 <div

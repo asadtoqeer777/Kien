@@ -40,7 +40,7 @@ const Connect = () => {
           <Container>
 
             <div id='connectHeading'>
-              <h1 className='text-[60px] sm:text-[100px] md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[275px] text-white font-bold xl:tracking-[-16.5px] uppercase leading-[70px]'>
+              <h1 className='text-[60px] sm:text-[100px] md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[275px] text-white font-bold xl:tracking-[-16.5px] uppercase leading-[70px] CraftworkGrotesk'>
                 Connect
               </h1>
             </div>
@@ -54,7 +54,7 @@ const Connect = () => {
                                     }} />
                     </div>
                   </div>
-                  <div className="col-span-8 lg:col-span-7">
+                  <div className="col-span-8 lg:col-span-7 CraftworkGrotesk">
                     <div className="mt-5 border-y-[1px] border-black flex justify-between items-center pr-4 2xl:pr-4  xl:pr-3">
                       <h2 className='text-[20px] 2xl:text-[35px] xl:text-[26px] lg:text-[24px] md:text-[22px] font-semibold lg:font-[500] xl:font-semibold  leading-[40px] 2xl:leading-[70px] xl:leading-[50px] lg:leading-[50px] md:leading-[45px]  lg:tracking-[-2.1px]'>Tell us your story :</h2>
                       <Image className='w-[25px] h-[25px] lg:h-[35px] lg:w-[35px]' src={DownArrow} alt='DownArrow' />
@@ -73,9 +73,9 @@ const Connect = () => {
                     </div>
                     <div className="">
                       <Button btnClasses={"bg-transparent text-black border-2 border-black w-[162px] h-[26px] rounded-[19.5px] text-[18px] mb-3 pb-[2px]"} btntext={"SUBMIT"} />
-                      <div className="text-sm w-[55%] lg:w-[35%] text-[#00000033]">
-                        By clicking the “Submit” button,
-                        you agree to the privacy policy.
+                      <div className="text-sm tracking-[-0.84px] w-[55%] text-[#00000033] AuxMono">
+                      By clicking the “Submit” button, 
+you agree to the privacy policy.
                       </div>
                     </div>
                   </div>
@@ -83,13 +83,13 @@ const Connect = () => {
                 <div className="absolute bottom-2 lg:bottom-1 xl:bottom-1 2xl:bottom-3 left-4">
                   <div className="grid grid-cols-12">
                     <div className="col-span-4 lg:col-span-5"></div>
-                    <div className="col-span-8 lg:col-span-5">
+                    <div className="col-span-8 lg:col-span-7">
 
-                      <h2 className='text-[20px] 2xl:text-[35px] xl:text-[28px] lg:text-[26px] ml-[-16px] font-semibold lg:font-[500] xl:font-semibold  leading-[25px] 2xl:leading-[41px] xl:leading-[35px] lg:leading-[30px] lg:tracking-[-2.1px] pr-4'>We will contact you within 16 hours after
+                      <h2 className='text-[20px] 2xl:text-[35px] xl:text-[28px] lg:text-[26px] ml-[-16px] font-semibold lg:font-[500] xl:font-semibold  leading-[25px] 2xl:leading-[41px] xl:leading-[35px] lg:leading-[30px] lg:tracking-[-2.1px] pr-4 CraftworkGrotesk'>We will contact you within 16 hours after
                         you submit the form.</h2>
                     </div>
                   </div>
-                  <div className="text-[10px] md:text-[12px] lg:text-lg font-semibold lg:font-[500] xl:font-semibold  leading-3 lg:leading-5 md:leading-4 lg:tracking-[-1.08px] pr-4 flex justify-between items-end gap-4 sm:gap-0">
+                  <div className="text-[10px] md:text-[12px] lg:text-lg font-semibold lg:font-[500] xl:font-semibold  leading-3 lg:leading-5 md:leading-4 lg:tracking-[-1.08px] pr-4 flex justify-between items-end gap-4 sm:gap-0 AuxMono">
                     <div>
                       <div>
                         MG Road,

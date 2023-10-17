@@ -12,7 +12,11 @@ interface Props {
 const CategoriesCardMain = ({handleContentChange} : Props) => {
   return (
     <div>
-      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto px-[43px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3">
+      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto px-[43px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
+        boxShadow: "47px 0px 263px 60px white inset",
+        borderBottomLeftRadius: "20px",
+        borderTopLeftRadius: "20px",
+      }}>
       <div className="flex items-center gap-2 absolute right-5 -top-[47px]">
         <Image src={DarkPlus} alt='DarkPlus' />
         <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />

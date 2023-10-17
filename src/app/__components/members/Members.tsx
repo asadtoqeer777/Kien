@@ -14,11 +14,12 @@ interface Props{
   ProfileName: string;
   prifileStack: string;
   memeberBtnBg: string;
+  stackDel: string;
 }
 
-const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg} : Props) => {
+const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg, stackDel} : Props) => {
   return (
-    <div className='relative'>
+    <div className='relative Space Grotesk'>
       <div className={`grid grid-cols-10 pt-[40px] uppercase ${memberTheme} `}>
         <div className="col-span-6 relative ">
           <div className="h-[226px]">
@@ -38,7 +39,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] right-[-12px]`}></div>
             <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] left-0`}></div>
           </div>
-          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3 w-[80%]">
+          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3 w-[80%] CraftworkGrotesk">
          
 {ProfileName}
           </h1>
@@ -48,7 +49,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             <Image className='w-[100%] h-[calc(100vh-266px)]' src={MembersBg} alt=''/>
             <div className={`w-[100vw] h-[3px] ${memberThemeCol} absolute top-0 left-0`}></div>
             <div className="absolute bottom-[23px]">
-            <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px]  ml-3 text-white w-[80%]">
+            <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px]  ml-3 text-white w-[80%] CraftworkGrotesk">
             
 {prifileStack}
           </h1>
@@ -142,7 +143,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                     </div>
 
                   </div>
-                  <div className="2xl:text-[78px] xl:text-[68px] lg:text-[65px] md:text-[55px] sm:text-[50px] text-[30px] font-bold leading-[65px] text-right tracking-[-4.68px]">
+                  <div className="2xl:text-[78px] xl:text-[68px] lg:text-[65px] md:text-[55px] sm:text-[50px] text-[30px] font-bold leading-[65px] text-right tracking-[-4.68px] CraftworkGrotesk">
                     2023
                   </div>
                 </div>
@@ -151,9 +152,8 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             </div>
             <div className="col-span-12 mt-[115px]">
               <div className=" pr-3 relative">
-                <div className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[50px] sm:text-[50px] text-[30px] 2xl:leading-[70px] leading-[55px] tracking-[-4.68px] font-bold text-end">
-                  ideation
-                  wizard
+                <div className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[50px] sm:text-[50px] text-[30px] 2xl:leading-[70px] leading-[55px] tracking-[-4.68px] font-bold text-end CraftworkGrotesk">
+                  {stackDel}
                 </div>
                 <div className={`w-full h-[1px] ${memberThemeCol} absolute top-[2px] `}></div>
               </div>
@@ -176,7 +176,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                     chakkaravarthy@kien.travel
                   </div>
                   <div className='mt-2 2xl:mt-0'>
-                    <Button btnClasses={`${memeberBtnBg} w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]`} btntext={"Connect Here"} />
+                    <Button btnClasses={`${memeberBtnBg} SpaceGrotesk w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]`} btntext={"Connect Here"} />
                   </div>
                 </div>
               </div>

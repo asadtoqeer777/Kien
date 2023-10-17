@@ -6,6 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: 'Craftwork Grotesk';
   src: url('./__assets/fonts/CraftworkGrotesk-Bold.ttf') format('woff');
@@ -83,6 +84,20 @@ body::-webkit-scrollbar{
   display: none;
 }
 
+.CraftworkGrotesk{
+  font-family: 'Craftwork Grotesk';
+}
+
+
+.SpaceGrotesk{
+  font-family: 'SpaceGrotesk';
+}
+
+.AuxMono{
+  font-family: 'Aux Mono';
+}
+
+
 .mainans{
   overscroll-behavior: none;
   height: 100vh;
@@ -99,7 +114,6 @@ body::-webkit-scrollbar{
 .panel {
   height: 100vh;
   flex-direction: column;
-  font-family: 'Aux Mono';
 }
 
 

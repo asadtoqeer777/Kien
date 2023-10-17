@@ -108,11 +108,11 @@ const TeamMembers = () => {
               </div>
               <div className="col-span-11">
 
-              <div className="uppercase grid grid-cols-6 mt-[10px]">
+              <div className="uppercase grid grid-cols-6 mt-[10px] AuxMono">
                 <div
                   className={`${
                     selectedTab === 1 ? "bg-[#313131]" : "bg-black"
-                  }  col-span-3 text-center py-[17px] border-r-[1.5px] border-white cursor-pointer`}
+                  }  col-span-3 text-center py-[17px] border-r-[1.5px] border-white cursor-pointer `}
                   onClick={() => setSelectedTab(1)}
                 >
                   Team Members
@@ -137,11 +137,11 @@ const TeamMembers = () => {
           <div>
 {VerticalTabs.map((items, index)=>{
   return <div
-  className="targetTab"
+  className="targetTab CraftworkGrotesk"
   style={{ display: index === activeTab ? "block" : "none" }}
 >
   <div className="bg-black relative z-10 pt-[20px] pl-[14px]">
-    <div className="2x:text-[69px] xl:text-[59px] lg:text-[49px] md:text-[43px] sm:text-[33px] text-[30px] font-semibold 2xl:-tracking-[4.14px] xl:-tracking-[3.14px] lg:-tracking-[2.14px] 2xl:leading-[64px] md:leading-[48px] leading-[38px]">
+    <div className="2x:text-[69px] xl:text-[59px] lg:text-[49px] md:text-[43px] sm:text-[33px] text-[30px] font-semibold 2xl:-tracking-[4.14px] xl:-tracking-[3.14px] lg:-tracking-[2.14px] 2xl:leading-[64px] md:leading-[48px] leading-[38px]  CraftworkGrotesk">
       {items.mainHeading}
     </div>
     <div className="2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] text-[15px] 2xl:tracking-[-1.32px] leading-[28px] mt-2 mb-1">
@@ -161,6 +161,7 @@ const TeamMembers = () => {
 </div>
 })}
           </div>
+
  : 
          <Partners/>}
           </div>
@@ -169,8 +170,8 @@ const TeamMembers = () => {
 
         {selectedTab ===1? 
         <div className="col-span-6">
-          <div className="2xl:text-[208px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px] uppercase font-bold leading-[172px] tracking-[-12.48px] -translate-x-14 ">
-            <Marquee>
+          <div className="2xl:text-[208px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px] uppercase font-bold leading-[172px] tracking-[-12.48px] -translate-x-14 CraftworkGrotesk">
+            <Marquee className="overflow-hidden">
            <div className="mr-[80px]"> PLayer</div>
            <div className="mr-[80px]"> PLayer</div>
            <div className="mr-[80px]"> PLayer</div>
@@ -188,13 +189,13 @@ const TeamMembers = () => {
                 onClick={() => handleTabClick(index)}
             >
               <div className="flex justify-between">
-                <div className={`2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]  ${index === activeTab ? " opacity-[0.4]" : ""}`}>
+                <div className={`2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2] CraftworkGrotesk ${index === activeTab ? " opacity-[0.4]" : ""}`}>
                   {items.title}
                 </div>
                 <div className={`h-[42px] w-[42px] bg-primary rounded-full ${index === activeTab ? "d-block" : "hidden"}`}></div>
               </div>
 
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
+              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 AuxMono">
                 <div>{items.head}</div>
                 <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">{items.subHead1}</div>
                 <div>{items.subHead2}</div>
@@ -206,9 +207,9 @@ const TeamMembers = () => {
           </div>
         </div> :  
         <div className="col-span-6 bg-secondary text-black h-[100vh-30px]">
-          <div className="2xl:text-[215px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px]  uppercase font-bold leading-[172px] tracking-[-9.48px] -translate-x-14 relative">
-            
-            <Marquee>
+          <div className="2xl:text-[215px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px]  uppercase font-bold leading-[172px] tracking-[-9.48px] -translate-x-14 relative CraftworkGrotesk">
+            <div className=" ">
+            <Marquee className="overflow-hidden">
            <div className="mr-[80px]"> Metafy</div>
            <div className="mr-[80px]"> Metafy</div>
            <div className="mr-[80px]"> Metafy</div>
@@ -216,6 +217,7 @@ const TeamMembers = () => {
            <div className="mr-[80px]"> Metafy</div>
            <div className="mr-[80px]"> Metafy</div>
             </Marquee>
+            </div>
           </div>
           <div className="pt-2 pl-2 text-[50px] uppercase font-medium w-[80%] leading-[44px] tracking-[-2.88px] truncate-[2]">
             "Mention Highlight"

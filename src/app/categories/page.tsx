@@ -99,7 +99,7 @@ const Category = () => {
                   />
                 </div>
                 <div
-                  className={`${style.categoryHeading} col-span-5 flex items-end pb-5`}
+                  className={`${style.categoryHeading} col-span-5 flex items-end pb-5 CraftworkGrotesk`}
                 >
                   <div>{option.maintitle}</div>
                 </div>
@@ -114,21 +114,21 @@ const Category = () => {
                   <div className="flex items-center gap-2 ml-4 mt-2">
                     <Button
                       btnClasses={
-                        "bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"
+                        "bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px] "
                       }
-                      btntext={"USER LOGIN"}
+                      btntext={"PERIPATETIC"}
                     />
                     <Button
                       btnClasses={
                         "bg-black text-white border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"
                       }
-                      btntext={"ENROLL NOW"}
+                      btntext={"DECODE CARD"}
                     />
                   </div>
                 </div>
                 <div className="col-span-5">
                   <div
-                    className={`${style.categoryHeading} col-span-4 text-[#00000080] mt-[4vh] sm:mt-[3vh]`}
+                    className={`${style.categoryHeading} col-span-4 text-[#00000080] mt-[4vh] sm:mt-[3vh] CraftworkGrotesk`}
                     id="categoryFadeText"
                   >
                     <h1>{option.subMaintitle1}</h1>
