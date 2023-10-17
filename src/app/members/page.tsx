@@ -41,7 +41,7 @@ const MembersPage: React.FC<MembersPageProps> = () => {
 
   return (
     <div>
-      <Header navTheme={activeSlide === 0 ? "bg-[#E3FF00]" : "bg-[#E3FF00] text-[#2667CF]" }/>
+      <Header navTheme={activeSlide === 0 ? "bg-[#E3FF00]" : "bg-black text-white" } navBorArrow={activeSlide === 0 ? false : true}/>
 {/* 
       <p>
         BeforeChange = activeSlide: <strong>{activeSlide}</strong>
@@ -53,8 +53,8 @@ const MembersPage: React.FC<MembersPageProps> = () => {
 <div className="relative">
 
       <Slider {...sliderSettings} ref={sliderRef} className='w-screen overflow-x-hidden'>
-        <MembersItem prifileStack={"CEO / founder"} ProfileName={" Siva chakkaravarthy"} memberTheme={"text-black bg-[white]"} memberThemeCol={"bg-black"} logoCol= {false} footerCol={"text-black"} memeberBtnBg={"bg-secondary"}/>
-        <MembersItem prifileStack={"C.F.O (CHEIF)"} ProfileName={"Vishwanath Purushothaman"}  memberTheme={"text-white bg-[#2667CF]"} memberThemeCol={"bg-white"} logoCol= {true} footerCol={"text-white"}  memeberBtnBg={"bg-black"}/>
+        <MembersItem prifileStack={"CEO / founder"} ProfileName={" Siva chakkaravarthy"} stackDel={"ideation wizard"} teamStack={"( CEO / FOUNDER )"} memberTheme={"text-black bg-[white]"} memberThemeCol={"bg-black"} logoCol= {false} footerCol={"text-black"} memeberBtnBg={"bg-secondary"}/>
+        <MembersItem prifileStack={"CHIEF OPERATIONS OFFICER"} ProfileName={"Vishwanath Purushothaman"} stackDel={"OPERATIONS MAESTRO"} teamStack={"( OPERATIONS )"} memberTheme={"bg-secondary"} memberThemeCol={"bg-black"} logoCol= {false} footerCol={"text-black"}  memeberBtnBg={"bg-black text-white"}/>
         
       </Slider>
       <div className="absolute bottom-4 left-[52%] z-20  text-white">

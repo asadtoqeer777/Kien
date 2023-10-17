@@ -20,9 +20,9 @@ const CatagoryButton = ({ btnLabel, btnLabelDetail,clickFcun, toggleBtn }: Props
       }
       onClick={clickFcun}
     >
-      <div className="flex flex-col w-full justify-start items-center h-full">
-        <div className="mb-[40px]">{btnLabel}</div>
-        {toggleBtn ? <div>{btnLabelDetail}</div> : ""}
+      <div className="flex flex-col w-full justify-start items-center h-full ">
+        <div className="mb-[40px] AuxMono">{btnLabel}</div>
+        {toggleBtn ? <div className="CraftworkGrotesk">{btnLabelDetail}</div> : ""}
       </div>
     </button>
   );

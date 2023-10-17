@@ -14,11 +14,13 @@ interface Props{
   ProfileName: string;
   prifileStack: string;
   memeberBtnBg: string;
+  stackDel: string;
+  teamStack: string
 }
 
-const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg} : Props) => {
+const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg, stackDel, teamStack} : Props) => {
   return (
-    <div className='relative'>
+    <div className='relative Space Grotesk'>
       <div className={`grid grid-cols-10 pt-[40px] uppercase ${memberTheme} `}>
         <div className="col-span-6 relative ">
           <div className="h-[226px]">
@@ -30,7 +32,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                 Team
               </div>
               <div>
-                ( CO - FOUNDER )
+                {teamStack}
               </div>
             </div>
             <div>Members</div>
@@ -38,7 +40,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] right-[-12px]`}></div>
             <div className={`w-[1px] h-[calc(100vh-30px)] ${memberThemeCol} absolute top-[-10px] left-0`}></div>
           </div>
-          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3 w-[80%]">
+          <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px] mt-8  ml-3 w-[80%] CraftworkGrotesk">
          
 {ProfileName}
           </h1>
@@ -48,7 +50,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             <Image className='w-[100%] h-[calc(100vh-266px)]' src={MembersBg} alt=''/>
             <div className={`w-[100vw] h-[3px] ${memberThemeCol} absolute top-0 left-0`}></div>
             <div className="absolute bottom-[23px]">
-            <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px]  ml-3 text-white w-[80%]">
+            <h1 className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[60px] sm:text-[50px] text-[30px] font-bold leading-[70px]  ml-3 text-white w-[80%] CraftworkGrotesk">
             
 {prifileStack}
           </h1>
@@ -62,7 +64,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
               <Image className='2xl:w-[253px] xl:w-[100%]  2xl:h-[75px] xl:h-[75px] mx-3' src={logoCol ?  BrandWhiteLogo : BrandLogo} alt='' />
               <div className="relative">
 
-                <div className="text-[48px] lg:text-[68px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px] md:w-[42%] w-[52%]   break-words 2xl:leading-[68px] leading-[50px] mt-2 relative text-end m-auto ">
+                <div className="text-[34px] lg:text-[55px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px] md:w-[42%] w-[52%]   break-words 2xl:leading-[68px] leading-[50px] mt-2 relative text-end m-auto ">
                   2023
                 </div>
                 <div className={`2xl:w-[46px] w-[40px] h-[428px] ${memberThemeCol} absolute top-[14%] xl:left-[29%] md:left-[20%] left-[12%]`}></div>
@@ -98,7 +100,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (02)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      NITHIS MATHUR A.K.A NICK
                     </div>
                   </div>
                   <div className="  flex justify-between">
@@ -106,7 +108,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (03)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      PRETUM MANUS
                     </div>
                   </div>
                   <div className="  flex justify-between">
@@ -114,7 +116,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (04)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      PARTNERS
                     </div>
                   </div>
                 </div>
@@ -142,7 +144,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                     </div>
 
                   </div>
-                  <div className="2xl:text-[78px] xl:text-[68px] lg:text-[65px] md:text-[55px] sm:text-[50px] text-[30px] font-bold leading-[65px] text-right tracking-[-4.68px]">
+                  <div className="2xl:text-[78px] xl:text-[68px] lg:text-[65px] md:text-[55px] sm:text-[50px] text-[30px] font-bold leading-[65px] text-right tracking-[-4.68px] CraftworkGrotesk">
                     2023
                   </div>
                 </div>
@@ -151,9 +153,8 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
             </div>
             <div className="col-span-12 mt-[115px]">
               <div className=" pr-3 relative">
-                <div className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[50px] sm:text-[50px] text-[30px] 2xl:leading-[70px] leading-[55px] tracking-[-4.68px] font-bold text-end">
-                  ideation
-                  wizard
+                <div className="2xl:text-[78px] xl:text-[70px] lg:text-[65px] md:text-[50px] sm:text-[50px] text-[30px] 2xl:leading-[70px] leading-[55px] tracking-[-4.68px] font-bold text-end CraftworkGrotesk">
+                  {stackDel}
                 </div>
                 <div className={`w-full h-[1px] ${memberThemeCol} absolute top-[2px] `}></div>
               </div>
@@ -176,7 +177,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                     chakkaravarthy@kien.travel
                   </div>
                   <div className='mt-2 2xl:mt-0'>
-                    <Button btnClasses={`${memeberBtnBg} w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]`} btntext={"Connect Here"} />
+                    <Button btnClasses={`${memeberBtnBg} SpaceGrotesk w-[122px] h-[20px] rounded-[19.5px] text-[10px] 2xl:text-[12px]`} btntext={"Connect Here"} />
                   </div>
                 </div>
               </div>

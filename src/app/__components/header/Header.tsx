@@ -4,15 +4,17 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import NavArrow from "../../__assets/images/pngs/navArrow.png"
+import NavArrowWhite from "../../__assets/images/svgs/backArrowWhite.svg"
 
 interface Props {
   navTheme: string,
   toggleNav?: boolean,
   handleNav?: any,
+  navBorArrow?: boolean,
   navCol?: number
 }
 
-const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
+const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) => {
   const [activeNav, setActiveNav] = useState(false);
   const router = useRouter()
 
@@ -20,7 +22,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
     setActiveNav((activeNav) => !activeNav)
   };
   return (
-    <header className='relative w-full'>
+    <header className='relative w-full CraftworkGrotesk'>
 
       <div className={activeNav || toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] fixed top-0 left-0 z-20 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
         <div onClick={handleNav || handleNavInternal}>
@@ -45,18 +47,19 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
           </div>
 
           <div className='cursor-pointer'>
-            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
+            <div className={`flex justify-between items-center w-[100%] sm:w-[80%] border-b-2  boredr-[1px] mt-[21px] ${navBorArrow ? "border-white" : " border-black"}`}>
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 About
               </h2>
               <div className="">
-                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />
+                {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
+               
               </div>
             </div>
             <div className="flex mt-1">
               <div className="w-[120px] sm:w-[300px]">
 
-                <div className="w-3 h-3 bg-black rounded-[50%]"></div>
+                <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
               </div>
               <div>
                 <div className=" text-sm not-italic font-normal">
@@ -70,7 +73,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
           </div>
 
           <div className='cursor-pointer' >
-            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]" onClick={() => {
+            <div className={`flex justify-between items-center w-[100%] sm:w-[80%] border-b-2  boredr-[1px] mt-[21px] ${navBorArrow ? "border-white" : " border-black"}`} onClick={() => {
             router.push('/members')
             // handleNav() || handleNavInternal()
             setActiveNav(false)
@@ -79,7 +82,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
                 Members
               </h2>
               <div className="">
-                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />  
+               {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
             <div className="flex mt-1" onClick={() => {
@@ -89,7 +92,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
           }}>
               <div className="w-[120px] sm:w-[300px]">
 
-                <div className="w-3 h-3 bg-black rounded-[50%]"></div>
+                <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
               </div>
               <div>
                 <div className=" text-sm not-italic font-normal">
@@ -107,18 +110,18 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
             // handleNav() || handleNavInternal()
             setActiveNav(false)
           }}>
-            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
+            <div className={`flex justify-between items-center w-[100%] sm:w-[80%] border-b-2  boredr-[1px] mt-[21px] ${navBorArrow ? "border-white" : " border-black"}`}>
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 Connect
               </h2>
               <div className="">
-                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />
+                {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
             <div className="flex mt-1">
               <div className="w-[120px] sm:w-[300px]">
 
-                <div className="w-3 h-3 bg-black rounded-[50%]"></div>
+                <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
               </div>
               <div>
                 <div className=" text-sm not-italic font-normal">
@@ -139,18 +142,18 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol }: Props) => {
             // handleNav() || handleNavInternal()
             setActiveNav(false)
           }}>
-            <div className="flex justify-between items-center w-[100%] sm:w-[80%] border-b-2 border-black boredr-[1px] mt-[21px]">
+            <div className={`flex justify-between items-center w-[100%] sm:w-[80%] border-b-2  boredr-[1px] mt-[21px] ${navBorArrow ? "border-white" : " border-black"}`}>
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 Process
               </h2>
               <div className="">
-                <Image className='shrink-0' src={NavArrow} alt='NavArrow' />
+                {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
             <div className="flex mt-1">
               <div className="w-[120px] sm:w-[300px]">
 
-                <div className="w-3 h-3 bg-black rounded-[50%]"></div>
+                <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
               </div>
               <div>
                 <div className=" text-sm not-italic font-normal">

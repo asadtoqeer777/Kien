@@ -9,7 +9,7 @@ const LandingTransition = () => {
     <div className="h-screen w-[100vw]">
       <div
         style={{
-          backgroundImage: "url(./heroBg-2.png)",
+          backgroundImage: "url(./heroBg-3.png)",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           width: "100%",
@@ -33,10 +33,9 @@ const LandingTransition = () => {
         </div>
 
         <div className="LandingPage h-screen w-full absolute top-0 left-0 bg-white z-[1]">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center absolute top-[50%] left-[50%]" id="logoBg" style={{ transform: "translate(-50%, -50%)" }}>
               <Image
-                className="landingPageMainImage absolute top-[50%] left-[50%] sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
-                style={{ transform: "translate(-50%, -50%)" }}
+                className="landingPageMainImage sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
                 src={logo}
                 alt="Logo"
               />
@@ -46,21 +45,23 @@ const LandingTransition = () => {
                 <div>
                   <div className=" w-full absolute bottom-[70px] right-[14px]">
                     <div className="flex justify-between pr-4">
-                      <div className="flex justify-between px-[14px] sm:px-[34px]">
+                      <div className="flex justify-between px-[14px] sm:px-[34px] CraftworkGrotesk">
                         <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
-                          <div className="">CURATED</div>
-                          <div className="">CREATIVE</div>
+                          <div className="">YOU</div>
+                          <div className="">ARE</div>
                         </div>
                         <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9">
-                          <div className="">TRAVEL</div>
-                          <div className="">EXPERIENCES</div>
+                          <div className="">THE</div>
+                          <div className="">DESTINATION </div>
                         </div>
                       </div>
-                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] ">
+                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] AuxMono">
+                        <div className="">IMMERSIVE
+</div>
                         <div className="">TRAVEL</div>
-                        <div className="">EXPERIENCES</div>
-                        <div className="">TRAVEL</div>
-                        <div className="">EXPERIENCES</div>
+                        <div className="">EXPERIENCES
+</div>
+                        <div className="">FOR YOU</div>
                       </div>
                     </div>
                   </div>

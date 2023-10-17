@@ -14,33 +14,33 @@ const ArchetypePage = () => {
 
   const ArchetypeContent = [
     {
-      title: "CONTEMPLATIVE",
-      subTiitle: "ADDITIONAL INFO",
-      para:"Relevant Info",
+      title: "savant",
+      subTiitle: "[SAV]+[UHNT]",
+      para:"Read More",
       img: Archetype1
     },
     {
       title: "VITALIST",
-      subTiitle: "ADDITIONAL INFO",
-      para:"Relevant Info",
+      subTiitle: "[VAAY]+[TUHL]+[IST]",
+      para:"Read More",
       img: Archetype2
     },
     {
-      title: "MELANCHOLIC",
-      subTiitle: "ADDITIONAL INFO",
-      para:"Relevant Info",
+      title: "REVELATOR",
+      subTiitle: "[Rev]+[uh]+[ley]+[ter]",
+      para:"Read More",
       img: Archetype3
     },
     {
       title: "EPICUREAN",
-      subTiitle: "ADDITIONAL INFO",
-      para:"Relevant Info",
+      subTiitle: "[EP]+[I]+[KYUH]+[REE]+[UHN]",
+      para:"Read More",
       img: Archetype4
     },
     {
-      title: "PERIPATETIC",
-      subTiitle: "ADDITIONAL INFO",
-      para:"Relevant Info",
+      title: "SEEKER",
+      subTiitle: "[SEE] + [KUH]",
+      para:"Read More",
       img: Archetype5
     },
   ]
@@ -50,15 +50,15 @@ const ArchetypePage = () => {
 
       <div className=" h-[40vh] bg-white">
         <h1
-          className="pt-[45px] sm:pt-[55px] md:pt-[65px]  xl:pt-[75px]  2xl:pt-[95px] text-center text-[50px] sm:text-[75px] md:text-[85px] lg:text-[110px] xl:text-[125px] 2xl:text-[160px] tracking-[-4.8px] 
-        lg:tracking-[-4.8px] font-bold leading-9 "
+          className="pt-[45px] sm:pt-[55px] md:pt-[65px]  xl:pt-[75px]  2xl:pt-[95px] text-center text-[50px] sm:text-[63px] md:text-[75px] lg:text-[100px] xl:text-[120px] 2xl:text-[140px] tracking-[-4.8px] 
+        lg:tracking-[-4.8px] font-bold leading-9 uppercase CraftworkGrotesk"
         >
-          BEGIN A STORY
+          Craft your STORY
         </h1>
 
         <div
           className="flex w-[450px] sm:w-[580px] md:w-[720px] lg:w-[900px] xl:w-[1100px] 2xl:w-[1180px] h-[300px] sm:h-[400px]  md:h-[450px] lg:h-[464px] xl:h-[484px] 
-          2xl:h-[554px] m-auto absolute top-20% left-1/2 transform -translate-x-1/2"id="beganStory"
+          2xl:h-[684px] m-auto absolute top-20% left-1/2 transform -translate-x-1/2"id="beganStory"
 
         >
           {ArchetypeContent.map((item, key)=>{
@@ -72,21 +72,18 @@ const ArchetypePage = () => {
       </div>
       <div className="grid grid-cols-12 h-[53vh] absolute bottom-0 left-0 w-full z-[-1]">
           <div className="col-span-2 md:col-span-3 xl:col-span-5 bg-black"></div>
-          <div className="col-span-8 md:col-span-7 xl:col-span-7 bg-primary relative">
+          <div className="col-span-10 md:col-span-9 xl:col-span-7 bg-primary relative">
             <div className="absolute text-white bottom-3 left-2 w-full">
-              <h2 className="text-[52px] font-[400]">Archetype</h2>
+              <h2 className="text-[52px] font-[400] SpaceGrotesk">Archetype</h2>
               <div className="grid grid-cols-10">
                 <div className="col-span-2">
-                  <p className="text-[12px] font-[400] mt-[9px]">Archetype</p>
+                  <p className="text-[12px] font-[400] mt-[9px] AuxMono">[AA]+[KEE]+[TYP]</p>
                 </div>
                 <div className="col-span-5 px-4">
                   <div className="flex mt-[9px] gap-3">
                     <div className="w-[12px] h-[12px] bg-white rounded-[50%] mt-[3px]"></div>
-                    <div className="text-[12px] font-[400] w-[95%]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <div className="text-[12px] font-[400] w-[95%] SpaceGrotesk">
+                    Beyond a timeless emblem, an archetype reveals intrinsic truths in travel. Engaging with these patterns leads to self-discovery and a deeper connection to humanity's collective narrative, journeying both across lands and within the soul.
                     </div>
                   </div>
                 </div> 

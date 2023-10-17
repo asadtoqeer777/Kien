@@ -14,11 +14,77 @@ import Whatsapp from "../__assets/images/pngs/whatsapp.png";
 import Instagram from "../__assets/images/pngs/instagram.png";
 import Facebook from "../__assets/images/pngs/facebook.png";
 import Button from "../__components/buttons/Button";
+import Marquee from "react-fast-marquee";
 
 const TeamMembers = () => {
   const router = useRouter();
   const [tab, setTab] = useState(1);
   const [selectedTab, setSelectedTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(0);
+
+  const VerticalTabs = [
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "Nithis Manthrikumar",
+      head: "head  : PRODUCT STRATEGY",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "Aaron  franklyn stevens",
+      head: "head  : creative director",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "Preetham S",
+      head: "head  : Engineering",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "Rakesh s",
+      head: "assistant  : designer",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "brian d. walt",
+      head: "head  : operations",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    {
+      mainHeading: "Unparalleled contributions.",
+      mainDescription: "The visionary behind our offerings, crafting products that resonate while staying ahead of the curve.",
+      subDescription: "PRODUCT STRATEGY HEAD",
+      title: "Muhammad fahad",
+      head: "tech  : developer",
+      subHead1: "sub heads 1",
+      subHead2: "sub heads 2"
+    },
+    
+
+
+  ]
+  const handleTabClick = (index: number) => {
+    setActiveTab(index);
+  };
+
   return (
     <div className="h-screen w-screen bg-black relative overflow-x-hidden">
       <Header navTheme={"bg-[white]"} />
@@ -42,11 +108,11 @@ const TeamMembers = () => {
               </div>
               <div className="col-span-11">
 
-              <div className="uppercase grid grid-cols-6 mt-[10px]">
+              <div className="uppercase grid grid-cols-6 mt-[10px] AuxMono">
                 <div
                   className={`${
                     selectedTab === 1 ? "bg-[#313131]" : "bg-black"
-                  }  col-span-3 text-center py-[17px] border-r-[1.5px] border-white cursor-pointer`}
+                  }  col-span-3 text-center py-[17px] border-r-[1.5px] border-white cursor-pointer `}
                   onClick={() => setSelectedTab(1)}
                 >
                   Team Members
@@ -67,36 +133,36 @@ const TeamMembers = () => {
           <div className=" h-[calc(100vh-120px)] overflow-y-auto no-scrollbar ">
 
           {selectedTab === 1 ? 
+
           <div>
-           <div
-            className="targetTab"
-            style={{ display: tab === 1 ? "block" : "none" }}
-          >
-            <div className="bg-black relative z-10 pt-[20px] pl-[14px]">
-              <div className="2x:text-[69px] xl:text-[59px] lg:text-[49px] md:text-[43px] sm:text-[33px] text-[30px] font-semibold 2xl:-tracking-[4.14px] xl:-tracking-[3.14px] lg:-tracking-[2.14px] 2xl:leading-[64px] md:leading-[48px] leading-[38px]">
-                How does Vishwanath contribute?
-              </div>
-              <div className="2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] text-[15px] 2xl:tracking-[-1.32px] leading-[28px] mt-2 mb-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </div>
-            <Image
-              className="w-full 2xl:h-[548px] xl:h-[500px]"
-              src={Player}
-              alt=""
-            />
-            <div>
-              <div className="2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] text-[15px] 2xl:tracking-[-1.32px] leading-[28px] mt-[17px] pl-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </div>
+{VerticalTabs.map((items, index)=>{
+  return <div
+  className="targetTab CraftworkGrotesk"
+  style={{ display: index === activeTab ? "block" : "none" }}
+>
+  <div className="bg-black relative z-10 pt-[20px] pl-[14px]">
+    <div className="2x:text-[69px] xl:text-[59px] lg:text-[49px] md:text-[43px] sm:text-[33px] text-[30px] font-semibold 2xl:-tracking-[4.14px] xl:-tracking-[3.14px] lg:-tracking-[2.14px] 2xl:leading-[64px] md:leading-[48px] leading-[38px]  CraftworkGrotesk">
+      {items.mainHeading}
+    </div>
+    <div className="2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] text-[15px] 2xl:tracking-[-1.32px] leading-[28px] mt-2 mb-1">
+    {items.mainDescription}
+    </div>
+  </div>
+  <Image
+    className="w-full 2xl:h-[548px] xl:h-[500px]"
+    src={Player}
+    alt=""
+  />
+  <div>
+    <div className="2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] text-[15px] 2xl:tracking-[-1.32px] leading-[28px] mt-[17px] pl-[14px]">
+    {items.subDescription}
+    </div>
+  </div>
+</div>
+})}
           </div>
- 
 
-
-          </div> : 
+ : 
          <Partners/>}
           </div>
          
@@ -104,119 +170,64 @@ const TeamMembers = () => {
 
         {selectedTab ===1? 
         <div className="col-span-6">
-          <div className="2xl:text-[208px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px] uppercase font-bold leading-[172px] tracking-[-12.48px] -translate-x-14 ">
-            PLayer
+          <div className="2xl:text-[208px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px] uppercase font-bold leading-[172px] tracking-[-12.48px] -translate-x-14 CraftworkGrotesk">
+            <Marquee className="overflow-hidden">
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+            </Marquee>
           </div>
-          <div className="mt-[-20px] relative z-10 h-[calc(100vh-182px)] overflow-y-auto pb-10">
-            <div
-              className="h-[152px] bg-[#313131] px-[20px] py-[14px] border-b-[1px] border-white"
-              onClick={() => setTab(1)}
-            >
-              <div className="flex justify-between">
-                <div className="2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]">
-                  Vishwanath Purushothaman
-                </div>
-                <div className="h-[42px] w-[42px] bg-primary rounded-full"></div>
-              </div>
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
-                <div>head : financier</div>
-                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">sub heads 1</div>
-                <div>sub heads 2</div>
-              </div>
-            </div>
+          <div className="mt-[-20px] relative z-10 h-[calc(100vh-182px)] overflow-y-auto pb-10 bg-black">
 
-            <div
-              className="h-[152px] px-[20px] py-[14px] border-b-[1px] border-white"
-              onClick={() => setTab(1)}
+            {VerticalTabs.map((items, index) => {
+              return <div
+              className={`h-[152px] flex flex-col justify-between uppercase hover:bg-[#313131] px-[20px] pt-[14px] border-b-[1px] border-white cursor-pointer  ${index === activeTab ? 'bg-[#313131]' : 'bg-transparent'}`}
+                key={index}
+                onClick={() => handleTabClick(index)}
             >
               <div className="flex justify-between">
-                <div className="2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]">
-                  Vishwanath Purushothaman
+                <div className={`2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2] CraftworkGrotesk ${index === activeTab ? " opacity-[0.4]" : ""}`}>
+                  {items.title}
                 </div>
-                <div className="h-[42px] w-[42px] bg-primary rounded-full"></div>
+                <div className={`h-[42px] w-[42px] bg-primary rounded-full ${index === activeTab ? "d-block" : "hidden"}`}></div>
               </div>
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
-                <div>head : financier</div>
-                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">sub heads 1</div>
-                <div>sub heads 2</div>
-              </div>
-            </div>
 
-            <div
-              className="h-[152px] px-[20px] py-[14px] border-b-[1px] border-white"
-              onClick={() => setTab(1)}
-            >
-              <div className="flex justify-between">
-                <div className="2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]">
-                  Vishwanath Purushothaman
-                </div>
-                <div className="h-[42px] w-[42px] bg-primary rounded-full"></div>
-              </div>
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
-                <div>head : financier</div>
-                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">sub heads 1</div>
-                <div>sub heads 2</div>
+              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 AuxMono">
+                <div>{items.head}</div>
+                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">{items.subHead1}</div>
+                <div>{items.subHead2}</div>
               </div>
             </div>
-
-            <div
-              className="h-[152px] px-[20px] py-[14px] border-b-[1px] border-white"
-              onClick={() => setTab(1)}
-            >
-              <div className="flex justify-between">
-                <div className="2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]">
-                  Vishwanath Purushothaman
-                </div>
-                <div className="h-[42px] w-[42px] bg-primary rounded-full"></div>
-              </div>
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
-                <div>head : financier</div>
-                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">sub heads 1</div>
-                <div>sub heads 2</div>
-              </div>
-            </div>
-
-            <div
-              className="h-[152px] px-[20px] py-[14px] border-b-[1px] border-white"
-              onClick={() => setTab(1)}
-            >
-              <div className="flex justify-between">
-                <div className="2xl:text-[48px] xl:text-[46px] lg:text-[38px] md:text-[34px] sm:text-[30px] text-[24px] font-bold w-[80%] leading-[44px] 2xl:tracking-[-2.88px] xl:tracking-[-1.88px] tracking-[-0.88px] truncate-[2]">
-                  Vishwanath Purushothaman
-                </div>
-                <div className="h-[42px] w-[42px] bg-primary rounded-full"></div>
-              </div>
-              <div className="flex justify-between items-center leading-[44px] 2xl:text-[17px] xl:text-[15px] md:text-[14px] text-[12px] font-medium tracking-[-1.02px] uppercase mt-1 ">
-                <div>head : financier</div>
-                <div className="2xl:ml-[-120px] xl:ml-[-100px] lg:ml-[-80px] md:ml-[-50px] ml-[0px]">sub heads 1</div>
-                <div>sub heads 2</div>
-              </div>
-            </div>
+            })}
 
 
           </div>
         </div> :  
         <div className="col-span-6 bg-secondary text-black h-[100vh-30px]">
-          <div className="2xl:text-[215px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px]  uppercase font-bold leading-[172px] tracking-[-9.48px] -translate-x-14 relative">
-            Metafy
+          <div className="2xl:text-[215px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px]  uppercase font-bold leading-[172px] tracking-[-9.48px] -translate-x-14 relative CraftworkGrotesk">
+            <div className=" ">
+            <Marquee className="overflow-hidden">
+           <div className="mr-[80px]"> Metafy</div>
+           <div className="mr-[80px]"> Metafy</div>
+           <div className="mr-[80px]"> Metafy</div>
+           <div className="mr-[80px]"> Metafy</div>
+           <div className="mr-[80px]"> Metafy</div>
+           <div className="mr-[80px]"> Metafy</div>
+            </Marquee>
+            </div>
           </div>
           <div className="pt-2 pl-2 text-[50px] uppercase font-medium w-[80%] leading-[44px] tracking-[-2.88px] truncate-[2]">
-            "Mention Highlight"
+          Brand Integration, Innovation and Immersion Partner
           </div>
           <div className=" pl-3 pr-3 items-center 2xl:leading-[44px] leading-[34px] text-[20px] font-medium tracking-[-1.02px]  mt-1 ">
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Metaphy Labs, headquartered in Bangalore, continues to be our steadfast partner in the ongoing journey of shaping and expanding the Kien brand within the digital landscape.  
             </div>
             <div>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+            Metaphy has been assisting us in developing the technical framework for our creative and innovative outlook of travel. We plan on further collaborating with them to implement more bold and inventive travel experiences.
             </div>
           </div>
           <div className="absolute w-full bottom-[26px] pb-[14px] border-b-[1.5px] border-black">
@@ -244,7 +255,7 @@ const TeamMembers = () => {
                 btntext={"Visit Webiste"}
               />
             </div>
-            <div className="flex justify-between items-center ml-2">
+            <div className="flex justify-between items-center ml-5">
               <div className="mt-2 2xl:mt-0">
                 <Button
                   btnClasses={
@@ -253,7 +264,7 @@ const TeamMembers = () => {
                   btntext={"CTA-01"}
                 />
               </div>
-              <div className="mt-2 2xl:mt-0 ml-[70%]">
+              <div className="mt-2 2xl:mt-0 ml-[50%]">
                 <Button
                   btnClasses={
                     "bg-transparent text-black border-[1px] border-black  w-[122px] h-[30px] rounded-[19.5px] text-[10px] 2xl:text-[12px]"
@@ -276,3 +287,45 @@ const TeamMembers = () => {
 };
 
 export default TeamMembers;
+
+
+
+// pages/index.tsx
+// import React, { useState } from 'react';
+
+// const tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4', 'Tab 5'];
+
+// const VerticalTabs: React.FC = () => {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   const handleTabClick = (index: number) => {
+//     setActiveTab(index);
+//   };
+
+//   return (
+//     <div>
+//       <h1 className="text-2xl font-bold mb-4">Vertical Tabs Example</h1>
+//       <div className="flex">
+//       <div className="w-3/4 p-4 bg-gray-100">
+//           {tabs[activeTab]}
+//         </div>
+//         <div className="w-1/4">
+//           <div className="space-y-2">
+//             {tabs.map((tab, index) => (
+//               <div
+//                 key={index}
+//                 onClick={() => handleTabClick(index)}
+//                 className={`cursor-pointer p-2 rounded ${index === activeTab ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+//               >
+//                 {tab}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+  
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default VerticalTabs;

@@ -1,17 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@400;600&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
+
+@font-face {
   font-family: 'Craftwork Grotesk';
-  src: url('./__assets/fonts/Craftwork Grotesk/MDGroteskRegular.woff') format('woff');
+  src: url('./__assets/fonts/CraftworkGrotesk-Bold.ttf') format('woff');
+  src: url('./__assets/fonts/CraftworkGrotesk-Heavy.ttf') format('woff');
+  src: url('./__assets/fonts/CraftworkGrotesk-Medium.ttf') format('woff');
+  src: url('./__assets/fonts/CraftworkGrotesk-SemiBold.ttf') format('woff');
   font-weight: normal;
   font-style: normal;
-} */
+}
+
+
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('./__assets/fonts/SpaceGrotesk-Bold.ttf') format('woff');
+  src: url('./__assets/fonts/SpaceGrotesk-Light.ttf') format('woff');
+  src: url('./__assets/fonts/SpaceGrotesk-Medium.ttf') format('woff');
+  src: url('./__assets/fonts/SpaceGrotesk-Regular.ttf') format('woff');
+  src: url('./__assets/fonts/SpaceGrotesk-SemiBold.ttf') format('woff');
+  src: url('./__assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Aux Mono';
+  src: url('./__assets/fonts/Aux\ Mono.otf') format('woff');
+  src: url('./__assets/fonts/Aux\ Mono.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @layer utilities {
   @variants responsive {
@@ -49,13 +77,26 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  
 
 }
 
 body::-webkit-scrollbar{
   display: none;
 }
+
+.CraftworkGrotesk{
+  font-family: 'Craftwork Grotesk';
+}
+
+
+.SpaceGrotesk{
+  font-family: 'SpaceGrotesk';
+}
+
+.AuxMono{
+  font-family: 'Aux Mono';
+}
+
 
 .mainans{
   overscroll-behavior: none;
