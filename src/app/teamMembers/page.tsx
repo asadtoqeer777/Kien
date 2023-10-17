@@ -172,15 +172,15 @@ const TeamMembers = () => {
         <div className="col-span-6">
           <div className="2xl:text-[208px] xl:text-[180px] lg:text-[160px] md:text-[150px] sm:text-[140px] text-[120px] uppercase font-bold leading-[172px] tracking-[-12.48px] -translate-x-14 CraftworkGrotesk">
             <Marquee className="overflow-hidden">
-           <div className="mr-[80px]"> PLayer</div>
-           <div className="mr-[80px]"> PLayer</div>
-           <div className="mr-[80px]"> PLayer</div>
-           <div className="mr-[80px]"> PLayer</div>
-           <div className="mr-[80px]"> PLayer</div>
-           <div className="mr-[80px]"> PLayer</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
+           <div className="mr-[80px]"> PLayers</div>
             </Marquee>
           </div>
-          <div className="mt-[-20px] relative z-10 h-[calc(100vh-182px)] overflow-y-auto pb-10">
+          <div className="mt-[-20px] relative z-10 h-[calc(100vh-182px)] overflow-y-auto pb-10 bg-black">
 
             {VerticalTabs.map((items, index) => {
               return <div
@@ -220,22 +220,14 @@ const TeamMembers = () => {
             </div>
           </div>
           <div className="pt-2 pl-2 text-[50px] uppercase font-medium w-[80%] leading-[44px] tracking-[-2.88px] truncate-[2]">
-            "Mention Highlight"
+          Brand Integration, Innovation and Immersion Partner
           </div>
           <div className=" pl-3 pr-3 items-center 2xl:leading-[44px] leading-[34px] text-[20px] font-medium tracking-[-1.02px]  mt-1 ">
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Metaphy Labs, headquartered in Bangalore, continues to be our steadfast partner in the ongoing journey of shaping and expanding the Kien brand within the digital landscape.  
             </div>
             <div>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+            Metaphy has been assisting us in developing the technical framework for our creative and innovative outlook of travel. We plan on further collaborating with them to implement more bold and inventive travel experiences.
             </div>
           </div>
           <div className="absolute w-full bottom-[26px] pb-[14px] border-b-[1.5px] border-black">
@@ -263,7 +255,7 @@ const TeamMembers = () => {
                 btntext={"Visit Webiste"}
               />
             </div>
-            <div className="flex justify-between items-center ml-2">
+            <div className="flex justify-between items-center ml-5">
               <div className="mt-2 2xl:mt-0">
                 <Button
                   btnClasses={
@@ -272,7 +264,7 @@ const TeamMembers = () => {
                   btntext={"CTA-01"}
                 />
               </div>
-              <div className="mt-2 2xl:mt-0 ml-[70%]">
+              <div className="mt-2 2xl:mt-0 ml-[50%]">
                 <Button
                   btnClasses={
                     "bg-transparent text-black border-[1px] border-black  w-[122px] h-[30px] rounded-[19.5px] text-[10px] 2xl:text-[12px]"

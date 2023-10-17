@@ -99,7 +99,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (02)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      NITHIS MATHUR A.K.A NICK
                     </div>
                   </div>
                   <div className="  flex justify-between">
@@ -107,7 +107,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (03)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      PRETUM MANUS
                     </div>
                   </div>
                   <div className="  flex justify-between">
@@ -115,7 +115,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                       (04)
                     </div>
                     <div>
-                      SIVA CHUKERWARTHY
+                      PARTNERS
                     </div>
                   </div>
                 </div>
