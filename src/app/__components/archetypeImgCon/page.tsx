@@ -24,7 +24,7 @@ const ArchetypeImgCon = ({
 				writingMode:  "vertical-rl",
 				transform: "scale(-1, -1)"
 			}}>
-            <div className="">
+            <div className=" uppercase">
               <div className="text-[24px] sm:text-[27px] md:text-[28px] lg:text-[30px] xl:text-[33px] 2xl:text-[50px] leading-[28px] xl:leading-[45px]">
                 {heading}
               </div>

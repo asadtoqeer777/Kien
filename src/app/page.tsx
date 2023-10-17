@@ -32,11 +32,15 @@ export default function Home() {
       scrollTrigger: {
         trigger: ".MainContainer",
         pin: true,
-        scrub: 1,
+        // scrub: 1,
         end: "+=10000",
-
-        // end: "+=" + sections.length * 11000,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    // end: () => "+=" + document.querySelector(".gsapcontainer").offsetWidth,
         onUpdate: (self) => {
+          self.targets().forEach((target, index) => {
+            panelRefs.current[index].updateTo({ x: target._gsap.x }, true);
+          });
           // Calculate the activeNav based on the scroll position
           const scrollPercent = self.progress * 100;
           console.log("scrollPercent", scrollPercent);
@@ -57,15 +61,15 @@ export default function Home() {
             "LandingPage"
           ) as HTMLElement | null;
 
-          if (scrollPercent < 0.1) {
-            if (philosophyMain) {
-              philosophyMain.style.overflowY = "auto";
-            }
-          } else {
-            if (philosophyMain) {
-              philosophyMain.style.overflowY = "hidden";
-            }
-          }
+          // if (scrollPercent < 0.1) {
+          //   if (philosophyMain) {
+          //     philosophyMain.style.overflowY = "auto";
+          //   }
+          // } else {
+          //   if (philosophyMain) {
+          //     philosophyMain.style.overflowY = "hidden";
+          //   }
+          // }
           if (scrollPercent > 0.01) {
             if (footer) {
               footer.style.display = "none";
@@ -146,15 +150,15 @@ export default function Home() {
             setToggleNav(1);
           }
 
-          if (scrollPercent > 76) {
-            if (philosophyMain) {
-              philosophyMain.style.overflowY = "auto";
-            }
-          } else {
-            if (philosophyMain) {
-              philosophyMain.style.overflowY = "hidden";
-            }
-          }
+          // if (scrollPercent > 76) {
+          //   if (philosophyMain) {
+          //     philosophyMain.style.overflowY = "auto";
+          //   }
+          // } else {
+          //   if (philosophyMain) {
+          //     philosophyMain.style.overflowY = "hidden";
+          //   }
+          // }
         },
       },
     });
@@ -163,7 +167,7 @@ export default function Home() {
       position: "absolute",
       top: "50%",
       left: "50%",
-      width: "179px%",
+      width: "179px",
       height: "100vh",
       transform: "translate(-50%, -50%)",
     })
@@ -178,17 +182,22 @@ export default function Home() {
           height: "388px",
           transform: "translate(-50%, -50%)",
         },
-        "LandingPage"
       )
 
-      .from(".ProfileMainDetails", {
-        top: "50%",
-        right: "0%",
-      })
-      .to(".ProfileMainDetails", {
-        right: "50%",
-        transform: "translate(50%, -50%)",
-      });
+      tl.fromTo(
+        "#logoBg",
+        {
+          
+          width: "100%",
+          padding: "20px"
+        },
+        {
+          position: "absolute",
+          bottom: "20px",
+          width: "138px",
+          alignItems: "end",
+        }
+      )
 
     stops.forEach((stop, index) => {
       const currentSection = sections[stop] as HTMLElement; // Use type assertion
@@ -212,7 +221,7 @@ export default function Home() {
           "#categoryFadeTextBorder",
           {
             borderBottom: "0px",
-            duration: 3,
+            duration: 6,
           },
           "start"
         );
@@ -220,28 +229,40 @@ export default function Home() {
           "#categoriesTransition",
           {
             position: "absolute",
-            top: "50%",
-            transform: "translate(0%, -35%)",
+            // top: "50%",
+            // transform: "translate(0%, -35%)",
+            translateX: "0%",
             duration: 3,
           },
           "start"
-        );
+        ).to(
+          "#categoryFadeText",
+          {
+            display: "none"
+          },
+        )
       }
       if (currentSection.querySelector("#philosophy")) {
         tl.fromTo(
           "#philosophy",
           {
-            scale: 100,
-            duration: 15
+            scale: 15,
+            duration: 20,
+
+            
           },
           {
             scale: 1,
-            duration: 15,
+            duration: 20,
+
           }
         )
-        // .to("#bottomFotter", {
-        //   yPercent: '30'
-        // }, "start")
+        .from(".philosophyMain", {
+          overflowY: "hidden",
+        })
+        .to(".philosophyMain", {
+          overflowY: "scroll",
+        })
       }
 
       tl.to(sections, {

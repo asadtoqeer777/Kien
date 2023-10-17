@@ -48,15 +48,14 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
   return (
     <div
       className={
-        scrollCheck
-          ? "bg-black w-[100vw] h-[100vh] philosophyMain relative"
-          : "bg-black w-[100vw] h-[100vh] philosophyMain overflow-y-auto relative"
+        " w-[100vw] h-[100vh] philosophyMain  relative overflow-x-hidden"
       }
     >
       <section className=" w-full relative z-20">
-        <div className="bg-white pt-10 ">
+        <div className=" pt-10 ">
           <Container styles="uppercase">
             <div className="flex justify-between items-center">
+                
               <div
                 className="cursor-pointer"
                 onClick={() => {
@@ -86,9 +85,10 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                 </div>
               </div>
             </div>
-            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold">
+            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold ">
               Philosophy
             </h1>
+
             <div className="md:w-[80%] w-full mx-auto 2xl:mt-5 xl:mt-2 lg:mt-0 md:-mt-7" id="philosophy">
               {/* <TransformWrapper> */}
                 {/* <TransformComponent> */}
@@ -103,30 +103,6 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
             </div>
           </Container>
         </div>
-
-        <div className="bg-black text-white">
-          {/* <Container styles="py-3">
-                        <p className='text-xs mb-1'>(04)</p>
-                        <h1 className='2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold'>
-                            Your personality, your destinations, your experiences : <br />
-                            <span className='sm:block hidden '>Your memories.</span>
-                        </h1>
-                        <h1 className='sm:hidden block mt-3 text-xl font-semibold'>Your memories.</h1>
-                        <div className='flex lg:flex-row flex-col-reverse 2xl:gap-40 xl:gap-32 lg:gap-28 gap-8 lg:mt-3 mt-6'>
-                            <div className='xl:max-w-sm max-w-xs w-full flex items-end'>
-                                <div className="flex justify-between gap-6 w-full">
-                                    <p className='w-max text-xs'>(04)<br />RELEVANT INFO</p>
-                                    <p className='w-max text-xs'>IND</p>
-                                    <p className='w-max text-xs'>(04)<br />RELEVANT INFO</p>
-                                </div>
-                            </div>
-                            <p className='max-w-[658px] leading-7 w-[95%] lg:text-base md:text-sm text-xs pr-4'>
-                                Kien's travel philosophy is straightforward: we prioritise the traveler before the destination. We craft personalised travel experiences that are both expressive and effective, aiming to reconnect people with the essence of travel. We encourage the celebration of the world's beauty and its diverse cultures through a wondrous and creative perspective.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                    </Container> */}
-        </div>
       </section>
 
       <section className="sticky bg-black top-0 text-white">
@@ -135,41 +111,18 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
 
           <p className="text-xs mb-1">(04)</p>
           <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold">
-            Your personality, your destinations, your experiences : <br />
-            <span className="sm:block hidden ">Your memories.</span>
-          </h1>
-          <h1 className="sm:hidden block mt-3 text-xl font-semibold">
-            Your memories.
+          Meet who you are. On the way.
           </h1>
           <div className="lg:w-9/12 ml-auto mt-3 h-full border-b-[1.5px] border-white relative">
             <div className="max-w-[658px] lg:ml-44 leading-7 lg:text-base md:text-sm text-xs pr-4">
               <p>
-                Kien's travel philosophy is straightforward: we prioritise the
-                traveler before the destination. We craft personalised travel
-                experiences that are both expressive and effective, aiming to
-                reconnect people with the essence of travel. We encourage the
-                celebration of the world's beauty and its diverse cultures
-                through a wondrous and creative perspective. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
+              They say company defines the journey. And what better company to you than you. At KIEN, we believe in putting the traveler at the heart of every journey. We love designing travel experiences that aren't just personalised but also deeply resonant, reigniting the true spirit of exploration. We invite you to celebrate the world's splendours and its rich tapestry of cultures, all through a lens of wonder and imagination.
               </p>
               <p className="my-6">
-                Our objective is to embody this philosophy through meticulous
-                industry & personality research and collaborations with
-                qualified creators.
+              At KIEN, we're driven by this philosophy that goes beyond the ordinary. We immerse ourselves in industry insights and the subtleties of individual personalities, forging partnerships with like-minded creators. Our travel archetypes, meticulously crafted, are not just routes but compasses, guiding travellers towards rich experiences that resonate.
               </p>
               <p>
-                We've developed our travel archetypes/signs to provide our
-                travellers with superior experiences, lasting memories, and
-                unique ways to commemorate both themselves and the world around
-                them. They also provide a new creative playground for interested
-                travel creators to connect with travellers bearing the same
-                interests and thirst for exploration as them. A new perspective
-                to travel that signifies a deeper connection of the humanity
-                within landscapes and the evocative landscapes of humanity
-                itself.
+              These archetypes also serve as a beacon for travel enthusiasts and creators. They foster genuine connections, uniting travellers with shared aspirations and stories. In this evolving landscape of travel, we celebrate where personal journeys intersect with the vast, diverse tapestry of the world.
               </p>
 
               <div className="flex items-center gap-1 my-8">
@@ -187,8 +140,31 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                     />
               </div>
             </div>
-            <div className="absolute w-[340px] h-[183px] bg-[#E3FF00] bottom-[38%] left-[-8%] z-10">
+            <div className="absolute w-[340px] h-[183px] bg-[#E3FF00] bottom-[38%] left-[-8%] z-10 px-2 cursor-pointer" onClick={()=> {
+              router.push("/register")
+            }}>
+            <div className="max-w-sm w-full flex flex-col justify-between h-[100%] text-black ">
+            <div className="flex justify-between gap-6 w-full uppercase">
+              <p className="w-max text-xs">
+                (01)
+                <br />
+               TAKE ACTION
+              </p>
+              <p className="w-max text-xs">(02)</p>
+              <p className="w-max text-xs">
+                (03)
+                <br />
+                <span className="underline">
 
+                SignUp
+                </span>
+              </p>
+            </div>
+
+            <div className=" font-medium -tracking-[0.96px] leading-[15px]">
+            Join Kien in discovering your true passion and embark on journeys that know no boundaries
+            </div>
+          </div>
             </div>
           </div>
             <div className="absolute top-0 left-[25%] w-[1px] h-[94.9%] bg-white"></div>
@@ -241,22 +217,18 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
               >
                 <p>experiences provided</p>
 
-                <div className="md:hidden block flex-shrink-0 h-[22px] w-[22px] rounded-full bg-secondary cursor-pointer"></div>
+                <div className="md:hidden block flex-shrink-0 h-[22px] w-[22px] rounded-full bg-secondary cursor-pointer">
+
+                </div>
               </div>
 
               {/* <p className='md:absolute top-0 left-0 flex-shrink-0 border-b md:w-40 w-full py-2 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full mt-px'>experiences provided</p> */}
               <div className="md:px-6 pt-7 md:border-l border-t pb-16 w-full transform -translate-x-[.5px]">
                 <div className="flex items-start justify-between">
                   <p className="max-w-[630px] md:text-xl w-full leading-7">
-                    Reflecting Kien's Philosophy, creators hold a prominent
-                    position in our approach. We are passionate about portraying
-                    the essence of destinations and cultural hotspots, much like
-                    the numerous creators dedicated to showcasing the beauty and
-                    diversity of the travel landscape in a fresh and unique
-                    manner.
+                  Reflecting Kien's Philosophy, creators hold a prominent position in our approach. We are passionate about portraying the essence of destinations and cultural hotspots, much like the numerous creators dedicated to showcasing the beauty and diversity of the travel landscape in a fresh and unique manner.
                     <br /> <br />
-                    We are highly enthusiastic about the prospect of
-                    collaborating with you and your remarkable personalities
+                    We are highly enthusiastic about the prospect of collaborating with you and your remarkable personalities
                   </p>
                   {/* <p className='mt-3 text-[15px]'></p> */}
                   <div className="md:block hidden mt-4 h-[22px] w-[22px] rounded-full bg-secondary cursor-pointer"></div>

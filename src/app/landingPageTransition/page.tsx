@@ -33,10 +33,9 @@ const LandingTransition = () => {
         </div>
 
         <div className="LandingPage h-screen w-full absolute top-0 left-0 bg-white z-[1]">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center absolute top-[50%] left-[50%]" id="logoBg" style={{ transform: "translate(-50%, -50%)" }}>
               <Image
-                className="landingPageMainImage absolute top-[50%] left-[50%] sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
-                style={{ transform: "translate(-50%, -50%)" }}
+                className="landingPageMainImage sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
                 src={logo}
                 alt="Logo"
               />

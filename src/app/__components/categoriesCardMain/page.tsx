@@ -2,40 +2,39 @@ import React from "react";
 import Card from "../card/Card";
 import Image from "next/image";
 import DarkPlus from "../../__assets/images/svgs/darkPlus.svg"
-import NextArrow from "../../__assets/images/pngs/navArrow.png";
+import NextArrow from "../../__assets/images/svgs/backArrow.svg";
 import Button from "../buttons/Button";
 
-const CategoriesCardMain = () => {
+interface Props {
+  handleContentChange:  any
+}
+
+const CategoriesCardMain = ({handleContentChange} : Props) => {
   return (
     <div>
-      <div className="pb-5">
-            <div className="flex mx-4 mt-2 justify-between gap-2 flex-wrap">
-              <div className="">
-
-              </div>
-              <div className="flex items-center gap-2 ">
-                <Image src={DarkPlus} alt='DarkPlus' />
-                <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
-              </div>
-            </div>
-          </div>
-      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto px-[43px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4" id= "3">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto px-[43px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3">
+      <div className="flex items-center gap-2 absolute right-5 -top-[47px]">
+        <Image src={DarkPlus} alt='DarkPlus' />
+        <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
       </div>
-      <div className="footerArea flex justify-end mt-4 px-[43px]">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <div className=" absolute -bottom-[82px] right-5">
         <Image
-          className="w-[50px] sm:w-[55px] md:w-[60px] lg:w-[70px] 2xl:w-[90px]"
+          className="w-[50px] cursor-pointer sm:w-[55px] md:w-[60px] lg:w-[70px] 2xl:w-[90px] rotate-180"
           src={NextArrow}
           alt="NextArrow"
+          onClick={handleContentChange}
         />
       </div>
+      </div>
+
     </div>
   );
 };
