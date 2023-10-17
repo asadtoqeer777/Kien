@@ -34,7 +34,6 @@ export default function Home() {
         pin: true,
         scrub: 1,
         end: "+=10000",
-        snap: 1 / (sections.length - 1),
         // end: "+=" + sections.length * 11000,
         onUpdate: (self) => {
           // Calculate the activeNav based on the scroll position
@@ -140,7 +139,7 @@ export default function Home() {
           //   )
           // }
 
-          if (scrollPercent > 70) {
+          if (scrollPercent > 40.3000) {
             setToggleNav(2);
           } else {
             setToggleNav(1);
@@ -183,15 +182,13 @@ export default function Home() {
       tl.fromTo(
         "#logoBg",
         {
-          
           width: "100%",
           padding: "20px"
         },
         {
           position: "absolute",
           bottom: "20px",
-          width: "138px",
-          alignItems: "end",
+          // width: "138px",
         }
       )
 
@@ -208,19 +205,11 @@ export default function Home() {
         tl.to(
           "#categoryFadeText",
           {
-            marginTop: "-80px",
             opacity: "0",
             duration: 3,
           },
           "start"
-        ).to(
-          "#categoryFadeTextBorder",
-          {
-            borderBottom: "0px",
-            duration: 6,
-          },
-          "start"
-        );
+        )
         tl.to(
           "#categoriesTransition",
           {
@@ -235,6 +224,13 @@ export default function Home() {
           "#categoryFadeText",
           {
             display: "none"
+          },
+        )
+        .to(
+          "#categoryFadeTextBorder",
+          {
+            delay: "4s",
+            borderBottom: "0px",
           },
         )
       }
@@ -292,6 +288,10 @@ export default function Home() {
             : toggleNav == 3
             ? ""
             : "bg-[#E3FF00]"
+            
+        }
+        navBorArrow={
+          toggleNav == 2 ? true : false
         }
         toggleNav={activeNav === 2}
         handleNav={() => handleNav(2)}

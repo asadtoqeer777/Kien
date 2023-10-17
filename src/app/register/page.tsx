@@ -13,8 +13,8 @@ const Register = () => {
 
           <div className="mainImage text-center w-[310px] sm:w-[390px]  pt-[40px] m-auto relative  sm:pt-[50px] md:pt-[60px] lg:pt-[70px] xl:pt-[80px] 2xl:pt-[124px]">
             <Image className='h-auto w-[250px] md:w-[260px]  lg:w-[270px]  xl:w-[300px] 2xl:h-[117px] 2xl:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
-            <div className="text-[20px] sm:text-[23px] md:text-[25px] lg:md:text-[27px] mt-2 font-semibold text-white">
-              Travel Experiences
+            <div className="text-[20px] sm:text-[22px] md:text-[23px] lg:md:text-[24px] xl:text-[25px] 2xl:text-[27px] mt-2 font-semibold text-white">
+            YOU’RE THE DESTINATION
             </div>
             <div className="barImage">
               <div className='h-[540px] w-[35px] sm:h-[560px] md:h-[600px] lg:h-[568px] xl:h-[640px] 2xl:h-[748px] absolute top-0 right-[10px] sm:right-[35px] xl:right-[10px] z-10 bg-white'></div>

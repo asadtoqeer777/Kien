@@ -13,7 +13,7 @@ const Login = () => {
         <div className="mainImage text-center">
           <Image className='h-[auto] w-[310px] md:h-[117px] md:w-[360px] m-auto ' src={LogoImage} alt="LogoImage" />
           <div className="text-[27px] font-semibold text-[#000]">
-            Travel Experiences
+          YOU’RE THE DESTINATION
           </div>
           <div className="barImage">
             <Image className='h-[434px] w-[35px] sm:h-[475px] md:h-[501px] lg:h-[520px] xl:h-[522px] 2xl:h-[621px] absolute top-0 right-[10px] z-10' src={loginBar} alt="loginBar" />

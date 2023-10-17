@@ -58,7 +58,7 @@ const ArchetypePage = () => {
 
         <div
           className="flex w-[450px] sm:w-[580px] md:w-[720px] lg:w-[900px] xl:w-[1100px] 2xl:w-[1180px] h-[300px] sm:h-[400px]  md:h-[450px] lg:h-[464px] xl:h-[484px] 
-          2xl:h-[684px] m-auto absolute top-20% left-1/2 transform -translate-x-1/2 bg-red-400"id="beganStory"
+          2xl:h-[684px] m-auto absolute top-20% left-1/2 transform -translate-x-1/2"id="beganStory"
 
         >
           {ArchetypeContent.map((item, key)=>{
