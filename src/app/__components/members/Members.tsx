@@ -15,9 +15,10 @@ interface Props{
   prifileStack: string;
   memeberBtnBg: string;
   stackDel: string;
+  teamStack: string
 }
 
-const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg, stackDel} : Props) => {
+const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileName, prifileStack, memeberBtnBg, stackDel, teamStack} : Props) => {
   return (
     <div className='relative Space Grotesk'>
       <div className={`grid grid-cols-10 pt-[40px] uppercase ${memberTheme} `}>
@@ -31,7 +32,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
                 Team
               </div>
               <div>
-                ( CO - FOUNDER )
+                {teamStack}
               </div>
             </div>
             <div>Members</div>
@@ -63,7 +64,7 @@ const MembersItem = ({memberTheme, memberThemeCol, logoCol, footerCol, ProfileNa
               <Image className='2xl:w-[253px] xl:w-[100%]  2xl:h-[75px] xl:h-[75px] mx-3' src={logoCol ?  BrandWhiteLogo : BrandLogo} alt='' />
               <div className="relative">
 
-                <div className="text-[48px] lg:text-[68px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px] md:w-[42%] w-[52%]   break-words 2xl:leading-[68px] leading-[50px] mt-2 relative text-end m-auto ">
+                <div className="text-[34px] lg:text-[55px] xl:text-[78px] 2xl:text-[88px] font-medium tracking-[-5.28px] 2xl:w-[145px] xl:w-[115px] md:w-[42%] w-[52%]   break-words 2xl:leading-[68px] leading-[50px] mt-2 relative text-end m-auto ">
                   2023
                 </div>
                 <div className={`2xl:w-[46px] w-[40px] h-[428px] ${memberThemeCol} absolute top-[14%] xl:left-[29%] md:left-[20%] left-[12%]`}></div>
