@@ -238,10 +238,9 @@ export default function Home() {
         tl.fromTo(
           "#philosophy",
           {
-            scale: 15,
+            scale: 35,
             duration: 20,
-
-            
+            transformOrigin: "50% 65%"
           },
           {
             scale: 1,

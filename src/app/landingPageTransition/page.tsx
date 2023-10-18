@@ -45,12 +45,12 @@ const LandingTransition = () => {
                 <div>
                   <div className=" w-full absolute bottom-[70px] right-[14px]">
                     <div className="flex justify-between pr-4">
-                      <div className="flex justify-between px-[14px] sm:px-[34px] CraftworkGrotesk">
-                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9 mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
+                      <div className="flex justify-between items-end px-[14px] sm:px-[34px] CraftworkGrotesk">
+                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
                           <div className="">YOU</div>
                           <div className="">ARE</div>
                         </div>
-                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-6 sm:leading-9">
+                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] font-semibold">
                           <div className="">THE</div>
                           <div className="">DESTINATION </div>
                         </div>
@@ -58,7 +58,7 @@ const LandingTransition = () => {
                       <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] AuxMono">
                         <div className="">IMMERSIVE
 </div>
-                        <div className="">TRAVEL</div>
+                        <div className="sm:mb-2 mb-0">TRAVEL</div>
                         <div className="">EXPERIENCES
 </div>
                         <div className="">FOR YOU</div>

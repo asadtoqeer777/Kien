@@ -12,7 +12,7 @@ import footerLogo from "../__assets/images/svgs/footerLogo.svg";
 import CountUp from "react-countup";
 import backArrowCircle from "../__assets/images/svgs/back-arrow-circle.svg";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import philosphy from "../__assets/images/pngs/MicrosoftTeams-image.png"
+import philosphy from "../__assets/images/svgs/philosophyMain.svg"
 
 interface Props {
   scrollCheck: boolean;
@@ -96,7 +96,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   <Image
                     src={philosphy}
                     alt="philosophy-poster"
-                    className="custom-img  relative z-10"
+                    className="custom-img  relative z-10 h-[300px]"
                     fill
                   />
                 {/* </TransformComponent> */}
