@@ -46,7 +46,10 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
             MENU
           </div>
 
-          <div className='cursor-pointer'>
+          <div className='cursor-pointer' onClick={() => {
+          router.push('/aboutUs')
+          setActiveNav(false)
+        }}>
             <div className={`flex justify-between items-center w-[100%] sm:w-[80%] border-b-2  boredr-[1px] mt-[21px] ${navBorArrow ? "border-white" : " border-black"}`}>
               <h2 className=" text-[42px] sm:text-[52px] md:text-[60px] lg:text-[67px] xl:text-[75px] font-medium leading-[70px]">
                 About
