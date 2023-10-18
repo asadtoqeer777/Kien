@@ -5,14 +5,23 @@ import DarkPlus from "../../__assets/images/svgs/darkPlus.svg"
 import NextArrow from "../../__assets/images/svgs/backArrow.svg";
 import Button from "../buttons/Button";
 
-interface Props {
-  handleContentChange:  any
+interface Props{
+  card:  {
+    Name: string;
+    CountryName: string;
+    title: string;
+    subTitle: string;
+    travel: string;
+    status: string;
+    logo: any;
+}[],
+  handleContentChange:  any,
 }
 
-const CategoriesCardMain = ({handleContentChange} : Props) => {
+const CategoriesCardMain = ({handleContentChange, card} : Props) => {
   return (
     <div>
-      <div className="w-[100%] 2xl:m-auto pr-[43px]  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
+      <div className="w-[100%] 2xl:m-auto pr-[43px] relative " id= "3" style={{
         boxShadow: " 1px 0px 19px 15px white",
         borderBottomLeftRadius: "20px",
         borderTopLeftRadius: "20px",
@@ -21,20 +30,19 @@ const CategoriesCardMain = ({handleContentChange} : Props) => {
         <Image src={DarkPlus} alt='DarkPlus' />
         <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
       </div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <div className="absolute -bottom-[82px] right-5">
+      <div className="2xl:h-[calc(100vh-450px)] xl:h-[calc(100vh-420px)] h-[calc(100vh-400px)] bg-white overflow-y-auto no-scrollbar grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
+
+      {card.map((item, index)=>{
+        return <Card key={index} title={item.title} subTitle={item.subTitle} Name={item.Name} CountryName={item.CountryName} travel={item.travel} logo={item.logo}/>
+      })}
+      </div>
+        
+        <div className="absolute -bottom-[82px] right-5 " onClick={handleContentChange}>
         <Image
           className="w-[50px] cursor-pointer sm:w-[55px] md:w-[60px] lg:w-[70px] 2xl:w-[90px] rotate-180"
           src={NextArrow}
           alt="NextArrow"
-          onClick={handleContentChange}
+          
           id="categaryNextBtn"
         />
       </div>

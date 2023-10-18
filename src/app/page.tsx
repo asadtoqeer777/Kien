@@ -132,24 +132,9 @@ export default function Home() {
           {
             opacity: "0",
             duration: 3,
-          },
-          "start"
-        )
-        tl.to(
-          "#categoriesTransition1",
-          {
-            position: "absolute",
-            // top: "50%",
-            // transform: "translate(0%, -35%)",
-            translateX: "0%",
-            duration: 3,
-          },
-          "start"
-        ).to(
-          "#categoryFadeText1",
-          {
             display: "none"
           },
+          "start"
         )
         .to(
           "#categoryFadeTextBorder1",
@@ -158,6 +143,17 @@ export default function Home() {
             borderBottom: "0px",
           },
         )
+        tl.to(
+          "#categoriesTransition1",
+          {
+            position: "absolute",
+            translateX: "0%",
+            duration: 3,
+            zIndex: "2"
+          },
+          "start"
+        )
+
       }
 
 
@@ -167,22 +163,9 @@ export default function Home() {
           {
             opacity: "0",
             duration: 3,
-          },
-          "start"
-        )
-        tl.to(
-          "#categoriesTransition2",
-          {
-            position: "absolute",
-            translateX: "0px",
-            duration: 3,
-          },
-          "start"
-        ).to(
-          "#categoryFadeText2",
-          {
             display: "none"
           },
+          "start"
         )
         .to(
           "#categoryFadeTextBorder2",
@@ -191,6 +174,17 @@ export default function Home() {
             borderBottom: "0px",
           },
         )
+        tl.to(
+          "#categoriesTransition2",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+            zIndex: "2"
+          },
+          "start"
+        )
+
       }
 
 
@@ -200,22 +194,9 @@ export default function Home() {
           {
             opacity: "0",
             duration: 3,
-          },
-          "start"
-        )
-        tl.to(
-          "#categoriesTransition3",
-          {
-            position: "absolute",
-            translateX: "0px",
-            duration: 3,
-          },
-          "start"
-        ).to(
-          "#categoryFadeText3",
-          {
             display: "none"
           },
+          "start"
         )
         .to(
           "#categoryFadeTextBorder3",
@@ -224,6 +205,17 @@ export default function Home() {
             borderBottom: "0px",
           },
         )
+        tl.to(
+          "#categoriesTransition3",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+            zIndex: "2"
+          },
+          "start"
+        )
+
       }
 
 
@@ -234,8 +226,16 @@ export default function Home() {
           {
             opacity: "0",
             duration: 3,
+            display: "none"
           },
           "start"
+        )
+        .to(
+          "#categoryFadeTextBorder3",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
         )
         tl.to(
           "#categoriesTransition4",
@@ -243,20 +243,9 @@ export default function Home() {
             position: "absolute",
             translateX: "0px",
             duration: 3,
+            zIndex: "2"
           },
           "start"
-        ).to(
-          "#categoryFadeText4",
-          {
-            display: "none"
-          },
-        )
-        .to(
-          "#categoryFadeTextBorder4",
-          {
-            delay: "4s",
-            borderBottom: "0px",
-          },
         )
       }
 
@@ -267,8 +256,16 @@ export default function Home() {
           {
             opacity: "0",
             duration: 3,
+            display: "none"
           },
           "start"
+        )
+        .to(
+          "#categoryFadeTextBorder3",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
         )
         tl.to(
           "#categoriesTransition5",
@@ -276,27 +273,11 @@ export default function Home() {
             position: "absolute",
             translateX: "0px",
             duration: 3,
+            zIndex: "2"
           },
           "start"
-        ).to(
-          "#categoryFadeText5",
-          {
-            display: "none"
-          },
         )
-        .to(
-          "#categoryFadeTextBorder5",
-          {
-            delay: "4s",
-            borderBottom: "0px",
-          },
-        )
-      }
-
-
-
-
-      
+      }      
       if (currentSection.querySelector("#philosophy")) {
         tl.fromTo(
           "#philosophy",
