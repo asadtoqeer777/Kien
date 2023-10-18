@@ -48,23 +48,7 @@ export default function Home() {
           const landingLine2 = document.querySelector(
             "#landingLine2"
           ) as HTMLElement | null;
-          const philosophyMain = document.querySelector(
-            ".philosophyMain"
-          ) as HTMLElement | null;
 
-          const LandingPage = document.querySelector(
-            "LandingPage"
-          ) as HTMLElement | null;
-
-          // if (scrollPercent < 0.1) {
-          //   if (philosophyMain) {
-          //     philosophyMain.style.overflowY = "auto";
-          //   }
-          // } else {
-          //   if (philosophyMain) {
-          //     philosophyMain.style.overflowY = "hidden";
-          //   }
-          // }
           if (scrollPercent > 0.01) {
             if (footer) {
               footer.style.display = "none";
@@ -86,74 +70,11 @@ export default function Home() {
               landingLine2.style.display = "block";
             }
           }
-          // if(scrollPercent > 45){
-          //   gsap.to("#categoryFadeTextBorder",{
-          //     borderBottom: "0px"
-          //   })
-          //   gsap.to("#categoryFadeText",{
-          //       marginTop: "-50px",
-          //       opacity: "0.3",
-          //       display: "none",
-          //       transitionDuration: "1s",
-          //       scrollTrigger: {
-          //         trigger: "#categoryFadeText"
-          //     },
-          //   })
-          //  gsap .to(
-          //     "#categoriesTransition",
-          //     {
-          //       position: "absolute",
-          //       top: "50%",
-          //       left: "-84.2%",
-          //       transform: "translate(0%, -35%)",
-          //       transitionDuration: "1s",
-          //       scrollTrigger: {
-          //         trigger: "#categoriesTransition"
-          //       }
-          //     },
-          //   )
-          // }else if(scrollPercent < 45){
-          //   gsap.to("#categoryFadeTextBorder",{
-          //     borderBottom: "1px"
-          //   })
-          //   gsap.to("#categoryFadeText",{
-          //       marginTop: "0px",
-          //       opacity: "1",
-          //       display: "block",
-          //       transitionDuration: "1s",
-          //       scrollTrigger: {
-          //         trigger: "#categoryFadeText"
-          //     },
-          //   })
-          //   gsap.to(
-          //     "#categoriesTransition",
-          //     {
-          //       position: "absolute",
-          //       top: "50%",
-          //       left: "0%",
-          //       transform: "translate(84.2%, -35%)",
-          //       scrollTrigger: {
-          //         trigger: "#categoriesTransition"
-          //       }
-          //     },
-          //   )
-          // }
-
           if (scrollPercent > 40.3000) {
             setToggleNav(2);
           } else {
             setToggleNav(1);
           }
-
-          // if (scrollPercent > 76) {
-          //   if (philosophyMain) {
-          //     philosophyMain.style.overflowY = "auto";
-          //   }
-          // } else {
-          //   if (philosophyMain) {
-          //     philosophyMain.style.overflowY = "hidden";
-          //   }
-          // }
         },
       },
     });
@@ -201,9 +122,13 @@ export default function Home() {
         xPercent: -(100 * stop),
         duration: stop,
       });
-      if (currentSection.querySelector("#categoriesTransition")) {
+
+
+
+
+      if (currentSection.querySelector("#categoriesTransition1")) {
         tl.to(
-          "#categoryFadeText",
+          "#categoryFadeText1",
           {
             opacity: "0",
             duration: 3,
@@ -211,7 +136,7 @@ export default function Home() {
           "start"
         )
         tl.to(
-          "#categoriesTransition",
+          "#categoriesTransition1",
           {
             position: "absolute",
             // top: "50%",
@@ -221,19 +146,157 @@ export default function Home() {
           },
           "start"
         ).to(
-          "#categoryFadeText",
+          "#categoryFadeText1",
           {
             display: "none"
           },
         )
         .to(
-          "#categoryFadeTextBorder",
+          "#categoryFadeTextBorder1",
           {
             delay: "4s",
             borderBottom: "0px",
           },
         )
       }
+
+
+      if (currentSection.querySelector("#categoriesTransition2")) {
+        tl.to(
+          "#categoryFadeText2",
+          {
+            opacity: "0",
+            duration: 3,
+          },
+          "start"
+        )
+        tl.to(
+          "#categoriesTransition2",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+          },
+          "start"
+        ).to(
+          "#categoryFadeText2",
+          {
+            display: "none"
+          },
+        )
+        .to(
+          "#categoryFadeTextBorder2",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
+        )
+      }
+
+
+      if (currentSection.querySelector("#categoriesTransition3")) {
+        tl.to(
+          "#categoryFadeText3",
+          {
+            opacity: "0",
+            duration: 3,
+          },
+          "start"
+        )
+        tl.to(
+          "#categoriesTransition3",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+          },
+          "start"
+        ).to(
+          "#categoryFadeText3",
+          {
+            display: "none"
+          },
+        )
+        .to(
+          "#categoryFadeTextBorder3",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
+        )
+      }
+
+
+
+      if (currentSection.querySelector("#categoriesTransition4")) {
+        tl.to(
+          "#categoryFadeText4",
+          {
+            opacity: "0",
+            duration: 3,
+          },
+          "start"
+        )
+        tl.to(
+          "#categoriesTransition4",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+          },
+          "start"
+        ).to(
+          "#categoryFadeText4",
+          {
+            display: "none"
+          },
+        )
+        .to(
+          "#categoryFadeTextBorder4",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
+        )
+      }
+
+
+      if (currentSection.querySelector("#categoriesTransition5")) {
+        tl.to(
+          "#categoryFadeText5",
+          {
+            opacity: "0",
+            duration: 3,
+          },
+          "start"
+        )
+        tl.to(
+          "#categoriesTransition5",
+          {
+            position: "absolute",
+            translateX: "0px",
+            duration: 3,
+          },
+          "start"
+        ).to(
+          "#categoryFadeText5",
+          {
+            display: "none"
+          },
+        )
+        .to(
+          "#categoryFadeTextBorder5",
+          {
+            delay: "4s",
+            borderBottom: "0px",
+          },
+        )
+      }
+
+
+
+
+      
       if (currentSection.querySelector("#philosophy")) {
         tl.fromTo(
           "#philosophy",
@@ -269,6 +332,7 @@ export default function Home() {
       }
     });
   }, []);
+
 
   const handleNav = (navNumber: any) => {
     if (navNumber === activeNav) {
@@ -307,23 +371,13 @@ export default function Home() {
           <section className={`panel Category`} data-pin="true">
             <Category />
           </section>
-          {/* <section className={`panel CategoriesList`} data-pin="true">
-            <CategoriesList />
-          </section> */}
-
           <section className={`panel`} data-pin="true">
             <div className="Philosophy">
               <PhilosophyPage scrollCheck={true} />
             </div>
           </section>
-          {/* <section className={`panel`} data-pin="true">
-            <div>
-              <Profile />
-            </div>
-          </section> */}
         </div>
       </div>
-      {/* <Accordion/> */}
     </div>
   );
 }

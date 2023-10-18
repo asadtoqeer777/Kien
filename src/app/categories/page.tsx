@@ -35,6 +35,75 @@ const Category = () => {
       subtitle: "You’re a Savant if",
       description:
         "You're drawn to places rich in history and stories, always eager to explore spots that shed light on culture and traditions, turning every journey into a lesson in understanding.",
+        card: [
+          {
+            Name: "Soni Aggarwal,",
+            CountryName: "India",
+            title: "Savant",
+            subTitle: "Scholarly",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Rahul Yadav,",
+            CountryName: "India",
+            title: "Savant",
+            subTitle: "Reflective",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Sabby Ron,",
+            CountryName: "Netherlands",
+            title: "Savant",
+            subTitle: "Intellectual",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Robin Stevens,",
+            CountryName: "Spain",
+            title: "Savant",
+            subTitle: "Insightful",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Ravish Kumar,",
+            CountryName: "India",
+            title: "Savant",
+            subTitle: "Thoughtful",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Kendra Lynn,",
+            CountryName: "USA",
+            title: "Savant",
+            subTitle: "Learned ",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Owen Franks,",
+            CountryName: "Switzerland",
+            title: "Savant",
+            subTitle: "Reflective",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+          {
+            Name: "Sabby Ron,",
+            CountryName: "Netherlands",
+            title: "Savant",
+            subTitle: "Intellectual",
+            travel: "+100kms",
+            status: "lynnK"
+          },
+        ],
+        id: "categoriesTransition1",
+        subHeadId: "categoryFadeText1",
+        subHeadMainId: "categoryFadeTextBorder1"
     },
     {
       logo: CategoriesLogo2,
@@ -44,6 +113,9 @@ const Category = () => {
       subtitle: "You’re a Vitalist",
       description:
         "If you thrive on adventure and the thrill of the unknown, always eager to conquer new terrains and embrace the unpredictable, turning every journey into a heart-pounding escapade.",
+        id: "categoriesTransition2",
+        subHeadId: "categoryFadeText2",
+        subHeadMainId: "categoryFadeTextBorder2"
     },
     {
       logo: CategoriesLogo3,
@@ -53,6 +125,9 @@ const Category = () => {
       subtitle: "You’re a Revelator",
       description:
         "If you love uncovering hidden wonders, feel a deep connection to places with ancient stories, and find magic in the world's lesser-known spots.",
+        id: "categoriesTransition3",
+        subHeadId: "categoryFadeText3",
+        subHeadMainId: "categoryFadeTextBorder3"
     },
     {
       logo: CategoriesLogo4,
@@ -62,6 +137,9 @@ const Category = () => {
       subtitle: "You’re an Epicurean ",
       description:
         "If you have a taste for the finer things in travel, indulge in destinations known for culinary delights, and cherish experiences that tantalise the senses.",
+        id: "categoriesTransition4",
+        subHeadId: "categoryFadeText4",
+        subHeadMainId: "categoryFadeTextBorder4"
     },
     {
       logo: CategoriesLogo5,
@@ -71,6 +149,9 @@ const Category = () => {
       subtitle: "You’re a Seeker ",
       description:
         "If you're driven by an insatiable curiosity, always on the hunt for hidden gems and untold stories. You thrive on charting unknown territories and find immense joy in discovering the unbeaten paths, local secrets, and the unique heartbeat of every destination.",
+        id: "categoriesTransition5",
+        subHeadId: "categoryFadeText5",
+        subHeadMainId: "categoryFadeTextBorder5"
     },
   ];
 
@@ -80,26 +161,27 @@ const Category = () => {
 
   return (
     <div
-      className="w-[100vw] h-[100vh] overflow-y-auto overflow-x-hidden no-scrollbar bg-white relative "
+      className="w-[100vw] h-[100vh] overflow-hidden no-scrollbar bg-white relative "
       id="3"
     >
       {contentOptions.map((option, index) => (
         <div
           key={index}
           style={{ display: index === content ? "block" : "none" }}
+          className="overflow-y-auto h-[100vh] no-scrollbar"
         >
           <div className="">
             <div className="mt-[30px]">
-              <div className={`grid grid-cols-8 gap-2  ${style.categoryHero}`}>
+              <div className={`grid grid-cols-9 gap-2  ${style.categoryHero}`}>
                 <div className="col-span-3 px-3">
                   <Image
                     src={option.logo}
                     alt=""
-                    className="w-[100px] 2xl:w-[210px] xl:w-[180px] lg:w-[170px] md:w-[140px] sm:w-[120px]"
+                    className="categoryLogo w-[100px] 2xl:w-[210px] xl:w-[180px] lg:w-[170px] md:w-[140px] sm:w-[120px]"
                   />
                 </div>
                 <div
-                  className={`${style.categoryHeading} col-span-5 flex items-end pb-5 CraftworkGrotesk`}
+                  className={`${style.categoryHeading} col-span-6 flex items-end pb-5 CraftworkGrotesk`}
                 >
                   <div>{option.maintitle}</div>
                 </div>
@@ -107,8 +189,8 @@ const Category = () => {
             </div>
             <div className="relative">
               <div
-                className="grid grid-cols-8 gap-2 border-b-[1px] border-black pb-5"
-                id="categoryFadeTextBorder"
+                className="grid grid-cols-9 gap-2 border-b-[1px] border-black pb-5"
+                id={option.subHeadMainId}
               >
                 <div className="col-span-3">
                   <div className="flex items-center gap-2 ml-4 mt-2">
@@ -126,10 +208,10 @@ const Category = () => {
                     />
                   </div>
                 </div>
-                <div className="col-span-5">
+                <div className="col-span-6">
                   <div
-                    className={`${style.categoryHeading} col-span-4 text-[#00000080] mt-[4vh] sm:mt-[3vh] CraftworkGrotesk`}
-                    id="categoryFadeText"
+                    className={`${style.categoryHeading} text-[#00000080] mt-[4vh] sm:mt-[3vh] CraftworkGrotesk`}
+                    id={option.subHeadId}
                   >
                     <h1>{option.subMaintitle1}</h1>
                     <h1>{option.subMaintitle2}</h1>
@@ -138,9 +220,9 @@ const Category = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-8 gap-2">
+            <div className="grid grid-cols-9 gap-2">
               <div className="col-span-3"></div>
-              <div className="col-span-5" id="categoryFadeText">
+              <div className="col-span-6" id={option.subHeadId}>
                 <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[70px] xl:mt-[80px] 2xl:mt-[80px]">
                   <div className={`${style.categorySubHeading}`}>
                     <div>{option.subtitle}</div>
@@ -203,14 +285,16 @@ const Category = () => {
               />
             </div>
           </div>
-        </div>
-      ))}
-      <div
-        className="absolute 2xl:top-[296px] xl:top-[266px] lg:top-[256px] md:top-[224px] sm:top-[205px] right-0 translate-x-[84.2%] translate-y-[0%] w-full"
-        id="categoriesTransition"
+          <div
+        className="absolute 2xl:top-[296px] xl:top-[266px] lg:top-[256px] md:top-[224px] sm:top-[205px] right-0 translate-x-[84.2%] translate-y-[0%] w-full pl-[23px]"
+        id={option.id}
       >
         <CategoriesCardMain handleContentChange={handleContentChange} />
       </div>
+        </div>
+        
+      ))}
+
     </div>
   );
 };

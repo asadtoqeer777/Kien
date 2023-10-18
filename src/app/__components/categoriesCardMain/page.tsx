@@ -12,8 +12,8 @@ interface Props {
 const CategoriesCardMain = ({handleContentChange} : Props) => {
   return (
     <div>
-      <div className="w-[100%] 2xl:w-[90%] 2xl:m-auto pr-[43px] pl-[23px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
-        boxShadow: "47px 0px 263px 60px white inset",
+      <div className="w-[100%] 2xl:m-auto pr-[43px]  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 relative" id= "3" style={{
+        boxShadow: " 1px 0px 19px 15px white",
         borderBottomLeftRadius: "20px",
         borderTopLeftRadius: "20px",
       }}>
@@ -29,12 +29,13 @@ const CategoriesCardMain = ({handleContentChange} : Props) => {
         <Card />
         <Card />
         <Card />
-        <div className=" absolute -bottom-[82px] right-5">
+        <div className="absolute -bottom-[82px] right-5">
         <Image
           className="w-[50px] cursor-pointer sm:w-[55px] md:w-[60px] lg:w-[70px] 2xl:w-[90px] rotate-180"
           src={NextArrow}
           alt="NextArrow"
           onClick={handleContentChange}
+          id="categaryNextBtn"
         />
       </div>
       </div>
