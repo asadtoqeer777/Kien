@@ -1,6 +1,6 @@
 .categoryHeading{
   font-family: Craftwork Grotesk;
-font-size: 114.286px;
+font-size: 112.286px;
 font-style: normal;
 font-weight: 500;
 line-height: 100px;
@@ -120,6 +120,23 @@ margin-top: 178px;
       margin-top: 2vh;
       margin-bottom: 3vh;
     }
+}
+@media (max-height: 600px) and (max-width: 1024px) {
+  .categoryHeading{
+    font-size: 48.286px;
+    line-height: 45px;
+    }
+    .categorySubHeading{
+      font-size: 44.19px;
+      margin-top: 6vh;
+      }
+      .categorySubHeadDes{
+        font-size: 20.571px;
+        line-height: 20.143px; /* 130% */
+      }
+      .categoryLogo{
+        width: 140px;
+      }
 }
 
 @media (max-width: 450px) {
