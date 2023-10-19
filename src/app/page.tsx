@@ -87,6 +87,16 @@ export default function Home() {
       height: "100vh",
       transform: "translate(-50%, -50%)",
     })
+    // .from(
+    //   ".LandingPage",
+    //   {
+    //   // position: "absolute",
+    //   // top: "50%",
+    //   // left: "50%",
+
+    //   transform: "translate(-50%, -50%)",
+    //   }
+    // )
 
       .to(
         ".LandingPage",
@@ -97,6 +107,7 @@ export default function Home() {
           width: "179px",
           height: "388px",
           transform: "translate(-50%, -50%)",
+          zIndex: "-1"
         },
       )
 
@@ -283,7 +294,7 @@ export default function Home() {
         tl.fromTo(
           "#philosophy",
           {
-            scale: 35,
+            scale: 25,
             duration: 20,
             transformOrigin: "50% 65%",
           },

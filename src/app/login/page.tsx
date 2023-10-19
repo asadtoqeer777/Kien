@@ -28,10 +28,10 @@ const Login = () => {
             <Input inputLabel={"password"} inputLabelExtCSS={"text-[#00000080]"} inputExtCSS={"border-[#00000080]  text-[#00000080]"} inputType={"password"} />
           </div>
           <div className="mt-3 text-right">
-            <Button btnClasses={"bg-[#E3FF00] w-[114px] h-[30px] rounded-[19.5px] text-[13px] font-medium"} btntext={"LOGIN"} />
+            <Button btnClasses={"bg-[#E3FF00] w-[114px] h-[30px] rounded-[19.5px] text-[13px] font-medium AuxMono"} btntext={"LOGIN"} />
           </div>
           <div className="mt-[39px] sm:mt-[49px] md:mt-[59px] lg:mt-[69px] xl:mt-[79px] 2xl:mt-[89px] text-center">
-            <Button btnClasses={"bg-transparent  h-[25px] rounded-[19.5px] text-[13px] font-semibold	text-[#00000080] underline"} btntext={"Forgot Password?"} />
+            <Button btnClasses={"bg-transparent  h-[25px] rounded-[19.5px] text-[13px] font-semibold	text-[#00000080] underline AuxMono"} btntext={"Forgot Password?"} />
           </div>
         </div>
       </div>

@@ -45,14 +45,14 @@ const Register = () => {
                   <Input inputLabel={"RETYPE password"} inputLabelExtCSS={"text-[#ffffff80]"} inputExtCSS={"border-white  text-[white]"} inputType={"password"} />
                 </div>
                 <div className="mt-3 text-right">
-                  <Button btnClasses={"bg-[#E3FF00] w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-medium"} btntext={"Register"} />
+                  <Button btnClasses={"bg-[#E3FF00] w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-medium AuxMono"} btntext={"Register"} />
                 </div>
               </div>
             </div>
           </div>
 
           <div className="mt-[30px] sm:mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:xl:mt-[130px] text-center">
-            <Button btnClasses={"bg-transparent w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-semibold underline	text-[#ffffff80]"} btntext={"Need Help?"} />
+            <Button btnClasses={"bg-transparent w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-semibold underline	text-[#ffffff80] AuxMono"} btntext={"Need Help?"} />
           </div>
 
         </div>
