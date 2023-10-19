@@ -286,7 +286,6 @@ export default function Home() {
             scale: 35,
             duration: 20,
             transformOrigin: "50% 65%",
-            transform: "unset !important",
           },
           {
             scale: 1,
