@@ -39,7 +39,7 @@ const expListings = [
   },
 ];
 
-const PhilosophyPage = ({ scrollCheck }: Props) => {
+const PhilosophyPage = ({ scrollCheck }: any) => {
   const router = useRouter();
   const currentRoute = usePathname();
 

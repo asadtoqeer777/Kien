@@ -15,7 +15,7 @@ interface MembersPageProps {
   setState?: any;
 }
 
-const MembersPage: React.FC<MembersPageProps> = ({setState}) => {
+const MembersPage: React.FC<any> = ({setState}) => {
   const currentRoute = usePathname();
   const sliderRef = useRef<Slider | null>(null);
 

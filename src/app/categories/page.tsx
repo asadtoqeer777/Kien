@@ -498,8 +498,11 @@ const Category = () => {
             </div>
             <div className="relative">
               <div
-                className="grid grid-cols-9 gap-2 border-b-[1px] border-black pb-5"
+                className="grid grid-cols-9 gap-2  pb-5"
                 id={option.subHeadMainId}
+                style={{
+                  borderBottom: "1px solid black"
+                }}
               >
                 <div className="col-span-3">
                   <div className="flex items-center gap-2 ml-4 mt-2">
@@ -520,7 +523,7 @@ const Category = () => {
                 <div className="col-span-6">
                   <div
                     className={`${style.categoryHeading} text-[#00000080] mt-[4vh] sm:mt-[3vh] CraftworkGrotesk`}
-                    id={option.subHeadId}
+                    id={option.subHeadId} 
                   >
                     <div>{option.subMaintitle1}</div>
                     <div>{option.subMaintitle2}</div>
