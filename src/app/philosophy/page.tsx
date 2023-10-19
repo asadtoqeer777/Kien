@@ -54,39 +54,40 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
     >
       <section className=" w-full relative z-20">
         <div className=" pt-10 ">
-          <Container styles="uppercase">
-            <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center w-[94%] m-auto">
                 
-              <div
-                className="cursor-pointer"
-                onClick={() => {
-                  router.push("/");
-                }}
-              >
-                <Image
-                  src={backArrowCircle}
-                  alt="arrow-icon"
-                  className="custom-img"
-                  fill
-                />
-              </div>
-              <div className="hidden xl:max-w-sm max-w-xs w-full sm:flex items-end">
-                <div className="flex justify-between gap-6 w-full">
-                  <p className="w-max text-xs">
-                    (04)
-                    <br />
-                    RELEVANT INFO
-                  </p>
-                  <p className="w-max text-xs">IND</p>
-                  <p className="w-max text-xs">
-                    (04)
-                    <br />
-                    RELEVANT INFO
-                  </p>
+                <div
+                  className="cursor-pointer"
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                >
+                  <Image
+                    src={backArrowCircle}
+                    alt="arrow-icon"
+                    className="custom-img"
+                    fill
+                  />
+                </div>
+                <div className="hidden w-[300px] sm:flex items-end SpaceGrotesk">
+                  <div className="flex justify-between gap-6 w-full">
+                    <p className="w-max text-xs">
+                      (04)
+                      <br />
+                      BREATHE INTO
+                    </p>
+                    <p className="w-max text-xs">IND</p>
+                    <p className="w-max text-xs">
+                      (04)
+                      <br />
+                     YOUR LIFE
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold CraftworkGrotesk">
+          <Container styles="uppercase">
+
+            <h1 className="2xl:text-[222px] xl:text-[180px] lg:text-[145px] md:text-8xl sm:text-[80px] text-[50px] lg:leading-[70px] lg:mt-20 md:mt-10 mt-3 text-center font-semibold CraftworkGrotesk tracking-[-13.32px]">
               Philosophy
             </h1>
 
@@ -99,6 +100,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                     className="custom-img  relative z-10 h-[300px]"
                     fill
                   />
+                  {/* <object className="custom-img  relative z-10 h-[300px]" type="image/svg+xml" data="./philosophyMain.svg">svg-image</object> */}
                 {/* </TransformComponent> */}
               {/* </TransformWrapper> */}
             </div>
@@ -106,15 +108,15 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
         </div>
       </section>
 
-      <section className="sticky bg-black top-0 text-white">
+      <section className="sticky bg-black top-0 text-white z-10">
         <div className="h-full ">
-          <div className="relative pb-9 pl-4" id="bottomFotter">
+          <div className="relative pb-9 " id="bottomFotter">
 
           <p className="text-xs mb-1">(04)</p>
-          <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold CraftworkGrotesk">
+          <h1 className="2xl:text-[53px] xl:text-[44px] lg:text-[35px] md:text-[25px] text-xl lg:leading-[52px] font-semibold CraftworkGrotesk pl-4">
           Meet who you are. On the way.
           </h1>
-          <div className="lg:w-9/12 ml-auto mt-3 h-full border-b-[1.5px] border-white relative">
+          <div className="lg:w-9/12 ml-auto mt-3 h-full border-b-[1.5px] border-white pl-4 relative">
             <div className="max-w-[658px] lg:ml-44 leading-7 lg:text-base md:text-sm text-xs pr-4">
               <p>
               They say company defines the journey. And what better company to you than you. At KIEN, we believe in putting the traveler at the heart of every journey. We love designing travel experiences that aren't just personalised but also deeply resonant, reigniting the true spirit of exploration. We invite you to celebrate the world's splendours and its rich tapestry of cultures, all through a lens of wonder and imagination.
@@ -168,8 +170,8 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
           </div>
             </div>
           </div>
-            <div className="absolute top-0 left-[25%] w-[1px] h-[94.9%] bg-white"></div>
-            <div className="absolute top-0 left-[75%] w-[1px] h-[94.9%] bg-white"></div>
+            <div className="absolute top-0 left-[25%] w-[1px] h-[92.7%] lg:h-[94.2%] bg-white"></div>
+            <div className="absolute top-0 left-[77%] w-[1px] h-[92.7%] lg:h-[94.2%] bg-white"></div>
           </div>
 
           <div className="border-t lg:w-9/12 w-full ml-auto CraftworkGrotesk">
@@ -178,7 +180,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                 <div
                   className={`${
                     index === 0 && "md:border-r md:ml-[0.5px]"
-                  } md:absolute top-0 left-0 flex-shrink-0 md:border-b md:w-40 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full flex justify-between items-center md:border-0 border-b py-2 md:mt-px`}
+                  } md:absolute top-0 left-0 flex-shrink-0 md:border-b md:w-40 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full flex justify-between items-center md:border-0 border-b py-2 md:mt-px pl-4`}
                 >
                   <p>{data.title}</p>
 
@@ -212,9 +214,9 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                 </div>
               </div>
             ))}
-            <div className="relative calc-width ml-auto">
+            <div className="relative calc-width ml-auto ">
               <div
-                className={`md:absolute top-0 left-0 flex-shrink-0 md:border-b md:w-40 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full flex justify-between items-center md:border-0 border-b py-2 md:mt-px`}
+                className={`md:absolute top-0 left-0 flex-shrink-0 md:border-b md:w-40 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full flex justify-between items-center md:border-0 border-b py-2 md:mt-px pl-4`}
               >
                 <p>experiences provided</p>
 
@@ -224,7 +226,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
               </div>
 
               {/* <p className='md:absolute top-0 left-0 flex-shrink-0 border-b md:w-40 w-full py-2 uppercase leading-5 transform md:-translate-x-full md:-translate-y-full mt-px'>experiences provided</p> */}
-              <div className="md:px-6 pt-7 md:border-l border-t pb-16 w-full transform -translate-x-[.5px]">
+              <div className="md:px-6 pl-4 pt-7 md:border-l border-t pb-16 w-full transform -translate-x-[.5px]">
                 <div className="flex items-start justify-between">
                   <p className="max-w-[630px] md:text-xl w-full leading-7">
                   Reflecting Kien's Philosophy, creators hold a prominent position in our approach. We are passionate about portraying the essence of destinations and cultural hotspots, much like the numerous creators dedicated to showcasing the beauty and diversity of the travel landscape in a fresh and unique manner.
@@ -295,10 +297,10 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
           </div>
         </div>
       </section>
-      <div className="absolute top-0 left-3 w-[1px] h-[68vh] bg-black"></div>
-      <div className="absolute top-0 left-[15%] w-[1px] h-[68vh] bg-black"></div>
-      <div className="absolute top-0 left-[65%] w-[1px] h-[68vh] bg-black"></div>
-      <div className="absolute top-0 left-[85%] w-[1px] h-[68vh] bg-black"></div>
+      <div className="absolute top-0 left-3 w-[1px] h-[80vh] bg-black "></div>
+      <div className="absolute top-0 left-[25%] w-[1px] h-[80vh] bg-black"></div>
+      <div className="absolute top-0 left-[65%] w-[1px] h-[80vh] bg-black"></div>
+      <div className="absolute top-0 left-[77%] w-[1px] h-[80vh] bg-black"></div>
     </div>
   );
 };

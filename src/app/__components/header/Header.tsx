@@ -24,7 +24,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
   return (
     <header className='relative w-full CraftworkGrotesk'>
 
-      <div className={activeNav || toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] fixed top-0 left-0 z-20 w-[100%] text-sm not-italic font-normal cursor-pointer `}>
+      <div className={activeNav || toggleNav ? "hidden" : `flex justify-between items-center h-[30px] ${navTheme} pl-[25px] sm:pl-[35px] pr-[50px] fixed top-0 left-0 z-20 w-[100%] text-sm not-italic font-normal cursor-pointer AuxMono`}>
         <div onClick={handleNav || handleNavInternal}>
           MENU
         </div>
@@ -59,7 +59,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
@@ -88,7 +88,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1" onClick={() => {
+            <div className="flex mt-1 SpaceGrotesk" onClick={() => {
             router.push('/teamMembers')
             // handleNav() || handleNavInternal()
             setActiveNav(false)
@@ -121,7 +121,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                 {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
@@ -153,7 +153,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                 {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
