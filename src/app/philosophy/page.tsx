@@ -7,7 +7,7 @@ import Container from "../__components/container";
 import Image from "next/image";
 import Button from "../__components/buttons/Button";
 import philosophyPoster from "../__assets/images/svgs/philosophy-poster.svg";
-import plusIcon from "../__assets/images/svgs/plusIconfilled.svg";
+import plusIcon from "../__assets/images/svgs/plusIconFilled.svg";
 import footerLogo from "../__assets/images/svgs/footerLogo.svg";
 import CountUp from "react-countup";
 import backArrowCircle from "../__assets/images/svgs/back-arrow-circle.svg";
