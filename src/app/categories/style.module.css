@@ -1,5 +1,5 @@
 .categoryHeading{
-  font-family: Craftwork Grotesk;
+  font-family: "Craftwork Grotesk";
 font-size: 112.286px;
 font-style: normal;
 font-weight: 500;
@@ -9,17 +9,13 @@ letter-spacing: -3.6px;
 
 
 .categoryHero{
-  /* background-image: url("../../../public/page5heroBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
   border-bottom: 1px solid black;
 }
 
 .categorySubHeading{
 font-size: 76.19px;
 font-style: normal;
-font-family: Craftwork Grotesk;
+font-family: "Craftwork Grotesk";
 font-weight: 500;
 line-height: 32.381px;
 letter-spacing: -2.286px;
@@ -27,9 +23,9 @@ margin-top: 178px;
 }
 
 .categorySubHeadDes{
-  font-family: Craftwork Grotesk;
-  font-size: 28.571px;
-  font-style: normal;
+  font-family: "Craftwork Grotesk";
+  font-size: 23.571px;
+  letter-spacing: -0.69px;
   font-weight: 500;
   line-height: 37.143px; /* 130% */
   width: 70%;
