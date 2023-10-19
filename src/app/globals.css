@@ -209,8 +209,10 @@ body::-webkit-scrollbar{
 
 
 .landingBgImg{
-  background-image: url("./__assets/images/pngs/Light.png");
+  background-image: url("./__assets/images/pngs/lightBg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-position: center;
+  /* background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(24,91,27,1) 50%, rgba(0,0,0,1) 100%); */
 }
