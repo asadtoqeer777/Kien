@@ -505,13 +505,13 @@ const Category = () => {
                   <div className="flex items-center gap-2 ml-4 mt-2">
                     <Button
                       btnClasses={
-                        "bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px] "
+                        "bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px] SpaceGrotesk"
                       }
                       btntext={"PERIPATETIC"}
                     />
                     <Button
                       btnClasses={
-                        "bg-black text-white border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"
+                        "bg-black text-white border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px] SpaceGrotesk"
                       }
                       btntext={"DECODE CARD"}
                     />

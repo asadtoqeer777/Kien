@@ -32,30 +32,30 @@ const LandingTransition = () => {
           </div>
         </div>
 
-        <div className="LandingPage h-screen w-full absolute top-0 left-0 bg-white z-[1]">
-            <div className="flex justify-center items-center absolute top-[50%] left-[50%]" id="logoBg" style={{ transform: "translate(-50%, -50%)" }}>
+        <div className="LandingPage h-screen w-full absolute top-0 left-0 z-[1] landingBgImg" >
+            {/* <div className="flex justify-center items-center absolute top-[50%] left-[50%]" id="logoBg" style={{ transform: "translate(-50%, -50%)" }}>
               <Image
                 className="landingPageMainImage sm:w-[280px] lg:w-[300px] xl:w-[320px]  2xl:w-[468px] h-[auto] w-[310px] md:w-[360px] landing-logo"
                 src={logo}
                 alt="Logo"
               />
-            </div>
+            </div> */}
             <div className="landingPageFooter h-screen flex items-end landing-logo relative">
               <div>
                 <div>
-                  <div className=" w-full absolute bottom-[70px] right-[14px]">
+                  <div className=" w-full absolute bottom-[70px] right-[14px] text-white">
                     <div className="flex justify-between pr-4">
                       <div className="flex justify-between items-end px-[14px] sm:px-[34px] CraftworkGrotesk">
-                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
+                        <div className=" text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] mr-[40px] sm:mr-[150px] md:mr-[212px] lg:mr-[262px]">
                           <div className="">YOU</div>
                           <div className="">ARE</div>
                         </div>
-                        <div className="text-black text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] font-semibold">
+                        <div className=" text-[18px] md:text-2xl xl:text-3xl 2xl:text-4xl leading-[18px] sm:leading-[20px] md:leading-[22px] xl:leading-[26px] 2xl:leading-[32px] font-semibold">
                           <div className="">THE</div>
                           <div className="">DESTINATION </div>
                         </div>
                       </div>
-                      <div className="text-black text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] AuxMono">
+                      <div className=" text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-semibold leading-[12px] sm:leading-[17px]  sm:right-[34px] AuxMono">
                         <div className="">IMMERSIVE
 </div>
                         <div className="sm:mb-2 mb-0">TRAVEL</div>
@@ -70,8 +70,8 @@ const LandingTransition = () => {
             </div>
           </div>
       </div>
-      <div className="absolute top-0 left-[80%] h-[calc(100vh-50px)] w-[1px] bg-black z-10" id="landingLine1"></div>
-      <div className="absolute top-0 left-[61.5%] h-[calc(100vh-50px)] w-[1px] bg-black z-10" id="landingLine2"></div>
+      <div className="absolute top-0 left-[80%] h-[calc(100vh-50px)] w-[1px] bg-white z-10" id="landingLine1"></div>
+      <div className="absolute top-0 left-[61.5%] h-[calc(100vh-50px)] w-[1px] bg-white z-10" id="landingLine2"></div>
       
       <div className="w-[100vw] mt-5 flex items-center gap-[45px] no-scrollbar absolute bottom-0 left-0 z-20">
         <AutoScrollFooter />

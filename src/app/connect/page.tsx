@@ -35,7 +35,7 @@ const Connect = () => {
   }, [])
   return (
     <div>
-      <div className="h-[100%]">
+      <div className="h-screen w-screen overflow-hidden">
         <div className="h-[100vh] bg-black pt-[30px] sm:pt-[50px] md:pt-[80px] xl:pt-[120px] relative" id="mainConnect">
           <Container>
 

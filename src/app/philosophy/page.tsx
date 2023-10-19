@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Header from "../__components/header/Header";
 import Container from "../__components/container";
 import Image from "next/image";
@@ -41,6 +41,7 @@ const expListings = [
 
 const PhilosophyPage = ({ scrollCheck }: Props) => {
   const router = useRouter();
+  const currentRoute = usePathname();
 
   const [selectedExp, setSelectedExp] = useState<number>(
     expListings.length - 1
@@ -52,6 +53,8 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
         " w-[100vw] h-[100vh] philosophyMain  relative overflow-x-hidden SpaceGrotesk"
       }
     >
+
+      <Header navTheme={`bg-primary text-white z-40 ${currentRoute === "/philosophy" ? "block" : "hidden"}`} navBorArrow={true}/> 
       <section className=" w-full relative z-20">
         <div className=" pt-10 ">
         <div className="flex justify-between items-center w-[94%] m-auto">
@@ -201,7 +204,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                 >
                   <div className="2xl:text-[255px] xl:text-[200px] sm:text-[140px] text-[110px]  2xl:leading-[13rem] xl:leading-[12rem] leading-[10rem] 2xl:max-w-[630px] font-bold">
                     {data.count < 10 ? "00" : data.count < 100 && 0}
-                    <CountUp end={data.count}/>
+                    <CountUp end={data.count} enableScrollSpy={true}/>
                     <span>{data.moreThanCount && "+"}</span>
                   </div>
                   <p className="mt-4 lg:text-[15px] sm:text-sm text-[10px]">
@@ -244,7 +247,7 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   >
                     <Button
                       btntext="CONNECT"
-                      btnClasses="text-white border border-white w-[162px] h-[26px]"
+                      btnClasses="text-white border border-white w-[162px] h-[26px] SpaceGrotesk"
                     />
                   </div>
 
@@ -255,12 +258,12 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
                   >
                     <Button
                       btntext="REGISTER NOW"
-                      btnClasses="text-white border border-white w-[162px] h-[26px]"
+                      btnClasses="text-white border border-white w-[162px] h-[26px] SpaceGrotesk"
                     />
                   </div>
                   <Button
                     btntext="VIEW CURATORS"
-                    btnClasses="bg-secondary w-[181px] text-black h-[26px]"
+                    btnClasses="bg-secondary w-[181px] text-black h-[26px] SpaceGrotesk"
                   />
                 </div>
               </div>
@@ -274,13 +277,13 @@ const PhilosophyPage = ({ scrollCheck }: Props) => {
               <p className="w-max text-xs">
                 (04)
                 <br />
-                RELEVANT INFO
+                TAKE CHARGE
               </p>
               <p className="w-max text-xs">IND</p>
               <p className="w-max text-xs">
                 (04)
                 <br />
-                RELEVANT INFO
+                OF THE WORLD
               </p>
             </div>
           </div>

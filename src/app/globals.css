@@ -77,7 +77,6 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-
 }
 
 body::-webkit-scrollbar{
@@ -209,3 +208,9 @@ body::-webkit-scrollbar{
 }
 
 
+.landingBgImg{
+  background-image: url("./__assets/images/pngs/Light.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
