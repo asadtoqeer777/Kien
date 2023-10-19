@@ -30,10 +30,10 @@ const CategoriesCardMain = ({handleContentChange, card} : Props) => {
         <Image src={DarkPlus} alt='DarkPlus' />
         <Button btnClasses={"bg-transparent text-black border-[1px] border-black w-[122px] h-[25px] rounded-[19.5px] text-[12px]"} btntext={"VIEW ALL CARDS"} />
       </div>
-      <div className="2xl:h-[calc(100vh-450px)] xl:h-[calc(100vh-420px)] h-[calc(100vh-400px)] bg-white overflow-y-auto no-scrollbar grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
+      <div className="2xl:h-[calc(100vh-450px)] xl:h-[calc(100vh-420px)] h-[calc(100vh-400px)] overflow-hidden bg-white no-scrollbar grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4" id="cardMainCon">
 
       {card.map((item, index)=>{
-        return <Card key={index} title={item.title} subTitle={item.subTitle} Name={item.Name} CountryName={item.CountryName} travel={item.travel} logo={item.logo}/>
+        return <Card key={index} title={item.title} subTitle={item.subTitle} Name={item.Name} CountryName={item.CountryName} travel={item.travel} logo={item.logo} status={item.status}/>
       })}
       </div>
         

@@ -11,10 +11,11 @@ interface Props{
   Name: string,
   CountryName: string,
   travel: string,
-  logo: any
+  logo: any,
+  status: string
 }
 
-const Card = ({title, subTitle, Name, CountryName, travel, logo} : Props) => {
+const Card = ({title, subTitle, Name, CountryName, travel, logo, status} : Props) => {
   console.log("dfjksdajf", logo);
   
   return (

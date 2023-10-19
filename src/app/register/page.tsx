@@ -52,7 +52,7 @@ const Register = () => {
           </div>
 
           <div className="mt-[30px] sm:mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:xl:mt-[130px] text-center">
-            <Button btnClasses={"bg-transparent w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-semibold	text-[#ffffff80]"} btntext={"Need Help?"} />
+            <Button btnClasses={"bg-transparent w-[114px] h-[25px] rounded-[19.5px] text-[13px] font-semibold underline	text-[#ffffff80]"} btntext={"Need Help?"} />
           </div>
 
         </div>

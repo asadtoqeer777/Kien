@@ -59,7 +59,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
@@ -88,7 +88,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1" onClick={() => {
+            <div className="flex mt-1 SpaceGrotesk" onClick={() => {
             router.push('/teamMembers')
             // handleNav() || handleNavInternal()
             setActiveNav(false)
@@ -121,7 +121,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                 {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>
@@ -153,7 +153,7 @@ const Header = ({ navTheme, toggleNav, handleNav, navCol, navBorArrow }: Props) 
                 {navBorArrow ?  <Image className='shrink-0 rotate-180' src={NavArrowWhite} alt='NavArrow' /> : <Image className='shrink-0' src={NavArrow} alt='NavArrow' /> }
               </div>
             </div>
-            <div className="flex mt-1">
+            <div className="flex mt-1 SpaceGrotesk">
               <div className="w-[120px] sm:w-[300px]">
 
                 <div className={`w-3 h-3 ${navBorArrow? "bg-white" : "bg-black"} rounded-[50%]`}></div>

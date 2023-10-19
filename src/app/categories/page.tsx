@@ -528,7 +528,7 @@ const Category = () => {
                 </div>
               </div>
               <div
-        className="absolute top-[56px] right-0 translate-x-[84.2%] translate-y-[0%] w-full pl-[23px]"
+        className="absolute top-[56px] right-0 z-10 translate-x-[84.2%] translate-y-[0%] w-full pl-[23px]"
         id={option.id}
       >
         <CategoriesCardMain card={option?.card} handleContentChange={handleContentChange} />
@@ -600,12 +600,6 @@ const Category = () => {
               />
             </div>
           </div>
-          {/* <div
-        className="absolute 2xl:top-[296px] xl:top-[266px] lg:top-[256px] md:top-[224px] sm:top-[205px] right-0 translate-x-[84.2%] translate-y-[0%] w-full pl-[23px]"
-        id={option.id}
-      >
-        <CategoriesCardMain card={option?.card} handleContentChange={handleContentChange} />
-      </div> */}
         </div>
         
       ))}
