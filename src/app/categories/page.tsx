@@ -522,13 +522,13 @@ const Category = () => {
                     className={`${style.categoryHeading} text-[#00000080] mt-[4vh] sm:mt-[3vh] CraftworkGrotesk`}
                     id={option.subHeadId}
                   >
-                    <h1>{option.subMaintitle1}</h1>
-                    <h1>{option.subMaintitle2}</h1>
+                    <div>{option.subMaintitle1}</div>
+                    <div>{option.subMaintitle2}</div>
                   </div>
                 </div>
               </div>
               <div
-        className="absolute top-[56px] right-0 z-10 translate-x-[84.2%] translate-y-[0%] w-full pl-[23px]"
+        className="absolute top-[56px] right-0 z-10 translate-x-[94.2%] translate-y-[0%] w-full pl-[23px]"
         id={option.id}
       >
         <CategoriesCardMain card={option?.card} handleContentChange={handleContentChange} />
