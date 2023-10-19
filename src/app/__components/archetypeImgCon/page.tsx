@@ -10,7 +10,7 @@ interface Props{
 const ArchetypeImgCon = ({
 	ArchetypeImg, subHeading, heading,
 	text
-} : Props) => {
+} : any) => {
   return (
 	<div>
 		<div className="relative ">

@@ -1,6 +1,6 @@
 .categoryHeading{
   font-family: "Craftwork Grotesk";
-font-size: 112.286px;
+font-size: 95.286px;
 font-style: normal;
 font-weight: 500;
 line-height: 100px;
@@ -43,7 +43,7 @@ margin-top: 178px;
     margin-top: 14vh;
     }
     .categorySubHeadDes{
-      font-size: 26.571px;
+      font-size: 20.571px;
       line-height: 30.143px; /* 130% */
     }
 }
@@ -61,7 +61,7 @@ margin-top: 178px;
     }
 
     .categorySubHeadDes{
-      font-size: 20.571px;
+      font-size: 18.571px;
     }
 }
 
@@ -78,7 +78,7 @@ margin-top: 178px;
     }
 
     .categorySubHeadDes{
-      font-size: 20.571px;
+      font-size: 17px;
     }
 }
 
@@ -95,7 +95,7 @@ margin-top: 178px;
     }
 
     .categorySubHeadDes{
-      font-size: 20.571px;
+      font-size: 16.571px;
     }
 }
 
@@ -111,7 +111,6 @@ margin-top: 178px;
     }
 
     .categorySubHeadDes{
-      font-size: 20.571px;
       width: 85%;
       margin-top: 2vh;
       margin-bottom: 3vh;
@@ -147,7 +146,7 @@ margin-top: 178px;
     }
 
     .categorySubHeadDes{
-      font-size: 16.571px;
+      font-size: 15px;
       width: 95%;
       margin-top: 2vh;
       margin-bottom: 3vh;

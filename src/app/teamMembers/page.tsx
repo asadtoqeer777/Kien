@@ -25,7 +25,7 @@ interface Props{
   setSelectedTab: any
 }
 
-const TeamMembers = ({selectedTab, setSelectedTab}: Props) => {
+const TeamMembers = ({selectedTab, setSelectedTab}: any) => {
   const router = useRouter();
   // const [selectedTab, setSelectedTab] = useState(1);
   const [activeTab, setActiveTab] = useState(0);
